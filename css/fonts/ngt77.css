@@ -1,0 +1,8 @@
+@font-face {
+    font-family: 'NewsGothicCondBold';
+    src: url('ngt77.eot');
+    src: url('ngt77.eot') format('embedded-opentype'),
+         url('ngt77.woff') format('woff'),
+         url('ngt77.ttf') format('truetype'),
+         url('ngt77.svg#NewsGothicCondBold') format('svg');
+}

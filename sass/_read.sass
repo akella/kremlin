@@ -1,0 +1,219 @@
+.read__wrap
+	padding-top: 80px 
+	+r(wide)
+		box-shadow: 0 0 15px rgba(black, 0.4)
+		background: #fff
+		padding-top: 0
+
+.read
+	background: #fff
+	box-shadow: 0 0 15px rgba(black, 0.4)
+	+r(wide)
+		box-shadow: none
+	.read__top
+		background: #E8E8EC
+		height: 60px
+		*
+			float: left
+		i
+			display: inline-block
+			position: relative
+			font-style: normal
+		span
+			position: absolute
+			right: -8px
+			top: -4px
+			width: 16px
+			height: 12px
+			line-height: 12px
+			font-size: 8px
+			font-family: Arial,sans-serif
+			color: #fff
+			border-radius: 10px
+			background: #696E77
+			text-align: center
+			border: 2px solid #E3E4E8
+		.read__loadarticle
+			cursor: pointer
+			height: 40px
+			padding: 20px 30px 0 30px
+			margin-left: 10px
+			i
+				+s(icon-article)
+			&:hover, &:active, &.is-active
+				i
+					+s(icon-articlea)
+		.read__loadphoto
+			position: relative
+			cursor: pointer
+			height: 40px
+			padding: 20px 30px 0 30px
+			i
+				+s(icon-photo)
+			&:hover, &:active, &.is-active
+				i
+					+s(icon-photoa)
+		.read__loadvideo
+			position: relative
+			cursor: pointer
+			height: 40px
+			padding: 20px 30px 0 30px
+			i
+				+s(icon-video)
+			&:hover, &:active, &.is-active
+				i
+					+s(icon-videoa)
+		.read__loadvideo, .read__loadphoto, .read__loadarticle
+			&.is-active
+				position: relative
+				&:before
+					position: absolute
+					bottom: 0
+					+s(read-active)
+					left: 50%
+					margin-left: -11px
+					content: ' '
+		.read__share
+			float: right
+			cursor: pointer
+			height: 40px
+			padding: 20px 20px 0 20px
+			i
+				+s(icon-share)
+			&:hover, &:active, &.is-active
+				i
+					+s(icon-sharea)
+		.read__sep
+			position: relative
+			top: 16px
+			height: 28px
+			border-left: 1px solid #D6D8DC
+	.read__updated
+		position: absolute
+		bottom: -30px
+		right: 17px
+		font-size: 11px
+		color: #aaafb6
+		+r(wide)
+			padding-bottom: 15px
+			bottom: 0
+	.read__in
+		padding: 25px 40px
+	.read__meta
+		font-size: 11px
+		color: #aaafb6
+		margin-bottom: 31px
+	.read__published
+		margin-right: 14px
+		display: inline-block
+	.read__location
+		display: inline-block
+		i
+			display: inline-block
+			+s(geo)
+			position: relative
+			top: 2px
+			margin-right: 6px
+
+.read__content
+	font-size: 15px
+	color: #2d3746
+	line-height: 1.4em
+	h1
+		font-size: 33px
+		color: #0D3C7C
+		line-height: 1.2
+		margin-bottom: 24px
+		font-weight: normal
+		+condbold
+	.lead
+		color: #2565BC
+		font-size: 18px
+		line-height: 1.4
+		font-weight: normal
+		margin-bottom: 47px
+		+lite
+	p
+		margin-bottom: 1.5em
+	ul,ol
+		margin: 1em 2em
+		list-style: disc
+	ol
+		list-style: decimal
+	.slider
+		margin: 0 -40px 1.5em -40px
+		img
+			display: block
+			width: 100%
+	blockquote
+		float: right
+		width: 50%
+		+box-sizing(border-box)
+		border-left: 1px solid #E8E8EC
+		padding: 10px 0 10px 30px
+		margin: 5px 0 10px 10px
+		+frank
+		font-size: 23px
+		color: #2d78e1
+		line-height: 1.1
+		p
+			margin: 0
+
+.materials
+	margin: 0 0 1em 0 !important
+	padding: 0
+	list-style: none !important
+	width: 50%
+	li
+		border-bottom: 1px solid #E8E8EC
+		position: relative
+		&:last-child
+			border-bottom: none
+	i
+		position: absolute
+		right: 0
+		top: 17px
+		+s(clip)
+		display: inline-block
+	a
+		display: block
+		text-decoration: none
+		color: #aaafb6
+		font-size: 15px
+		padding: 15px 15px 15px 0
+		+condbold
+
+.slider
+	position: relative
+	margin-bottom: 1.5em
+	.slider__next, .slider__prev
+		position: absolute
+		top: 0
+		bottom: 0
+		width: 100px
+		cursor: pointer
+		z-index: 101
+		opacity: 0
+		+transition(opacity 0.2s ease-in-out)
+		i
+			position: absolute
+			top: 50%
+			left: 50%
+			margin-top: -12px
+			margin-left: -12px
+	&:hover
+		.slider__next, .slider__prev
+			opacity: 1
+	.slider__next
+		right: 0
+		i
+			+s(next)
+	.slider__prev
+		left: 0
+		i
+			+s(prev)
+	.slider__title
+		font-size: 11px
+		color: #c2c6d2
+		text-align: right
+		padding: 10px 20px 0 0

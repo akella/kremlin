@@ -1,0 +1,142 @@
+$sidenav: 240px
+.sidenavoverlay
+	position: fixed
+	left: 0
+	right: 0
+	bottom: 0
+	top: 0  
+	z-index: -2
+	opacity: 0 
+	cursor: pointer
+	+transition(all .3s ease-in-out)
+	.is-withsidebar &
+		left: 240px
+		z-index: 300
+		opacity: 1 
+		background: rgba(#000, .6) 
+.sidenav
+	// 	position: fixed;
+	// 	top: 0;
+	// 	bottom: 0;
+	// 	left: 0;
+	position: fixed
+	top: 0
+	bottom: 0  
+	left: -($sidenav)
+	width: $sidenav
+	//overflow: auto;
+	background: #545460
+	//padding: 75px 40px 20px 40px;
+	//left: -320px;
+	+transition(left 0.3s ease-in-out)
+	z-index: 30
+	//display: none
+	.sidenav__toggle
+		position: absolute
+		top: 0
+		left: 0
+		width: 66px
+		height: 60px
+		cursor: pointer
+		z-index: 40
+		opacity: 1
+		display: block
+		i
+			position: absolute
+			top: 21px
+			left: 24px
+			+s(togglesidebar)
+	.is-withsidebar &
+		//left: 0;
+		display: block
+	.sidenav__content
+		padding: 75px 24px 20px 24px
+		width: $sidenav - 48px
+		top: 0
+		z-index: 50
+		left: 0
+		bottom: 0
+		overflow: auto 
+		// &.is-fixed
+		position: absolute
+		top: 0
+		&.is-static
+			position: absolute
+	.sidenav__top
+		height: 60px
+		background: #545460
+		//background: red;
+		position: absolute
+		top: 0
+		left: 0
+		z-index: 100
+		width: $sidenav
+	.sidenav__bg
+		width: $sidenav
+		background: #545460
+		position: fixed
+		top: 0
+		left: 0
+		bottom: 0
+	h3
+		+condbold
+		color: #fff
+		font-size: 16px
+		font-weight: normal
+		margin-bottom: 21px
+	ul
+		margin: 0 -24px 22px -24px
+		padding: 0 24px 4px 24px
+		border-bottom: 1px solid  #73737C
+		list-style: none
+		font-size: 12px
+		+translate3d(0, 0, 0)
+		a
+			color: #fff
+			text-decoration: none
+			&.is-active
+				color: #FFF
+			&:hover
+				color: #fff
+			span
+				color: #c2c6d2
+				display: block
+		li
+			margin-bottom: 1.2em
+		&:last-child
+			border-bottom: none
+	.sidenav__special
+		position: relative
+		i
+			position: absolute
+			+s(special)
+			top: 3px
+			left: -34px
+	.sidenav__pre
+		padding-left: 38px + 24px
+
+body
+	+transition(all .3s ease-in-out)
+	.wrapsite, .topline, .read__wrap
+		+transition(left .3s ease-in-out,transform .3s ease-in-out)
+		
+		//@include transition(all .3s ease-in-out);
+	&.is-withsidebar
+		//padding-left: 320px;
+		//margin-left: $sidenav; !!!
+		//overflow-x: hidden 
+		overflow: hidden
+		.sidenav
+			left: 0 
+		.topline__toggleaside
+			display: none
+		.wrapsite,.topline, .read__wrap
+			+transition(left .3s ease-in-out,transform .3s ease-in-out)
+			+translate3d($sidenav, 0, 0)
+			//+transition-delay(0.01s)
+			//position: relative
+			//margin-left: 320px;
+			//-webkit-transform: translate3d(320px, 0, 0);
+			//@include transition(all .3s ease-in-out);
+		.topline
+			//margin-left: 320px;

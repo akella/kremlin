@@ -1,0 +1,8 @@
+@font-face {
+    font-family: 'NewsGothicBTCond';
+    src: url('ngt57.eot');
+    src: url('ngt57.eot') format('embedded-opentype'),
+         url('ngt57.woff') format('woff'),
+         url('ngt57.ttf') format('truetype'),
+         url('ngt57.svg#NewsGothicBTCond') format('svg');
+}

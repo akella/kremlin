@@ -1,0 +1,64 @@
+.sites
+	background: #F0EEEF
+	padding-top: 40px
+	+transition(all .3s linear)
+	ul
+		list-style: none
+		margin-right: -60px
+	.sites__toggle
+		position: absolute
+		bottom: 0
+		height: 100px
+		cursor: pointer
+		width: 100%
+		z-index: 10
+	.sites__in
+		@extend %in
+		height: 320px
+		overflow: hidden
+		//margin-right: -60px;
+		+transition(all 0.3s ease-in-out)
+		position: relative
+	&.is-expanded
+		padding-bottom: 1px 
+		.sites__in
+			height: 900px
+			overflow: visible
+	.site
+		width: 320px - 27px - 30px
+		height: 180px - 22px - 12px
+		padding: 22px 27px 12px 30px
+		margin-right: 40px
+		margin-bottom: 40px
+		float: left
+		background: #fff
+		text-decoration: none
+		font-size: 20px
+		color: #697891
+		+frank
+		line-height: 1.2
+		position: relative
+		+transition(all .2s linear)
+		&:hover
+			background: #fafafa url(../img/site.jpg) no-repeat 0 0
+			color: darken(#697891, 20%)
+			color: #fff
+			position: relative
+			box-shadow: 0 0 15px rgba(#000, .3)
+			span
+				color: #fff
+		span
+			display: block
+			position: absolute
+			bottom: 29px
+			left: 27px
+			text-transform: uppercase
+			color: #2d78e1
+			font-family: Arial,sans-serif
+			font-size: 10px
+		.site__arrow
+			position: absolute
+			+s(sites-arrow)
+			bottom: 25px
+			right: 29px
+			display: inline-block

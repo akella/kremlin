@@ -1,0 +1,92 @@
+// all the layout magic is here
+
+// site layout
+%in
+	width: 680px
+	padding-left: 160px
+	margin: 0 auto 
+	.is-reading &
+		+r(wide)
+			margin-left: 0 
+
+
+// reader layout
+.is-reading
+	//overflow: hidden
+	.wrapsite
+		+r(notwide)
+			position: fixed
+			width: 100%
+	+r(wide)
+		overflow: auto
+		overflow-x: hidden
+
+.read__wrap
+	// position: fixed
+	// top: 100px 
+	min-width: 840px 
+	bottom: 0
+	height: auto
+	right: 0
+	left: 0
+	overflow: auto
+	position: absolute
+	z-index: -1
+	opacity: 0 
+	margin-top: -15px 
+	+transition(margin .3s ease-in-out,opacity .3s ease-in-out,left .3s ease-in-out)
+	+r(notwide)
+		height: auto !important
+		top: 0 !important
+	.is-reading &
+		opacity: 1 
+		z-index: 200 
+		position: relative
+		margin-top: 0 
+		+r(wide)
+			left: 840px + 40px
+			position: fixed
+			right: 40px
+			overflow: auto
+			min-width: 0 
+			max-width: 760px 
+			// bottom: auto;
+			// overflow: visible;
+	// @include r(wide){
+	// 	left: 760px;
+	// 	right: 40px;
+	// 	// bottom: auto;
+	// 	// overflow: visible;
+	// 	overflow: auto;
+	// }
+
+.read__overlay
+	position: absolute
+	top: 60px
+	left: 0
+	bottom: 0
+	right: 0
+	z-index: 2
+	background: rgba(black, 0.5)
+	+r(wide)
+		display: none
+
+.read
+	width: 680px
+	//margin: 20px auto 50px auto;
+	position: relative
+	z-index: 10
+	min-width: 560px
+	//max-width: 760px;
+	margin: 0 auto
+	left: 80px 
+	//margin-top: 10px;
+	margin-bottom: 40px
+	+r(med)
+		//margin: 0 auto;
+		//margin-left: 240px
+	+r(wide)
+		width: auto
+		margin-left: 0
+		margin-bottom: 0 
+		left: 0 

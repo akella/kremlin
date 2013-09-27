@@ -1,0 +1,215 @@
+.wrapsite
+	padding-top: 60px
+
+.topline
+	background: #051941
+	height: 60px
+	position: fixed
+	top: 0
+	left: 0
+	right: 0
+	z-index: 220
+	width: 100% 
+	//@include transition(all .3s ease-in-out);
+	.topline__toggleaside
+		position: fixed
+		cursor: pointer
+		z-index: 40
+		height: 60px
+		width: 66px
+		left: 0
+		top: 0
+		i
+			+s(togglesidebar1)
+			position: absolute
+			top: 21px
+			left: 24px
+		&:hover
+			i
+				+s(togglesidebar)
+	.topline__in
+		@extend %in
+		position: relative
+	.topline__head
+		float: left
+		font-size: 15px
+		color: #ffffff
+		position: relative
+		height: 60px
+		line-height: 60px
+		display: inline-block
+		text-decoration: none
+		padding-right: 23px
+		margin-right: 23px
+		&:before
+			border-left: 1px solid #1E3D63
+			position: absolute
+			right: 0
+			content: ' '
+			height: 20px
+			top: 21px
+			width: 1px
+		.topline__logo
+			position: absolute
+			left: -56px
+			top: 13px
+			display: inline-block
+			+s(orel)
+	.topline__nav
+		list-style: none
+		font-size: 15px
+		margin-right: -20px
+		li
+			float: left
+			margin-right: 21px
+			height: 60px
+			line-height: 60px
+		a
+			color: #a0afc3
+			text-decoration: none
+			&:hover, &.is-active
+				color: #fff
+			&.topline__search
+				//color: #68788F;
+	&.is-withsearch 
+		.search
+			top: 18px 
+	.search
+		+transition(all .3s ease-in-out)
+		position: absolute
+		top: -30px
+		height: 42px 
+		left: 160px + 160px
+		z-index: 20 
+		background: #051941 
+		.search__dots
+			+s(asidetoggle)
+			display: inline-block
+			vertical-align: middle
+			margin-right: 10px 
+			cursor: pointer
+		.search__input
+			display: inline-block 
+			width: 416px 
+			position: relative
+			height: 24px 
+			vertical-align: middle
+			input
+				position: relative
+				height: 24px 
+				line-height: 24px
+				width: 416px - 20px
+				padding: 0 10px
+				background: #ffffff 
+				border-style: none
+				border-radius: 4px
+		.search__submit
+			display: inline-block
+			position: relative
+			font-size: 15px
+			color: #a0afc3 
+			margin-left: 5px 
+			cursor: pointer
+			&:active
+				position: relative
+				top: 1px 
+			input
+				opacity: 0
+				position: absolute
+				-webkit-appearance: none
+				top: 0
+				left: 0
+				right: 0
+				bottom: 0
+				display: block
+				 
+		.search__advanced
+			display: inline-block
+			position: absolute
+			font-family: Tahoma,sans-serf  
+			font-size: 10px 
+			color: #bcbec8
+			right: 10px  
+			top: 7px 
+			line-height: 1 
+			cursor: pointer
+			&:hover
+				text-decoration: underline
+
+
+
+.footer
+	background: #03112E
+	padding: 50px 0
+	font-size: 12px
+	color: #68718b
+	line-height: 1.4
+	.footer__in
+		@extend %in
+		position: relative
+	.footer__col
+		width: 150px
+		float: left
+		margin-bottom: 38px
+		margin-right: 20px
+		&.footer__col_last
+			float: right
+			margin-right: 0
+			padding-bottom: 100px
+	h3
+		font-size: 16px
+		+frank
+		font-weight: normal
+		color: #a0afc3
+		line-height: 1.3
+		margin-bottom: 30px
+		margin-right: 24px
+		a
+			text-decoration: none
+			color: #68718b
+			&:hover
+				color: #c2c6d2
+	ul
+		list-style: none
+		margin-bottom: 36px
+		li
+			margin-bottom: 1.1em
+		a
+			color: #697891
+			text-decoration: none
+			&:hover
+				color: #a0afc3
+		.footer__currentsite
+			a
+				color: #a0afc3
+			span
+				display: block
+				color: #324866
+	.footer__copy
+		clear: both
+		position: relative
+		top: -15px
+		span
+			display: block
+			// margin-top: 1em;
+	.footer__special
+		position: relative
+		i
+			position: absolute
+			+s(special)
+			top: 3px
+			left: -34px
+			opacity: .3
+	.footer__license
+		margin-top: 60px
+		i
+			display: inline-block
+			+s(cc)
+			margin-bottom: 8px
+			display: inline-block
+	.footer__logo
+		position: absolute
+		right: 34px
+		// bottom: 50px;
+		bottom: 0
+		+s(bigorel)

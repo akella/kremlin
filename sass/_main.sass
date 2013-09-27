@@ -1,0 +1,140 @@
+.content
+	background: #F0EEEF
+	&.content_main
+		box-shadow: inset 0 15px 15px -15px rgba(black, 0.1)
+	&.content_white
+		background: #FCFBFC
+	.content__in
+		@extend %in
+		padding-top: 40px 
+		padding-bottom: 40px 
+
+.hentry
+	margin-bottom: 22px
+	padding-bottom: 22px
+	border-bottom: 1px solid #D6D8DC
+	.hentry__title
+		font-size: 20px
+		color: #041030
+		text-decoration: none
+		font-weight: normal
+		line-height: 1.2
+		margin-bottom: 10px
+		+frank
+		a
+			color: #2d3746
+			text-decoration: none
+			+transition(all 1.3s ease-in-out)
+			&:hover
+				color: #245FC0
+				+transition(all 0.2s ease-in-out)
+	&.hentry_inactive
+		.hentry__title
+			a
+				color: #aaafb6
+	.hentry__meta
+		color: #aaafb6
+		font-size: 11px
+	.hentry__pic
+		margin-top: 22px
+		img
+			display: block
+	.hentry__content
+		font-size: 13px
+		color: #352e4a
+		line-height: 1.5
+		margin-top: 22px
+		p
+			margin-bottom: 1em
+			&:last-child
+				margin-bottom: 0
+	&.hentry_white
+		background: #fff
+		padding: 20px 28px 28px 28px
+		border-bottom: none
+		margin-bottom: 45px
+		.hentry__title
+			font-size: 24px
+			min-height: 127px
+		.hentry__pic
+			margin: 22px -28px -28px -28px
+	&.hentry_wide
+		margin-bottom: 42px
+		border-bottom-style: none
+		padding-bottom: 0
+		.hentry__title
+			font-size: 33px
+			line-height: 1.2
+			padding-top: 13px
+		.hentry__meta
+	&.hentry_equal
+		min-height: 385px
+	&.hentry_last
+		border-bottom: none
+		padding-bottom: 0
+
+.cols
+	margin-right: -50px
+	overflow: hidden
+	.col
+		width: 320px
+		float: left
+		margin-right: 40px
+
+.promoted
+	background: #fff
+	position: relative
+	height: 180px
+	+transition(all 0.3s linear)
+	overflow: hidden
+	.promoted__in
+		@extend %in
+		padding-top: 40px 
+		padding-bottom: 40px 
+	.promoted__toggle
+		position: absolute
+		right: 40px
+		bottom: 40px
+		+s(promotedarrow)
+		cursor: pointer
+	&.is-collapsed
+		height: 60px
+		.promoted__in
+			padding-top: 0
+			padding-bottom: 0 
+		.promoted__toggle
+			bottom: 25px
+			+rotate(180)
+
+.promoted__entry
+	overflow: hidden
+	text-decoration: none
+	display: block
+	.promoted__pic
+		float: right
+		margin-left: 100px
+	.promoted__title
+		+lite
+		color: #061844
+		font-size: 24px
+		text-decoration: none
+		line-height: 1.3
+		font-weight: normal
+		padding-top: 5px
+	.promoted__date
+		margin-top: 10px
+		color: #aaafb6
+		font-size: 11px
+	.is-collapsed &
+		position: relative
+		padding-top: 15px 
+		.promoted__pic
+			display: none
+		.promoted__date
+			font-size: 11px
+			color: #C9C6CA
+			margin: 0 
+		.promoted__title
+			color: #a0afc3
+			font-size: 12px
+			padding-top: 0 
