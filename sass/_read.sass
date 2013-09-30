@@ -10,8 +10,8 @@
 	box-shadow: 0 0 15px rgba(black, 0.4)
 	+r(wide)
 		box-shadow: none
-	.read__top
-		background: #E8E8EC
+	.read__tabs
+		background: #DADCE0
 		height: 60px
 		*
 			float: left
@@ -30,9 +30,9 @@
 			font-family: Arial,sans-serif
 			color: #fff
 			border-radius: 10px
-			background: #696E77
+			background: #3559C5
 			text-align: center
-			border: 2px solid #E3E4E8
+			border: 2px solid #DADCE0
 		.read__loadarticle
 			cursor: pointer
 			height: 40px
@@ -42,7 +42,7 @@
 				+s(icon-article)
 			&:hover, &:active, &.is-active
 				i
-					+s(icon-articlea)
+					+s(icon-article)
 		.read__loadphoto
 			position: relative
 			cursor: pointer
@@ -52,7 +52,7 @@
 				+s(icon-photo)
 			&:hover, &:active, &.is-active
 				i
-					+s(icon-photoa)
+					+s(icon-photo)
 		.read__loadvideo
 			position: relative
 			cursor: pointer
@@ -62,27 +62,27 @@
 				+s(icon-video)
 			&:hover, &:active, &.is-active
 				i
-					+s(icon-videoa)
+					+s(icon-video)
 		.read__loadvideo, .read__loadphoto, .read__loadarticle
 			&.is-active
 				position: relative
 				&:before
 					position: absolute
-					bottom: 0
+					top: 0
 					+s(read-active)
 					left: 50%
-					margin-left: -11px
+					margin-left: -7px
 					content: ' '
 		.read__share
 			float: right
 			cursor: pointer
 			height: 40px
-			padding: 20px 20px 0 20px
+			padding: 20px 40px 0 20px
 			i
 				+s(icon-share)
 			&:hover, &:active, &.is-active
 				i
-					+s(icon-sharea)
+					+s(icon-share)
 		.read__sep
 			position: relative
 			top: 16px
@@ -103,9 +103,35 @@
 		font-size: 11px
 		color: #aaafb6
 		margin-bottom: 31px
-	.read__published
+	.read__categ
+		font-size: 15px 
+		color: #5c5e6c 
+		margin-bottom: 37px
+		+lite
+	.read__published, .read__time
 		margin-right: 14px
 		display: inline-block
+		color: #5c5e6c 
+		+reg
+	.read__tags
+		display: inline-block
+		border-radius:  10px
+		color: #9c9ea8 
+		font-size: 11px 
+		text-decoration: none
+		background: #ECECEE
+		padding: 4px  8px
+		line-height: 1
+		margin-right: 22px 
+		a
+			text-decoration: none
+			color: #868892 
+			span
+				color: #9c9ea8 
+	.read__copy
+		display: inline-block
+		color: #9c9ea8
+		font-size: 11px  
 	.read__location
 		display: inline-block
 		i
@@ -117,21 +143,21 @@
 
 .read__content
 	font-size: 15px
-	color: #2d3746
+	color: #343646
 	line-height: 1.4em
 	h1
 		font-size: 33px
-		color: #0D3C7C
+		color: #3656cc
 		line-height: 1.2
 		margin-bottom: 24px
 		font-weight: normal
 		+condbold
 	.lead
-		color: #2565BC
-		font-size: 18px
+		color: #343646
+		font-size: 22px
 		line-height: 1.4
 		font-weight: normal
-		margin-bottom: 47px
+		margin-bottom: 23px
 		+lite
 	p
 		margin-bottom: 1.5em
@@ -146,18 +172,29 @@
 			display: block
 			width: 100%
 	blockquote
-		float: right
-		width: 50%
-		+box-sizing(border-box)
-		border-left: 1px solid #E8E8EC
-		padding: 10px 0 10px 30px
-		margin: 5px 0 10px 10px
-		+frank
-		font-size: 23px
-		color: #2d78e1
-		line-height: 1.1
+		font-size: 30px 
+		color: #1e2032
+		+lite
+		background: #F5F5F6
+		text-align: center
+		padding: 80px 80px 70px 80px  
+		line-height: 1.4
+		margin: 35px  -40px
 		p
-			margin: 0
+			margin: 0 
+		// float: right
+		// width: 50%
+		// +box-sizing(border-box)
+		// border-left: 1px solid #E8E8EC
+		// padding: 10px 0 10px 30px
+		// margin: 5px 0 10px 10px
+		// +frank
+		// font-size: 23px
+		// color: #2d78e1
+		// line-height: 1.1
+		// p
+		// 	margin: 0
+		
 
 .materials
 	margin: 0 0 1em 0 !important

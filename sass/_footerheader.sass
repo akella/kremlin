@@ -1,8 +1,8 @@
 .wrapsite
 	padding-top: 60px
-
 .topline
-	background: #051941
+	// background: #051941
+	+background-image(linear-gradient(#181D3E, #15216E))
 	height: 60px
 	position: fixed
 	top: 0
@@ -77,11 +77,11 @@
 	.search
 		+transition(all .3s ease-in-out)
 		position: absolute
-		top: -30px
+		top: -50px
 		height: 42px 
 		left: 160px + 160px
 		z-index: 20 
-		background: #051941 
+		+background-image(linear-gradient(#181D3E, #15216E))
 		.search__dots
 			+s(asidetoggle)
 			display: inline-block
@@ -139,7 +139,7 @@
 
 
 .footer
-	background: #03112E
+	background: #1E2031
 	padding: 50px 0
 	font-size: 12px
 	color: #68718b
@@ -157,16 +157,17 @@
 			margin-right: 0
 			padding-bottom: 100px
 	h3
-		font-size: 16px
+		font-size: 18px
 		+frank
 		font-weight: normal
-		color: #a0afc3
+		color: #848cae
 		line-height: 1.3
 		margin-bottom: 30px
 		margin-right: 24px
 		a
 			text-decoration: none
-			color: #68718b
+			color: #6c7396
+			display: inline-block
 			&:hover
 				color: #c2c6d2
 	ul
@@ -175,20 +176,21 @@
 		li
 			margin-bottom: 1.1em
 		a
-			color: #697891
+			color: #6c7396
 			text-decoration: none
 			&:hover
 				color: #a0afc3
 		.footer__currentsite
 			a
-				color: #a0afc3
+				color: #6c7396
 			span
 				display: block
-				color: #324866
+				color: #414664
 	.footer__copy
 		clear: both
 		position: relative
 		top: -15px
+		color: #414664 
 		span
 			display: block
 			// margin-top: 1em;
@@ -200,8 +202,19 @@
 			top: 3px
 			left: -34px
 			opacity: .3
+	.footer__search
+		position: relative
+		i
+			position: absolute
+			+s(footersearch)
+			top: 1px
+			left: -34px
+			opacity: .3
 	.footer__license
-		margin-top: 60px
+		margin-top: 30px
+		color: #414664 
+		p
+			margin-bottom: 1em 
 		i
 			display: inline-block
 			+s(cc)
