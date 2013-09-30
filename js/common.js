@@ -24,6 +24,10 @@ $(document).ready(function() {
 			$('.wrapsite').css('top', -($(window).scrollTop()));
 			$('body').addClass('is-reading');
 		}
+		$('.hentry').removeClass('is-active');
+		if($(this).hasClass("hentry")){
+			$(this).addClass('is-active')
+		}
 		return false;
 
 	});
