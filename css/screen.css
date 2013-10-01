@@ -887,6 +887,8 @@ body {
     .content.content_top .content__in {
       padding-top: 0;
       padding-bottom: 0; }
+  .content .content__sep {
+    border-top: 1px solid #eeeff2; }
 
 .cols {
   margin-right: -50px;
@@ -1094,6 +1096,36 @@ body {
     background: url('../img/icons-s031615d393.png') 0 -836px no-repeat;
     width: 24px;
     height: 20px; }
+
+.dateblock {
+  float: right;
+  font-size: 11px;
+  color: #9c9ea8;
+  text-decoration: none;
+  border-radius: 3px;
+  border: 1px solid #ececee;
+  height: 28px;
+  line-height: 28px;
+  padding: 0 38px;
+  margin-top: 15px; }
+
+.subnav {
+  list-style: none;
+  font-size: 0; }
+  .subnav li {
+    display: inline-block;
+    font-size: 15px;
+    color: #9c9ea8; }
+    .subnav li a {
+      color: #9c9ea8;
+      text-decoration: none;
+      margin-right: 25px; }
+      .subnav li a.is-active {
+        color: #182e84; }
+
+.content_subnav .content__in {
+  height: 60px;
+  line-height: 60px; }
 
 .events .events__title {
   font-family: "gcondbold", arial, sans-serif;
