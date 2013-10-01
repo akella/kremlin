@@ -1146,7 +1146,8 @@ body {
   height: 40px;
   text-align: center;
   display: block;
-  position: relative; }
+  position: relative;
+  margin-bottom: 40px; }
   .more i {
     display: inline-block;
     background: url('../img/icons-s031615d393.png') 0 -1020px no-repeat;
