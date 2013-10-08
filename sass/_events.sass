@@ -21,7 +21,18 @@
 			text-decoration: none
 			margin-right: 25px  
 			&.is-active
-				color: #182e84 
+				color: #3656cc  
+	&.subnav_sub
+		li 
+			a.is-active
+				position: relative
+				&:before
+					position: absolute
+					bottom: -5px 
+					+s(dot)
+					content: ' '
+					left: 50% 
+					
 .content_subnav
 	.content__in
 		height: 60px
@@ -56,3 +67,9 @@
 		top: 50%
 		margin-left: -17px  
 		margin-top: -3px 
+	&.more_alt
+		border: 1px solid #DEDEE2
+		background: #ECECEE
+		box-shadow: none
+		i
+			+s(more_alt)
