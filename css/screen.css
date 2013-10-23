@@ -877,6 +877,36 @@ body {
     color: #c2c6d2;
     text-align: right;
     padding: 10px 20px 0 0; }
+  .slider .slider__slidetitle {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    z-index: 10;
+    font-size: 11px;
+    color: #9c9ea8;
+    text-align: center;
+    background-color: rgba(245, 245, 245, 0.9);
+    padding: 13px 0;
+    -webkit-transform: translate(0, 100%);
+    -moz-transform: translate(0, 100%);
+    -ms-transform: translate(0, 100%);
+    -o-transform: translate(0, 100%);
+    transform: translate(0, 100%);
+    -webkit-transition: all 0.2s ease-in-out;
+    -moz-transition: all 0.2s ease-in-out;
+    -o-transition: all 0.2s ease-in-out;
+    transition: all 0.2s ease-in-out; }
+  .slider .slider__slide {
+    position: relative;
+    width: 100%;
+    overflow: hidden; }
+  .slider:hover .slider__slidetitle {
+    -webkit-transform: translate(0, 0);
+    -moz-transform: translate(0, 0);
+    -ms-transform: translate(0, 0);
+    -o-transform: translate(0, 0);
+    transform: translate(0, 0); }
 
 .content {
   background: #f5f5f6; }
@@ -1055,9 +1085,9 @@ body {
   .hentry.is-active {
     position: relative; }
     .hentry.is-active .hentry__title {
-      color: #3656cc; }
+      color: #245fc0; }
       .hentry.is-active .hentry__title a {
-        color: #3656cc; }
+        color: #245fc0; }
     .hentry.is-active .hentry__meta {
       color: #3656cc; }
     .hentry.is-active:before {
@@ -1075,6 +1105,8 @@ body {
       border-bottom: none; }
     .hentry.hentry_event .hentry__title {
       margin-right: 150px; }
+    .hentry.hentry_event .hentry__inst {
+      padding-right: 60px; }
   .hentry .hentry__assets {
     position: absolute;
     top: 2px;
