@@ -134,7 +134,12 @@ body {
   font-family: "gregu", arial, sans-serif;
   line-height: 1.4;
   background: #545460;
-  text-rendering: optimizeLegibility; }
+  text-rendering: optimizeLegibility;
+  -webkit-transform: translate3d(0, 0, 0);
+  -moz-transform: translate3d(0, 0, 0);
+  -ms-transform: translate3d(0, 0, 0);
+  -o-transform: translate3d(0, 0, 0);
+  transform: translate3d(0, 0, 0); }
 
 a img, fieldset {
   border: none; }
