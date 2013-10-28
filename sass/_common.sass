@@ -116,7 +116,7 @@ body
 	line-height: 1.4
 	background: #545460 
 	text-rendering: optimizeLegibility
-	+transform(translate3d(0,0,0))
+	//+transform(translate3d(0,0,0))
 
 // resets
 a img,fieldset
@@ -139,7 +139,13 @@ a img,fieldset
 .content
 	.content__in
 		@extend %in
-		
+
+.h1
+	font-size: 33px 
+	color: #3656cc
+	margin-bottom: 37px  
+	font-weight: normal
+	+lite
 .h2
 	+lite
 	color: #141018
@@ -172,6 +178,16 @@ a img,fieldset
 		padding: 32px 80px 32px 40px
 		color: #181c40 
 		border-bottom: 1px solid #E1E2E7
+		+transition(all .2s ease-in-out)
+		&:before
+			position: absolute
+			top: 50%
+			right: 80px 
+			+s(hentryactive)
+			content: ' '
+			margin-top: -10px 
+			opacity: 0 
+			+transition(all .2s ease-in-out)
 		&.is-active,&:hover
 			color: #3656cc 
 			position: relative
@@ -179,12 +195,10 @@ a img,fieldset
 			+box-shadow(0 0 28px rgba(#000, .15))
 			border-bottom-color: #FCFCFD 
 			&:before
-				position: absolute
-				top: 50%
 				right: 38px 
-				+s(hentryactive)
-				content: ' '
-				margin-top: -10px 
+				opacity: 1 
+		&:hover
+			z-index: 3 
 			
 
 
