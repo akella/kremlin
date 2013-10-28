@@ -35,9 +35,6 @@
 // 	    #{$s}
 //     }
 // BTW these comments will not render into css
-// for awesomeness use .🍺 class. Example:
-// .🍺{beer:everything}
-
 //*{-webkit-transition: .3s all;}
 
 @font-face
@@ -125,29 +122,74 @@ body
 a img,fieldset
 	border: none
 
-// common styles, these could be attached to any block with "@extend %wyswyg;"
+// common blocks
+.submit
+	border-radius: 3px / 3px 3px 2px 2px
+	background-color: #fbfbfd
+	box-shadow: 0 1px 4px rgba(70,76,98,.15)
+	display: inline-block
+	font-size: 16px 
+	color: #37a58c
+	padding: 0 82px  
+	height: 39px 
+	line-height: 39px 
+	+lite
+	cursor: pointer
+	
+.content
+	.content__in
+		@extend %in
+		
+.h2
+	+lite
+	color: #141018
+	font-size: 24px
+	font-weight: normal
+	margin-bottom: 34px
+	a
+		color: #414664
+		text-decoration: none
+	&.is-inactive
+		margin:  36px 0 10px 0
+		a
+			color: #9c9ea8
+			text-decoration: none 
+	&.h2_blue
+		color: #3656cc 
+.links
+	list-style: none
+	background: #FCFCFD 
+	li
+		font-size: 20px 
+		+lite
+		color: #181c40
+		&:last-child
+			a
+				border-bottom: none 
+	a
+		text-decoration: none
+		display: block
+		padding: 32px 80px 32px 40px
+		color: #181c40 
+		border-bottom: 1px solid #E1E2E7
+		&.is-active,&:hover
+			color: #3656cc 
+			position: relative
+			z-index: 2 
+			+box-shadow(0 0 28px rgba(#000, .15))
+			border-bottom-color: #FCFCFD 
+			&:before
+				position: absolute
+				top: 50%
+				right: 38px 
+				+s(hentryactive)
+				content: ' '
+				margin-top: -10px 
+			
 
-// %wyswyg{
-// 	p{
-// 		margin-bottom: 1em;
-// 	}
-// 	ul,ol{
-// 		margin: 1em 2em;
-// 		list-style: disc;
-// 	}
-// 	ol{
-// 		list-style: decimal;
-// 	}
-// 	blockquote{
-// 		margin: 1em 2em;
-// 	}
-// 	table{
-// 		border-spacing: 0;
-// 		border-collapse: collapse;
-// 		width: 100%;
-// 		td{
-// 			border: 1px solid #ccc;
-// 			padding: 5px;
-// 		}
-// 	}
-// }
+
+
+
+
+
+
