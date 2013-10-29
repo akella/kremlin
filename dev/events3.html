@@ -1,0 +1,121 @@
+<!doctype html>
+<!--[if lte IE 8]><html class="lteie8"><![endif]-->
+<!--[if gt IE 8]><!--><html><!--<![endif]-->
+<head>
+	<meta charset="utf-8">
+	<title>Template</title>
+	<meta name="viewport" content="width=device-width"/>
+	<link rel="stylesheet" media="screen" href="css/screen.css" >
+	<script src="js/jquery.js"></script>
+	<script src="js/transition-events.js"></script>
+	<script src="js/jquery.cycle.js"></script>
+	<script src="js/common.js"></script>
+</head>
+<body>
+
+include "aside"
+
+include "topline"
+
+<!-- begin wrapsite -->
+<div class="wrapsite">
+
+	<!-- BEGIN content -->
+	<div class="content content_top content_subnav">
+		<div class="content__in">
+			<ul class="subnav">
+				<li><a href="#" >Деятельность Президента</a></li>
+				<li><a href="#" class="is-active">Администрация Президента</a></li>
+				<li><a href="#">Комиссии и Советы</a></li>
+			</ul>
+		</div>
+		<div class="content__sep"></div>
+		<div class="content__in">
+			<ul class="subnav subnav_sub"> 
+				<li><a href="#">Новости</a></li>
+				<li><a href="#" class='is-active'>Сведения об Администрации Президента</a></li>
+			</ul>
+
+		</div>
+	</div>
+	<!-- END content -->
+
+	<!-- BEGIN  content-->
+	<div class="content content_main">
+		<div class="content__in">
+			<!-- BEGIN page -->
+			<div class="page">
+				<h2 class="h1">Сведения об Администрации Президента</h2>
+				<p class="lead">Многогранность работы Президента, широчайший спектр
+его деятельности предполагают существование специального
+органа, создающего условия для реализации Президентом
+его конституционных полномочий.</p>
+
+<p class="lead">Таким органом является Администрация Президента.</p>
+				<!-- BEGIN slider -->
+				<div class="slider">
+				<div class="slider__next"><i></i></div>
+				<div class="slider__prev"><i></i></div>
+				<div class="slider__slides cycle-slideshow"
+					data-cycle-fx="scrollHorz"
+					data-cycle-pause-on-hover="true"
+					data-cycle-slides="> .slider__slide"
+					data-cycle-prev=".slider__prev"
+					data-cycle-next=".slider__next">
+					<div class="slider__slide">
+						<img src="img/1f.jpg" data-text="Перед началом заседания Комиссии" alt="">
+						<div class="slider__slidetitle">Перед началом заседания Комиссии</div>
+					</div>
+					<div class="slider__slide">
+						<img src="img/1f.jpg" data-text="Перед началом заседания Комиссии" alt="">
+						<div class="slider__slidetitle">Перед началом заседания Комиссии</div>
+					</div>
+				
+				</div>
+			</div>
+			<!-- end slider -->
+			<p>Администрация Президента обеспечивает деятельность главы государства. Это выражается, в частности, в подготовке законопроектов для внесения их Президентом в Госдуму в порядке законодательной инициативы.</p>
+
+
+<p>Администрация готовит проекты указов, распоряжений, поручений, обращений Президента, иных документов, в том числе проектов ежегодных посланий Президента Федеральному Собранию.</p>
+
+<p>Администрация контролирует и проверяет исполнение федеральных законов, указов, распоряжений и поручений Президента и представляет ему соответствующие доклады.</p>
+
+
+<p>Администрация обеспечивает взаимодействие Президента с политическими партиями, общественными объединениями, профессиональными и творческими союзами в России, государственными органами и должностными лицами иностранных государств, российскими и зарубежными политическими и общественными деятелями, международными организациями.</p>
+
+
+<p>В Администрации анализируются: информация о социально-экономических, политических и правовых процессах в стране и мире; обращения граждан; предложения общественных объединений и органов местного самоуправления. На основе обрабатываемых материалов готовятся доклады Президенту.</p>
+
+
+<p>Президент осуществляет общее руководство своей Администрацией.</p>
+
+
+<p>Непосредственно управляет работой Администрации ее глава – Руководитель Администрации.</p>
+
+
+<p>Администрация Президента работает в Москве, в нескольких зданиях на территории Кремля, на Старой площади и улице Ильинка.
+</p>
+			</div>
+			<!-- END page -->
+
+			<ul class="links">
+				<li><a href="#">Руководство и основные должностные лица</a></li>
+				<li><a href="#">Подразделения</a></li>
+				<li><a href="#">Госслужба в Администрации</a></li>
+				<li><a href="#">Приёмная</a></li>
+			</ul>
+		</div>
+	</div>
+	<!-- END content-->
+
+	include "promoted"
+	include "footer"
+
+</div>
+<!-- end wrapsite -->
+
+	include "read"
+<div class="sidenavoverlay"></div>
+</body>
+</html>
