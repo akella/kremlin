@@ -148,7 +148,7 @@ $(document).ready(function() {
 	// ==================================================================
 	// ===========================SIDENAV================================
 	// ==================================================================
-	$('.topline__toggleaside,.sidenav__toggle, .wrapsite__overlayfixed').click(function (e) {
+	$('.topline__toggleaside,.sidenav__toggle, .wrapsite__overlayfixed,.wrapsite__overlay').click(function (e) {
 		$('.sidenav').height($(window).height());
 		$('.sidenav').css({'top': $(window).scrollTop()})
 		$('body').toggleClass('is-withsidebar');

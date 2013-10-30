@@ -468,7 +468,7 @@ a img, fieldset {
   height: 400px;
   background: #51515d; }
 
-.wrapsite__overlay, .wrapsite__overlayfixed {
+.wrapsite__overlay {
   position: absolute;
   left: 0;
   right: 0;
@@ -480,21 +480,11 @@ a img, fieldset {
   -webkit-transition: all 0.3s ease-in-out;
   -moz-transition: all 0.3s ease-in-out;
   -o-transition: all 0.3s ease-in-out;
-  transition: all 0.3s ease-in-out; }
-  .is-withsidebar .wrapsite__overlay, .is-withsidebar .wrapsite__overlayfixed {
+  transition: all 0.3s ease-in-out;
+  background: rgba(0, 0, 0, 0.6); }
+  .is-withsidebar .wrapsite__overlay {
     z-index: 300;
-    opacity: 1;
-    background: rgba(0, 0, 0, 0.6); }
-
-.wrapsite__overlayfixed {
-  position: fixed;
-  background: red;
-  left: 240px;
-  opacity: 1; }
-  .is-withsidebar .wrapsite__overlayfixed {
-    left: 240px;
-    opacity: 0;
-    z-index: 30000; }
+    opacity: 1; }
 
 .sidenav {
   position: absolute;
