@@ -148,12 +148,10 @@ $(document).ready(function() {
 	// ==================================================================
 	// ===========================SIDENAV================================
 	// ==================================================================
-	$('.topline__toggleaside,.sidenav__toggle, .sidenavoverlay').click(function (e) {
+	$('.topline__toggleaside,.sidenav__toggle, .wrapsite__overlayfixed').click(function (e) {
+		$('.sidenav').height($(window).height());
+		$('.sidenav').css({'top': $(window).scrollTop()})
 		$('body').toggleClass('is-withsidebar');
-		// curpos = $(window).scrollTop();
-		// if(curpos>0){
-		// 	side.css('top', curpos).removeClass('is-fixed');
-		// }
 	});
 	//sidebar fixed
 	// (function () {
