@@ -23,6 +23,13 @@ $break-med: 1160px;
 	}
 }
 
+//simple gradient
+@mixin g($color1, $color2){
+	@include background-image(linear-gradient($color1, $color2));
+}
+@mixin gh($color1, $color2){
+	@include background-image(linear-gradient(left, $color1, $color2));
+}
 
 // ROTATE
 @mixin rotate($deg: 0, $m11: 0, $m12: 0, $m21: 0, $m22: 0) {
