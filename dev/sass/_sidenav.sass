@@ -11,8 +11,9 @@ $sidenav: 240px
 	z-index: -2
 	opacity: 0
 	cursor: pointer
-	+transition(all .3s ease-in-out)
+	//+transition(all .3s ease-in-out)
 	background: rgba(#000, .6)
+	opacity: 0 !important 
 	.is-withsidebar &
 		z-index: 300
 		opacity: 1
@@ -144,7 +145,7 @@ body
 		//overflow-x: hidden 
 		overflow: hidden
 		.read
-			opacity: .9 
+			opacity: .9
 		.sidenav
 			//left: 0 
 		.topline__toggleaside

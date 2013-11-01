@@ -36,7 +36,7 @@ $break-med: 1160px;
 }
 
 // TRANSITION
-@mixin transition($what) {
+@mixin transition($what:'all .3s ease-in-out') {
 	-moz-transition:    $what;
 	-o-transition:      $what;
 	-webkit-transition: $what;

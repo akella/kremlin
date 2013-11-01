@@ -477,11 +477,8 @@ a img, fieldset {
   z-index: -2;
   opacity: 0;
   cursor: pointer;
-  -webkit-transition: all 0.3s ease-in-out;
-  -moz-transition: all 0.3s ease-in-out;
-  -o-transition: all 0.3s ease-in-out;
-  transition: all 0.3s ease-in-out;
-  background: rgba(0, 0, 0, 0.6); }
+  background: rgba(0, 0, 0, 0.6);
+  opacity: 0 !important; }
   .is-withsidebar .wrapsite__overlay, .is-withsidebar .wrapsite__overlayfixed {
     z-index: 300;
     opacity: 1; }
@@ -631,14 +628,20 @@ body {
 
 .sites {
   background: #dadce0;
-  padding-top: 40px;
+  padding-top: 30px;
   -webkit-transition: all 0.3s linear;
   -moz-transition: all 0.3s linear;
   -o-transition: all 0.3s linear;
   transition: all 0.3s linear; }
   .sites ul {
     list-style: none;
-    margin-right: -60px; }
+    margin-right: -60px;
+    overflow: hidden;
+    padding-top: 10px;
+    -webkit-transition: all 0.3s ease-in-out;
+    -moz-transition: all 0.3s ease-in-out;
+    -o-transition: all 0.3s ease-in-out;
+    transition: all 0.3s ease-in-out; }
   .sites .sites__toggle {
     position: absolute;
     bottom: 0;
@@ -647,18 +650,7 @@ body {
     width: 100%;
     z-index: 10; }
   .sites .sites__in {
-    height: 320px;
-    overflow: hidden;
-    -webkit-transition: all 0.3s ease-in-out;
-    -moz-transition: all 0.3s ease-in-out;
-    -o-transition: all 0.3s ease-in-out;
-    transition: all 0.3s ease-in-out;
     position: relative; }
-  .sites.is-expanded {
-    padding-bottom: 1px; }
-    .sites.is-expanded .sites__in {
-      height: 900px;
-      overflow: visible; }
   .sites .site {
     width: 263px;
     height: 146px;
@@ -678,13 +670,10 @@ body {
     -o-transition: all 0.2s linear;
     transition: all 0.2s linear; }
     .sites .site:hover {
-      background: #fafafa url(../img/site.jpg) no-repeat 0 0;
+      background: #fcfcfd;
       color: #3e4756;
-      color: white;
       position: relative;
       box-shadow: 0 0 15px rgba(0, 0, 0, 0.3); }
-      .sites .site:hover span {
-        color: white; }
     .sites .site span {
       display: block;
       position: absolute;

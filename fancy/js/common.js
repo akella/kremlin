@@ -7,7 +7,7 @@ $(document).ready(function() {
 
 
 	// ===============================================================
-	// ===========================TEST================================
+	// ===========================read layer==========================
 	// ===============================================================
 	//opening read in narrow
 	$('.hentry,.read__overlay').click(function (e) {
@@ -36,14 +36,21 @@ $(document).ready(function() {
 			setpopup();
 		});
 	});
-
+	//sites toggling
+	// @todo use data-min and set data-max on load, to switch between heights and use
+	// css animations for toggling
+	//alert($('.sites').data('minheight'));
+	toanimate = $('.sites').find('ul');
+	maxheight = toanimate.height();
+	toanimate.height($('.sites').data('minheight'));
+	$('.sites').data('maxheight',maxheight);
 	$('.site').click(function (e) {
 		e.stopPropagation();
 	});
+
 	$('.sites').click(function (e) {
-		$(this).addClass('is-expanded').afterTransition(function(){
+		$('.sites').find('ul').height($('.sites').data('maxheight')).afterTransition(function(){
 			setpopup();
-			//alert('a');
 		});
 	});
 
@@ -57,7 +64,8 @@ $(document).ready(function() {
 	footer = $('.footer');
 	promoted  = $('.promoted ');
 	body = $('body');
-	side = $('.sidenav__content');
+	side = $('.sidenav');
+	//sidewrap = $('.sidenav');
 	//alert($('.footer').offset().top);
 
 	// static parameters
@@ -137,6 +145,10 @@ $(document).ready(function() {
 			body.removeClass('is-wide');
 		}
 	}
+	function setsidenav(){
+		side.height($(window).height());
+	}
+	setsidenav();
 
 
 
@@ -149,8 +161,8 @@ $(document).ready(function() {
 	// ===========================SIDENAV================================
 	// ==================================================================
 	$('.topline__toggleaside,.sidenav__toggle, .wrapsite__overlayfixed,.wrapsite__overlay').click(function (e) {
-		$('.sidenav').height($(window).height());
-		$('.sidenav').css({'top': $(window).scrollTop()})
+		
+		$('.sidenav').css({'top': $(window).scrollTop()});
 		$('body').toggleClass('is-withsidebar');
 	});
 	//sidebar fixed
@@ -188,6 +200,7 @@ $(document).ready(function() {
 	$(window).resize(function() {
 		setwideclass();
 		setpopup();
+		setsidenav();
 	});
 
 
@@ -217,6 +230,8 @@ $(document).ready(function() {
         parentSelector: null
     };
     $(".fixme").stickyPanel(stickyPanelSettings);
+
+
 
 
 });
