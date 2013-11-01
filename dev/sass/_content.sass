@@ -99,7 +99,9 @@
 			vertical-align: middle
 			display: inline-block
 			margin-left: 12px 
-	@each $s in text, photo, video
+	@each $s in text, photo, video, telegram, sadtelegram
 		.hentry__#{$s}
 			+s(#{$s})
-	
+	&.hentry_telegram
+		.hentry__assets
+			text-align: right
