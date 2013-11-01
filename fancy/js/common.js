@@ -231,7 +231,18 @@ $(document).ready(function() {
     };
     $(".fixme").stickyPanel(stickyPanelSettings);
 
-
+    //focusing on material
+	$('body').on('mouseenter', '.read', function(){
+		if($('body').hasClass('is-wide')){
+			$('body').addClass('is-focusedonread');
+		}
+	});
+	$('body').on('mouseleave', '.read', function(){
+		if($('body').hasClass('is-wide')){
+			$('body').removeClass('is-focusedonread');
+		}
+	});
+    
 
 
 });
