@@ -1248,6 +1248,8 @@ body {
     height: 22px; }
   .hentry.hentry_telegram .hentry__assets {
     text-align: right; }
+  .hentry.hentry_doc .hentry__assets {
+    width: 76px; }
 
 .dateblock {
   float: right;
@@ -1324,6 +1326,9 @@ body {
       .rubr .rubr__list a.is-active, .rubr .rubr__list a:hover {
         color: #3559c5; }
 
+.docsearch__wrap {
+  background: #fcfcfd; }
+
 .docsearch {
   padding: 25px 0;
   margin-right: -20px;
@@ -1335,30 +1340,29 @@ body {
     float: left;
     width: 330px;
     margin-right: 20px;
-    margin-bottom: 10px; }
+    margin-bottom: 14px; }
     .docsearch .docsearch__field.docsearch__fieldlong {
       width: 680px; }
   .docsearch label {
     display: block;
     font-size: 15px;
-    padding-bottom: 4px;
+    padding-bottom: 6px;
     color: #343646; }
   .docsearch input {
     background: #f5f5f6;
     border-radius: 3px;
-    border: 1px solid #ececee;
     display: block;
     width: 100%;
     -webkit-box-sizing: border-box;
     -moz-box-sizing: border-box;
     box-sizing: border-box;
-    border-style: none;
+    border: 1px solid #ececee;
     padding: 10px;
     font-family: "glite", arial, sans-serif;
     font-size: 15px; }
   .docsearch .docsearch__submit {
     position: absolute;
-    bottom: 35px;
+    bottom: 40px;
     right: 20px; }
   .docsearch .select {
     position: relative; }
