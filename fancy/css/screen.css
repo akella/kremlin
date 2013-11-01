@@ -80,12 +80,23 @@
       margin-bottom: 0;
       left: 0; } }
 
-.is-wide.is-reading .read {
+.is-wide.is-reading .read__wrap {
   opacity: 0.5; }
-.is-wide.is-reading.is-focusedonread .content, .is-wide.is-reading.is-focusedonread .topline, .is-wide.is-reading.is-focusedonread .footer {
-  opacity: 0.5; }
-.is-wide.is-reading.is-focusedonread .read {
-  opacity: 1; }
+.is-wide.is-reading .overlayforeverything {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: black;
+  z-index: -1;
+  opacity: 0; }
+.is-wide.is-reading.is-focusedonread .overlayforeverything {
+  z-index: 9000;
+  opacity: 0.3; }
+.is-wide.is-reading.is-focusedonread .read__wrap {
+  opacity: 1;
+  z-index: 10000; }
 
 @font-face {
   font-family: "franklingothicdemicmpcregular";
