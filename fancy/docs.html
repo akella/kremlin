@@ -81,48 +81,43 @@
 	<!-- BEGIN content -->
 	<div class="content content_top content_subnav">
 		<div class="content__in">
-			<ul class="subnav">
-				<li><a href="#" class="is-active">Деятельность Президента</a></li>
-				<li><a href="#">Администрация Президента</a></li>
-				<li><a href="#">Комиссии и Советы</a></li>
+			<div class="dateblock">Сентябрь 2013 года</div>
+			<ul class="subnav subnav_sub">
+				<li><a href="#" class="is-active">Все материалы</a></li>
+				<li><a href="#">Бюджетные послания</a></li>
+				<li><a href="#">Конституция России</a></li>
 			</ul>
 		</div>
-		<div class="content__sep"></div>
+		<div class="content__sep content__sepshadow"></div>
 		<div class="fixme">
-			<div class="content__in " >
-				<div class="dateblock">Сентябрь 2013 года</div>
-				<ul class="subnav subnav_sub"> 
-					<li><a href="#">Новости</a></li>
-					<li><a href="#">Поездки</a></li>
-					<li><a href="#" class='is-active'>Стенограммы</a></li>
-					<li><a href="#">Телеграммы</a></li>
-				</ul>
-			</div>
-			<div class="content__sep content__sepshadow"></div>
-			<!-- begin rubr -->
-			<div class="rubr">
-				<div class="content__in">
-					<h3 class="rubr__head">Рубрикация материалов</h3>
-				</div>
-				<div class="content__sep"></div>
-				<div class="content__in content__flexible">
-					<div class="rubr__list">
-						<ul>
-							<li><a href="#" class="is-active">Все материалы</a></li>
-							<li><a href="#">Послания Федеральному Собранию</a></li>
-							<li><a href="#">Заявления по важнейшим вопросам</a></li>
-							<li><a href="#">Совещания и заседания</a></li>
-						</ul>
-						<ul>
-							<li><a href="#">Речи и обращения</a></li>
-							<li><a href="#">Встречи с представителями сообществ</a></li>
-							<li><a href="#">Интервью и пресс-конференции</a></li>
-							<li><a href="#">Статьи</a></li>
-						</ul>
+			<div class="content__in content__flexible" >
+				<!-- BEGIN docsearch -->
+				<div class="docsearch">
+					<div class="docsearch__field">
+						<label for="">Название документа</label>
+						<input type="text" name="" id="">
+					</div>
+					<div class="docsearch__field">
+						<label for="">или его номер</label>
+						<input type="text" name="" id="">
+					</div>
+					<div class="docsearch__field docsearch__fieldlong">
+						<label for="">Текст в документе</label>
+						<input type="text" name="" id="">
+					</div>
+					<div class="docsearch__field">
+						<label for="">Вид документа</label>
+						<div class="select">
+							<select name="" id=""><option value="">What</option></select>
+							<input type="text" name="" id="">
+						</div>
+					</div>
+					<div class="docsearch__submit">
+						<div class="submit">Найти документы</div>
 					</div>
 				</div>
+				<!-- END docsearch -->
 			</div>
-			<!-- end rubr -->
 		</div>
 	</div>
 	<!-- END content -->
@@ -136,19 +131,18 @@
 					<a href="#">4 сентября 2013 года</a>
 				</h2>
 				<!-- BEGIN  hentry-->
-				<div class="hentry hentry_event">
+				<div class="hentry hentry_doc">
 					<h2  class="hentry__title"><a href="#">Владимир Путин посетил Благовещенский район Амурской области,
 пострадавший от паводка</a></h2>
 					<div class="hentry__meta">7 января 2013 года, 09:00</div>
 					<ul class="hentry__assets">
 						<li><a href="#" class="hentry__text">Текст статьи</a></li>
-						<li><a href="#" class="hentry__photo">Фото</a></li>
-						<li><a href="#" class="hentry__video">Видео</a></li>
+						<li><a href="#" class="hentry__doc">документ</a></li>
 					</ul>
 				</div>
 				<!-- END hentry-->
 				<!-- BEGIN  hentry-->
-				<div class="hentry hentry_event">
+				<div class="hentry hentry_doc">
 					<h2  class="hentry__title"><a href="#">Поздравление православных христиан с Рождеством Христовым</a></h2>
 					<div class="hentry__meta">7 января 2013 года, 09:00</div>
 					<ul class="hentry__assets">
@@ -160,7 +154,7 @@
 					4 сентября 2013 года
 				</h2>
 				<!-- BEGIN  hentry-->
-				<div class="hentry hentry_event ">
+				<div class="hentry hentry_doc ">
 					<h2  class="hentry__title"><a href="#">Владимир Путин посетил Благовещенский район Амурской области,
 пострадавший от паводка</a></h2>
 					<div class="hentry__meta">7 января 2013 года, 09:00
@@ -171,7 +165,7 @@
 					</div>
 					<ul class="hentry__assets">
 						<li><a href="#" class="hentry__text">Текст статьи</a></li>
-						<li><a href="#" class="hentry__photo">Фото</a></li>
+						<li><a href="#" class="hentry__doc"></a></li>
 	
 					</ul>
 				</div>
@@ -180,13 +174,11 @@
 					<a href="#">4 сентября 2013 года</a>
 				</h2>
 				<!-- BEGIN  hentry-->
-				<div class="hentry hentry_event hentry_lastchild">
+				<div class="hentry hentry_doc">
 					<h2  class="hentry__title"><a href="#">Поздравление православных христиан с Рождеством Христовым</a></h2>
 					<div class="hentry__meta">7 января 2013 года, 09:00</div>
 					<ul class="hentry__assets">
 						<li><a href="#" class="hentry__text">Текст статьи</a></li>
-						<li><a href="#" class="hentry__video">Видео</a></li>
-	
 					</ul>
 				</div>
 				<!-- END hentry-->

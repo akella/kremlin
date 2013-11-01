@@ -75,7 +75,7 @@
 			right: 20px 
 			+s(hentryactive)
 			content: ' '
-	&.hentry_event
+	&.hentry_event, &.hentry_doc
 		position: relative
 		margin-bottom: 29px 
 		&:last-child,&.hentry_lastchild
@@ -99,7 +99,7 @@
 			vertical-align: middle
 			display: inline-block
 			margin-left: 12px 
-	@each $s in text, photo, video, telegram, sadtelegram
+	@each $s in text, photo, video, telegram, sadtelegram, doc
 		.hentry__#{$s}
 			+s(#{$s})
 	&.hentry_telegram

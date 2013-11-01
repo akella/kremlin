@@ -70,8 +70,59 @@
 			text-decoration: none
 			&.is-active,&:hover
 				color: #3559C5 
-
-
+.docsearch
+	padding: 25px 0
+	margin-right: -20px 
+	overflow: hidden
+	margin-left: -10px 
+	padding-left: 10px 
+	position: relative
+	.docsearch__field
+		float: left
+		width: 330px 
+		margin-right: 20px 
+		margin-bottom: 10px 
+		&.docsearch__fieldlong
+			width: 680px 
+	label
+		display: block
+		font-size: 15px 
+		padding-bottom: 4px 
+		color: #343646
+	input
+		background: #F5F5F6
+		border-radius: 3px
+		border: 1px solid #ECECEE 
+		display: block
+		width: 100%
+		+box-sizing(border-box)
+		border-style: none
+		padding: 10px 
+		+lite
+		font-size: 15px 
+	.docsearch__submit
+		position: absolute
+		bottom: 35px
+		right: 20px
+	.select
+		position: relative
+		&:before
+			content: ' '
+			position: absolute
+			top: 50%
+			margin-top: -4px 
+			right: 15px  
+			+s(select)
+		select
+			-webkit-appearance: none
+			position: absolute
+			left: 0 
+			top: 0
+			bottom: 0 
+			width: 100%
+			height: 100%
+			opacity: 0    
+			z-index: 10 
 .fixme
 	background: #fff
 	z-index: 200
