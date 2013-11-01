@@ -2,7 +2,7 @@
 	height: 400px 
 	background: #51515D 
 $sidenav: 240px
-.wrapsite__overlay
+.wrapsite__overlay,.wrapsite__overlayfixed
 	position: absolute
 	left: 0
 	right: 0
@@ -16,20 +16,20 @@ $sidenav: 240px
 	.is-withsidebar &
 		z-index: 300
 		opacity: 1
-// .wrapsite__overlayfixed
-// 	position: fixed
-// 	background: transparent 
-// 	left: 240px 
-// 	opacity: 0
-// 	+r(wide)
-// 		background: rgba(#000, .6)
-// 	.is-withsidebar &
-// 		left: 240px
-// 		opacity: 0
-// 		z-index: 30000
-// 	.is-reading &
-// 		background: rgba(#000, .6)
-// 		opacity: 1 
+.wrapsite__overlayfixed
+	position: fixed
+	background: transparent 
+	left: 240px 
+	opacity: 0
+	z-index: -1 
+	.is-withsidebar &
+		left: 240px
+		opacity: 0
+		z-index: 30000
+	.is-reading.is-withsidebar &
+		background: transparent
+		opacity: 1 
+		z-index: 30000
 		
 .sidenav
 	// 	position: fixed;
@@ -143,6 +143,8 @@ body
 		//margin-left: $sidenav; !!!
 		//overflow-x: hidden 
 		overflow: hidden
+		.read
+			opacity: .9 
 		.sidenav
 			//left: 0 
 		.topline__toggleaside
