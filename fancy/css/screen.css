@@ -54,7 +54,7 @@
         max-width: 760px; } }
 
 .read__overlay {
-  position: absolute;
+  position: fixed;
   top: 60px;
   left: 0;
   bottom: 0;

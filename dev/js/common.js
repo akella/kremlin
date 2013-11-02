@@ -23,6 +23,9 @@ $(document).ready(function() {
 		else{
 			$('.wrapsite').css('top', -($(window).scrollTop()));
 			$('body').addClass('is-reading');
+			// if($('.read__wrap').height()+60<$(window).height){
+			// 	$('.read__wrap').height($(window).height);
+			// }
 		}
 		$('.hentry').removeClass('is-active');
 		if($(this).hasClass("hentry")){
