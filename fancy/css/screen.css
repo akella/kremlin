@@ -5,11 +5,7 @@
 
 .content .content__in, .topline .topline__in, .footer .footer__in, .sites .sites__in, .promoted .promoted__in {
   width: 680px;
-  padding-left: 160px;
-  margin: 0 auto; }
-  @media only screen and (min-width: 1480px) {
-    .is-reading .content .content__in, .content .is-reading .content__in, .is-reading .topline .topline__in, .topline .is-reading .topline__in, .is-reading .footer .footer__in, .footer .is-reading .footer__in, .is-reading .sites .sites__in, .sites .is-reading .sites__in, .is-reading .promoted .promoted__in, .promoted .is-reading .promoted__in {
-      margin-left: 0; } }
+  padding-left: 160px; }
 
 @media only screen and (max-width: 1480px) {
   .is-reading .wrapsite {
@@ -54,7 +50,7 @@
         max-width: 760px; } }
 
 .read__overlay {
-  position: fixed;
+  position: absolute;
   top: 60px;
   left: 0;
   bottom: 0;

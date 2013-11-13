@@ -235,12 +235,12 @@ $(document).ready(function() {
     $(".fixme").stickyPanel(stickyPanelSettings);
 
     //focusing on material
-	$('body').on('mouseenter', '.read', function(){
+	$('body').on('mouseenter', '.read__wrap', function(){
 		if($('body').hasClass('is-wide')){
 			$('body').addClass('is-focusedonread');
 		}
 	});
-	$('body').on('mouseleave', '.read', function(){
+	$('body').on('mouseleave', '.read__wrap', function(){
 		if($('body').hasClass('is-wide')){
 			$('body').removeClass('is-focusedonread');
 		}
