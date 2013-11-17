@@ -128,7 +128,7 @@ $(document).ready(function() {
 		}
 		else{
 			newtop = 0;
-			newheight = 'auto';
+			newheight = $(window).height() - 80;
 		}
 		// set
 		readwrap.css("top",newtop);

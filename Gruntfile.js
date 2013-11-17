@@ -10,8 +10,7 @@ module.exports = function(grunt) {
 				options: {
 					silent: true,
 					filenamePrefix: 'partials/',
-					filenameSuffix: '.html',
-					banner: '<!-- I am a banner <% includes.files.dest %> -->'
+					filenameSuffix: '.html'
 				}
 			}
 		},
