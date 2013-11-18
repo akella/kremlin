@@ -16,11 +16,15 @@
 			+transition(all 1.3s ease-in-out)
 			&:hover
 				color: #245FC0
-				+transition(all 0.2s ease-in-out)
+				+transition(all 0.1s ease-in-out)
 	&.hentry_inactive
 		.hentry__title
 			a
 				color: #aaafb6
+				+transition(all 1.3s ease-in-out)
+				&:hover
+					color: #245FC0
+					+transition(all 0.1s ease-in-out)
 	.hentry__meta
 		color: #aaafb6
 		font-size: 11px
@@ -42,6 +46,13 @@
 		padding: 20px 28px 28px 28px
 		border-bottom: none
 		margin-bottom: 45px
+		+transition(all .3s linear)
+		&:hover
+			background: #fcfcfc
+			+box-shadow(0px 6px 32px 4px rgba(34,30,74,0.15))
+			.hentry__title
+				a
+					color: #245FC0 
 		.hentry__title
 			font-size: 24px
 			min-height: 127px

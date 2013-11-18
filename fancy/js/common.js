@@ -12,6 +12,9 @@ $(document).ready(function() {
 	//opening read in narrow
 	$('.hentry,.read__overlay').click(function (e) {
 		b = $('body');
+		if($(this).hasClass('hentry')){
+			$(this).addClass('is-active');
+		}
 		
 		if(b.hasClass('is-reading')){
 			fromtop = $('.wrapsite').css('top').substring(1);
