@@ -11,22 +11,29 @@ $sidenav: 240px
 	z-index: -2
 	opacity: 0
 	cursor: pointer
-	//+transition(all .3s ease-in-out)
+	+transition(all .3s ease-in-out)
 	background: rgba(#000, .6)
-	opacity: 0 !important 
+	//opacity: 0 !important 
 	.is-withsidebar &
 		z-index: 300
 		opacity: 1
+	
+.wrapsite__overlay
+	display: none
+	.is-wide &
+		display: block
 .wrapsite__overlayfixed
-	position: fixed
-	background: transparent 
-	left: 240px 
+	//position: fixed
+	background: rgba(218, 220, 224, .8)
+	left: 240px
 	opacity: 0
 	z-index: -1 
+	+transition(all 0s ease-in-out 0)
 	.is-withsidebar &
 		left: 240px
-		opacity: 0
+		opacity: 1
 		z-index: 30000
+		+transition(all .3s ease-in-out .3s)
 	.is-reading.is-withsidebar &
 		background: transparent
 		opacity: 1 

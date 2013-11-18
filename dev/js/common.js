@@ -23,10 +23,11 @@ $(document).ready(function() {
 		else{
 			$('.wrapsite').css('top', -($(window).scrollTop()));
 			$('body').addClass('is-reading');
-			console.log($('.read__wrap').height()+'===='+$(window).height());
+			//console.log($('.read__wrap').height()+'===='+$(window).height());
 			if($('.read__wrap').height()+60<$(window).height()){
-				console.log($('.read__wrap').height()+'===='+$(window).height());
-				$('.read__wrap').height($(window).height());
+				//console.log($('.read__wrap').height()+'===='+$(window).height());
+				//$('.read__wrap').height($(window).height());
+				$('.read__wrap').css($(window).height());
 
 			}
 		}
@@ -37,10 +38,25 @@ $(document).ready(function() {
 		return false;
 
 	});
+	// ===============================
+	// ================promoted module
+	// ===============================
+	promotedrun = 0;
 	$('.promoted__toggle').click(function (e) {
-		$('.promoted').toggleClass('is-collapsed').afterTransition(function(){
-			setpopup();
-		});
+		p = $('.promoted');
+		pe = $('.promoted__entry');
+		if(!promotedrun){
+			promotedrun = 1;
+
+			pe.fadeOut(200, function(){
+				p.toggleClass('is-collapsed').afterTransition(function(){
+					setpopup();
+					promotedrun = 0;
+					pe.fadeIn(200);
+				});
+			})
+
+		}
 	});
 	//sites toggling
 	// @todo use data-min and set data-max on load, to switch between heights and use
@@ -132,7 +148,8 @@ $(document).ready(function() {
 		}
 		// set
 		readwrap.css("top",newtop);
-		readwrap.css("height",newheight);
+		//readwrap.css("height",newheight);
+		readwrap.css("min-height", newheight);
 	}
 	// prevent scroll of a page
 	// $( '.scrollable' ).

@@ -1,5 +1,10 @@
 .wrapsite
 	padding-top: 60px
++keyframes(fade)
+	from
+		opacity: 1 
+	to
+		opacity: .4 
 .topline
 	// background: #051941
 	+background-image(linear-gradient(#181D3E, #15216E))
@@ -11,6 +16,11 @@
 	z-index: 220
 	width: 100% 
 	//+transition(all .3s ease-in-out)
+	&:hover
+		.topline__toggleaside
+			i
+				opacity: 1 
+				+animation(fade 3s linear 1 forwards)
 	.topline__toggleaside
 		position: fixed
 		cursor: pointer
@@ -24,9 +34,13 @@
 			position: absolute
 			top: 21px
 			left: 24px
+			opacity: .4
 		&:hover
 			i
 				+s(togglesidebar)
+				opacity: 1 
+				+animation(none)
+	
 	.topline__in
 		@extend %in
 		position: relative
