@@ -1856,7 +1856,7 @@ body {
   font-family: "gcondbold", arial, sans-serif;
   margin-left: 1px;
   text-align: center;
-  line-height: 26px;
+  line-height: 28px;
   color: #666666;
   border-radius: 3px; }
 
@@ -1878,8 +1878,8 @@ a.caldisabled {
   cursor: default; }
 
 #calcurrent {
-  background-color: #498ce2;
-  color: white; }
+  background-color: #c9f8a4;
+  color: #56b18f; }
 
 #caltoday {
   background-color: #333333;
