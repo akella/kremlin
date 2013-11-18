@@ -1353,8 +1353,18 @@ body {
   -moz-transition: all 0.2s linear;
   -o-transition: all 0.2s linear;
   transition: all 0.2s linear; }
+  .admincomis__block .cols {
+    display: none; }
   .admincomis__block.is-inactive {
     opacity: 0.5; }
+  .admincomis__block.is-active .cols {
+    display: block; }
+  .admincomis__block + .admincomis__block h2 {
+    opacity: 0.5;
+    margin-bottom: 0;
+    margin-top: 20px; }
+    .admincomis__block + .admincomis__block h2:hover {
+      opacity: 1; }
   .admincomis__block h2 a:hover {
     color: #245fc0; }
 

@@ -271,15 +271,23 @@ $(document).ready(function() {
 	// admin comis
 	// $(selector1).swapWith(selector2);
 	$('.admincomis__block h2').click(function(event) {
-	
-		$('.admincomis__block[data-block=admin]').swapWith('.admincomis__block[data-block=comis]');
+		if($(this).parent().hasClass('is-active')){
+
+		}
+		else{
+			$('.admincomis__block').removeClass('is-inactive').toggleClass('is-active');
+			$('.admincomis__block[data-block=admin]').swapWith('.admincomis__block[data-block=comis]');
+			
+			
+		}
+		
 		return false;
 	});
 	// fading on hover
 	$('.admincomis__block h2').hoverIntent(function(){
-		$(this).parent().prev().addClass('is-inactive');
+		$('.admincomis__block.is-active').addClass('is-inactive');
 	},function(){
-		$(this).parent().prev().removeClass('is-inactive');
+		$('.admincomis__block.is-active').removeClass('is-inactive');
 	});
 
 });
