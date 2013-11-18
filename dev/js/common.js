@@ -74,9 +74,22 @@ $(document).ready(function() {
 	});
 
 	$('.sites').click(function (e) {
-		$('.sites').find('ul').height($('.sites').data('maxheight')).afterTransition(function(){
-			setpopup();
-		});
+		
+		if($(this).hasClass('is-active')){
+			$(this).removeClass('is-active');	
+			$('.sites').find('ul').height($('.sites').data('minheight')).afterTransition(function(){
+				setpopup();
+			});
+		}
+		else{
+			$(this).addClass('is-active');	
+			$('.sites').find('ul').height($('.sites').data('maxheight')).afterTransition(function(){
+				setpopup();
+			});
+		}
+		// $('.sites').find('ul').height($('.sites').data('maxheight')).afterTransition(function(){
+		// 	setpopup();
+		// });
 	});
 
 	// ===============================================================
@@ -277,7 +290,7 @@ $(document).ready(function() {
 		else{
 			$('.admincomis__block').removeClass('is-inactive').toggleClass('is-active');
 			$('.admincomis__block[data-block=admin]').swapWith('.admincomis__block[data-block=comis]');
-			
+
 			
 		}
 		

@@ -2,6 +2,7 @@
 	background: #DADCE0
 	padding-top: 30px
 	+transition(all .3s linear)
+	position: relative
 	ul
 		list-style: none
 		margin-right: -60px
@@ -15,6 +16,24 @@
 		cursor: pointer
 		width: 100%
 		z-index: 10
+	.sites__toggleicon
+		position: absolute
+		right: 20px
+		bottom: 20px
+		cursor: pointer
+		width: 18px + 40px
+		height: 11px   + 40px
+		i
+			position: absolute
+			margin-left: -9px 
+			margin-top: -6px 
+			top: 50% 
+			left: 50% 
+			+s(promotedarrow)
+			+rotate(180)
+	&.is-active
+		.sites__toggleicon i
+			+rotate(0)
 	.sites__in
 		@extend %in
 		//height: 320px
