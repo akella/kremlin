@@ -303,6 +303,14 @@ $(document).ready(function() {
 		$('.admincomis__block.is-active').removeClass('is-inactive');
 	});
 
+	//datepicker
+	 $(".dateblock").dateinput({
+
+	});
+
+
+
+
 
 
 // debug debug

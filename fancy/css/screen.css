@@ -1786,3 +1786,11 @@ body {
     font-size: 22px;
     font-family: "glite", arial, sans-serif;
     color: #343646; }
+
+#calroot {
+  background: #fcfcfd;
+  -webkit-box-shadow: 0 8px 36px rgba(24, 46, 132, 0.15);
+  -moz-box-shadow: 0 8px 36px rgba(24, 46, 132, 0.15);
+  box-shadow: 0 8px 36px rgba(24, 46, 132, 0.15);
+  border-radius: 4px;
+  padding: 20px 37px; }
