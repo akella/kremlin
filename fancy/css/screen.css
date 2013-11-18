@@ -556,21 +556,22 @@ a img, fieldset {
   background: rgba(218, 220, 224, 0.8);
   left: 240px;
   opacity: 0;
+  height: 100%;
   z-index: -1;
-  -webkit-transition: all 0s ease-in-out;
+  -webkit-transition: opacity 0s ease-in-out;
   -webkit-transition-delay: 0;
-  -moz-transition: all 0s ease-in-out 0;
-  -o-transition: all 0s ease-in-out 0;
-  transition: all 0s ease-in-out 0; }
+  -moz-transition: opacity 0s ease-in-out 0;
+  -o-transition: opacity 0s ease-in-out 0;
+  transition: opacity 0s ease-in-out 0; }
   .is-withsidebar .wrapsite__overlayfixed {
     left: 240px;
     opacity: 1;
     z-index: 30000;
-    -webkit-transition: all 0.3s ease-in-out;
+    -webkit-transition: opacity 0.3s ease-in-out;
     -webkit-transition-delay: 0.3s;
-    -moz-transition: all 0.3s ease-in-out 0.3s;
-    -o-transition: all 0.3s ease-in-out 0.3s;
-    transition: all 0.3s ease-in-out 0.3s; }
+    -moz-transition: opacity 0.3s ease-in-out 0.3s;
+    -o-transition: opacity 0.3s ease-in-out 0.3s;
+    transition: opacity 0.3s ease-in-out 0.3s; }
   .is-reading.is-withsidebar .wrapsite__overlayfixed {
     background: transparent;
     opacity: 1;

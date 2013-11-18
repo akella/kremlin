@@ -185,7 +185,7 @@ $(document).ready(function() {
 	// ==================================================================
 	$('.topline__toggleaside,.sidenav__toggle, .wrapsite__overlayfixed,.wrapsite__overlay').click(function (e) {
 		
-		$('.sidenav').css({'top': $(window).scrollTop()});
+		$('.sidenav,.wrapsite__overlayfixed').css({'top': $(window).scrollTop()});
 		$('body').toggleClass('is-withsidebar');
 	});
 	//sidebar fixed
