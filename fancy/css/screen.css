@@ -45,7 +45,7 @@
   .is-reading .read__wrap {
     opacity: 1;
     z-index: 200;
-    position: relative;
+    position: absolute;
     margin-top: 0; }
     @media only screen and (min-width: 1480px) {
       .is-reading .read__wrap {
@@ -702,7 +702,7 @@ body {
       opacity: 0.9; }
     body.is-withsidebar .topline__toggleaside {
       display: none; }
-    body.is-withsidebar .wrapsite, body.is-withsidebar .topline, body.is-withsidebar .read__wrap {
+    body.is-withsidebar .wrapsite, body.is-withsidebar .topline {
       -webkit-transition: left 0.3s ease-in-out, -webkit-transform 0.3s ease-in-out;
       -moz-transition: left 0.3s ease-in-out, -moz-transform 0.3s ease-in-out;
       -o-transition: left 0.3s ease-in-out, -o-transform 0.3s ease-in-out;
