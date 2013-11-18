@@ -15,7 +15,11 @@
 	vertical-align:  middle
 	line-height:  1 
 	position:  relative
-	top:  2px 
+	top:  1px 
+	width: 120px 
+	text-align: center
+	&:first-letter
+		text-transform: uppercase
 #calnext
 	+s(calnext)
 	display:  inline-block
@@ -49,6 +53,7 @@
 .calweek 
 	clear: left
 	height: 22px
+	margin-bottom: 10px 
 
 //* single day */
 .calweek a

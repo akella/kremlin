@@ -302,10 +302,22 @@ $(document).ready(function() {
 	},function(){
 		$('.admincomis__block.is-active').removeClass('is-inactive');
 	});
-
+	// the french localization
+	$.tools.dateinput.localize("ru",  {
+	   months:        'январь,февраль,март,апрель,май,июнь,июль,август,' +
+	                  'сентябрь,октябрь,ноябрь,декабрь',
+	   shortMonths:   'янв,фев;мар,апр,май,июн,июл,' +
+	                  'авг,сеп,ноя,дек',
+	   days:          'понедельник,вторник,среда,четверг,пятница,суббота,воскресенье',
+	   shortDays:     'Пн,Вт,Ср,Чт,Пт,Сб,Вс'
+	});
 	//datepicker
 	 $(".dateblock").dateinput({
-
+	 	lang: 'ru',
+	 	change: function() {
+			var isoDate = this.getValue('mmmm yyyy');
+			$(".dateblock").text(isoDate);
+		}
 	});
 
 
@@ -313,10 +325,10 @@ $(document).ready(function() {
 
 
 
-// debug debug
-var filename= location.pathname.split('\\').pop().split('/').pop();
-//console.log(leafname);
-$('.topline__nav a[href$="'+filename+'"]').addClass('is-active');
+	// debug debug
+	var filename= location.pathname.split('\\').pop().split('/').pop();
+	//console.log(leafname);
+	$('.topline__nav a[href$="'+filename+'"]').addClass('is-active');
 });
 
 jQuery.fn.swapWith = function(to) {
