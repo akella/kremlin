@@ -303,6 +303,12 @@ $(document).ready(function() {
 		$('.admincomis__block.is-active').removeClass('is-inactive');
 	});
 
+
+
+// debug debug
+var filename= location.pathname.split('\\').pop().split('/').pop();
+//console.log(leafname);
+$('.topline__nav a[href$="'+filename+'"]').addClass('is-active');
 });
 
 jQuery.fn.swapWith = function(to) {
