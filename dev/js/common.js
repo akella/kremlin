@@ -285,15 +285,12 @@ $(document).ready(function() {
 	// $(selector1).swapWith(selector2);
 	$('.admincomis__block h2').click(function(event) {
 		if($(this).parent().hasClass('is-active')){
-
+			// something
 		}
 		else{
 			$('.admincomis__block').removeClass('is-inactive').toggleClass('is-active');
 			$('.admincomis__block[data-block=admin]').swapWith('.admincomis__block[data-block=comis]');
-
-			
 		}
-		
 		return false;
 	});
 	// fading on hover
@@ -302,7 +299,13 @@ $(document).ready(function() {
 	},function(){
 		$('.admincomis__block.is-active').removeClass('is-inactive');
 	});
-	// the french localization
+
+
+
+	// =============================
+	// =============================
+	// datepicker
+	// docs here http://jquerytools.org/documentation/dateinput/
 	$.tools.dateinput.localize("ru",  {
 	   months:        'январь,февраль,март,апрель,май,июнь,июль,август,' +
 	                  'сентябрь,октябрь,ноябрь,декабрь',
@@ -311,10 +314,9 @@ $(document).ready(function() {
 	   days:          'понедельник,вторник,среда,четверг,пятница,суббота,воскресенье',
 	   shortDays:     'Пн,Вт,Ср,Чт,Пт,Сб,Вс'
 	});
-	//datepicker
-	 $(".dateblock").dateinput({
-	 	lang: 'ru',
-	 	change: function() {
+	$(".dateblock").dateinput({
+		lang: 'ru',
+		change: function() {
 			var isoDate = this.getValue('mmmm yyyy');
 			$(".dateblock").text(isoDate);
 		}
@@ -324,13 +326,16 @@ $(document).ready(function() {
 
 
 
-
+	// =============================
+	// =============================
 	// debug debug
 	var filename= location.pathname.split('\\').pop().split('/').pop();
 	//console.log(leafname);
 	$('.topline__nav a[href$="'+filename+'"]').addClass('is-active');
 });
-
+// =============================
+// =============================
+// simpl plugin to switch elements
 jQuery.fn.swapWith = function(to) {
     return this.each(function() {
         var copy_to = $(to).clone(true);
