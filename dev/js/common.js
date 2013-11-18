@@ -268,7 +268,27 @@ $(document).ready(function() {
 			$('body').removeClass('is-focusedonread');
 		}
 	});
-    
-
+	// admin comis
+	// $(selector1).swapWith(selector2);
+	$('.admincomis__block h2').click(function(event) {
+	
+		$('.admincomis__block[data-block=admin]').swapWith('.admincomis__block[data-block=comis]');
+		return false;
+	});
+	// fading on hover
+	$('.admincomis__block h2').hoverIntent(function(){
+		$(this).parent().prev().addClass('is-inactive');
+	},function(){
+		$(this).parent().prev().removeClass('is-inactive');
+	});
 
 });
+
+jQuery.fn.swapWith = function(to) {
+    return this.each(function() {
+        var copy_to = $(to).clone(true);
+        var copy_from = $(this).clone(true);
+        $(to).replaceWith(copy_from);
+        $(this).replaceWith(copy_to);
+    });
+};

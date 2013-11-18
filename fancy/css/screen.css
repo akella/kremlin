@@ -1348,6 +1348,16 @@ body {
   .hentry.hentry_doc .hentry__assets {
     width: 76px; }
 
+.admincomis__block {
+  -webkit-transition: all 0.2s linear;
+  -moz-transition: all 0.2s linear;
+  -o-transition: all 0.2s linear;
+  transition: all 0.2s linear; }
+  .admincomis__block.is-inactive {
+    opacity: 0.5; }
+  .admincomis__block h2 a:hover {
+    color: #245fc0; }
+
 .dateblock {
   float: right;
   font-size: 11px;
