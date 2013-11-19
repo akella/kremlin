@@ -19,3 +19,11 @@ $icons: sprite-map("icons/*.png", $spacing: 10px);
 @mixin si($sprite, $map: $icons){
 	background: sprite($map, $sprite) no-repeat;
 }
+
+@mixin svg($name, $width, $height){
+	background: url('../img/svg/#{$name}.svg') no-repeat 0 0;
+	@include background-size(#{$width}px #{$height}px);
+	width: #{$width}px;
+	height: #{$height}px;
+	display: inline-block;
+}
