@@ -1,5 +1,24 @@
 $(document).ready(function() {
 	b1 = $('.wrapfix');
+
+	$(document).on("sidenav", function(e){
+		if(e.message=='open'){
+			curstate = b1.data('state');
+			if(curstate == 1 || curstate == 3){
+				b1.css({"top": b1.offset().top,'position': 'absolute'});
+			}
+		}
+		else{
+			
+			if(curstate == 1 || curstate == 3){
+				b1.css({"top": "",'position': 'fixed'});
+			}
+		}
+	});
+
+
+
+	
 	//init
 	b1.addClass('state2').css({'top': '60px'}).data('state',2);
 	//states

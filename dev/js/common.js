@@ -193,9 +193,20 @@ $(document).ready(function() {
 	// ===========================SIDENAV================================
 	// ==================================================================
 	$('.topline__toggleaside,.sidenav__toggle, .wrapsite__overlayfixed,.wrapsite__overlay').click(function (e) {
-		
+		if($('body').hasClass('is-withsidebar')){
+			msg = 'close';
+		}
+		else{
+			msg = 'open'
+		}
+		$.event.trigger({
+			type: "sidenav",
+			message: msg
+		});
 		$('.sidenav,.wrapsite__overlayfixed').css({'top': $(window).scrollTop()});
 		$('body').toggleClass('is-withsidebar');
+
+		
 	});
 	//sidebar fixed
 	// (function () {
