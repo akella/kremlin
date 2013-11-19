@@ -18,23 +18,28 @@ include "topline"
 	include "aside"
 	<!-- BEGIN content -->
 	<div class="content content_top content_subnav">
-	<div class="fixme">
-		<div class="content__in">
-			<ul class="subnav">
-				<li><a href="#" >Деятельность Президента</a></li>
-				<li><a href="#" class="is-active">Администрация Президента</a></li>
-				<li><a href="#">Комиссии и Советы</a></li>
-			</ul>
-		</div>
-		<div class="content__sep"></div>
-		
-			<div class="content__in">
-				<ul class="subnav subnav_sub"> 
-					<li><a href="#">Новости</a></li>
-					<li><a href="#" class='is-active'>Сведения об Администрации Президента</a></li>
-				</ul>
+	<div class="wrapfix__holder">
+			<div class="wrapfix">
+				<div class="content__in">
+					<ul class="subnav">
+						<li><a href="#" >Деятельность Президента</a></li>
+						<li><a href="#" class="is-active">Администрация Президента</a></li>
+						<li><a href="#">Комиссии и Советы</a></li>
+					</ul>
+				</div>
+				<div class="content__sep"></div>
+				
+					<div class="content__in">
+						<ul class="subnav subnav_sub"> 
+							<li><a href="#">Новости</a></li>
+							<li><a href="#" class='is-active'>Сведения об Администрации Президента</a></li>
+						</ul>
+					</div>
+				</div>
 			</div>
+			<!-- end wrapfix -->
 		</div>
+		<!-- end wrapfix holder -->
 	</div>
 	<!-- END content -->
 
@@ -56,6 +61,7 @@ include "topline"
 				<div class="slider__prev"><i></i></div>
 				<div class="slider__slides cycle-slideshow"
 					data-cycle-fx="scrollHorz"
+					data-cycle-timeout="0"
 					data-cycle-pause-on-hover="true"
 					data-cycle-slides="> .slider__slide"
 					data-cycle-prev=".slider__prev"
