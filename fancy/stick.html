@@ -6,45 +6,33 @@
 	<title>Template</title>
 	<meta name="viewport" content="width=device-width"/>
 	<link rel="stylesheet" media="screen" href="css/screen.css" >
-	<script src="js/jquery.js"></script>
-
-	<script src="js/transition-events.js"></script>
-	<script src="js/jquery.cycle.js"></script>
-	<script src="js/sticky.js"></script>
-	<script src="js/hoverintent.js"></script>
-	<script src="js/datepicker.js"></script>
-
-	<script src="js/common.js"></script>
-	<script src="js/submenuscroll.js"></script>
+	<script type="text/javascript" src="js/jquery.js"></script>
+	<script type="text/javascript" src="js/submenuscroll.js"></script>
+	<style type="text/css">
+	body{
+		padding-top: 60px;
+	}
+	.b1{height: 60px;background: red;}
+	.b2{height: 60px;background: green;}
+	.wrapfix{
+		width: 100%;
+		top: 0;
+		right: 0;
+	}
+	.state1{
+		position: fixed;
+		top: 0;
+	}
+	.state2{
+		position: absolute;
+	}
+	.state3{
+		position: fixed;
+		top: 60px;
+	}
+	</style>
 </head>
 <body>
-<!-- Begin sidenav  -->
-<aside class="sidenav">
-	<div class="sidenav__content">
-		<ul class="sidenav__pre">
-			<li><a href="#" class="sidenav__special"><i></i>Версия для людей с ограниченными возможностями</a></li>
-			<li><a href="#">English</a></li>
-		</ul>
-		<h3>Структура информационного портала Президента России</h3>
-		<ul class="sidenav__main">
-			<li><a href='#'>Президент России <span>Текущий ресурс</span></a></li>
-			<li><a href='#'>Конституция России</a></li>
-			<li><a href='#'>Государственная символика</a></li>
-			<li><a href='#'>Прием обращений граждан России</a></li>
-			<li><a href='#'>Президент России — <br>гражданам школьного <br>возраста</a></li>
-			<li><a href='#'>Виртуальный тур по Кремлю</a></li>
-			<li><a href='#'>Владимир Путин — личный <br>сайт</a></li>
-		</ul>
-		<ul class="sidenav__other">
-			<li><a href="#">Канал на Youtube</a></li>
-			<li><a href="#">Официальный Твиттер</a></li>
-		</ul>
-	</div>
-	<div class="sidenav__top">
-		<div class="sidenav__toggle"><i></i></div>
-	</div>
-</aside>
-<!-- end sidenav -->
 <!-- begin topline -->
 <div class="topline">
 	<div class="topline__in">
@@ -77,7 +65,14 @@
 	</div>
 </div>
 <!-- end topline -->
-
+<div class="wrapfix">
+	<div class="b1">
+		b1
+	</div>
+	<div class="b2">
+		b2
+	</div>
+</div>
 <!-- begin wrapsite -->
 <div class="wrapsite">
 <div class="wrapsite__overlay"></div>
@@ -109,269 +104,32 @@
 		</div>
 	</aside>
 	<!-- end sidenav -->
-	
-	<!-- BEGIN content -->
-	<div class="content content_top content_subnav">
-		<div class="content__in">
-			<ul class="subnav">
-				<li><a href="#" class="is-active">Видеозаписи</a></li>
-				<li><a href="#">Фотографии</a></li>
-				<li><a href="#">Аудиозаписи</a></li>
-			</ul>
-		</div>
-		<div class="content__sep"></div>
-		<div class="content__in">
-			<ul class="subnav subnav_sub"> 
-				<li><a href="#" class='is-active'>Все материалы</a></li>
-				<li><a href="#">Встречи и совещания</a></li>
-				<li><a href="#">Выступления</a></li>
-				<li><a href="#">Итервью и пресс-конференции</a></li>
-			</ul>
-
-		</div>
+	<div style="line-height: 2.4;font-size: 30px;padding:40px">
+		Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
+		tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
+		quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
+		consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse
+		cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non
+		proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+		Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
+		tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
+		quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
+		consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse
+		cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non
+		proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+		Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
+		tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
+		quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
+		consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse
+		cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non
+		proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+		Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
+		tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
+		quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
+		consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse
+		cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non
+		proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
 	</div>
-	<!-- END content -->
-
-	<!-- BEGIN  content-->
-	<div class="content content_main">
-		<div class="content__in">
-			<!-- BEGIN  media-->
-			<div class="media media_wide">
-				<div class="media__top">
-					<h2  class="media__title"><a href="#">Владимир Путин принял участие в церемонии открытия Всемирной студенческой Универсиады в Казани</a></h2>
-					<div class="media__meta">
-						<a href="#" class="media__type">Интервью</a>
-						<div class="media__published">4 сентября 2013</div>
-						<div class="media__length">Длительность 1 час 40 минут</div>
-					</div>
-				</div>
-				<div class="media__pic">
-					<img src="img/2.jpg" height="420" alt="">
-				
-				</div>
-			</div>
-			<!-- END media-->
-
-			<!-- begin cols -->
-			<div class="cols">
-			<!-- BEGIN  col-->
-			<div class="col">
-				<!-- BEGIN  media-->
-				<div class="media">
-					<div class="media__top">
-						<h2  class="media__title"><a href="#">Владимир Путин принял участие в церемонии открытия Всемирной студенческой Универсиады в Казани</a></h2>
-						<div class="media__meta">
-							<a href="#" class="media__type">Интервью</a>
-							<div class="media__published">4 сентября 2013</div>
-							
-						</div>
-					</div>
-					<div class="media__pic">
-						<img src="img/media.jpg"  alt="">
-						<div class="media__videolink">
-							<div class="media__quality">
-								<span class="is-hd">hd</span>
-							</div>
-						</div>
-					</div>
-				</div>
-				<!-- END media-->
-
-			</div>
-			<!-- END col-->
-			
-			<!-- BEGIN  col-->
-			<div class="col">
-				<!-- BEGIN  media-->
-				<div class="media">
-					<div class="media__top">
-						<h2  class="media__title"><a href="#">Владимир Путин принял участие в церемонии открытия Всемирной студенческой Универсиады в Казани</a></h2>
-						<div class="media__meta">
-							<a href="#" class="media__type">Интервью</a>
-							
-							<div class="media__length">Длительность 1 час 40 минут</div>
-						</div>
-					</div>
-					<div class="media__pic">
-						<img src="img/media.jpg"  alt="">
-						<div class="media__videolink">
-							<div class="media__quality">
-								<span>sd</span>
-							</div>
-						</div>
-					</div>
-				</div>
-				<!-- END media-->
-
-			</div>
-			<!-- END col-->
-			</div>
-			<!-- end cols -->
-
-			<!-- BEGIN  media-->
-			<div class="media media_wide">
-				<div class="media__top">
-					<h2  class="media__title"><a href="#">Владимир Путин на Универсиаде</a></h2>
-					<div class="media__meta">
-						<a href="#" class="media__type">Интервью</a>
-						<div class="media__published">4 сентября 2013</div>
-						<div class="media__length">Длительность 1 час 40 минут</div>
-					</div>
-				</div>
-				<div class="media__pic">
-					<img src="img/2.jpg" height="420" alt="">
-					
-				</div>
-			</div>
-			<!-- END media-->
-
-			<!-- begin cols -->
-			<div class="cols">
-			<!-- BEGIN  col-->
-			<div class="col">
-				<!-- BEGIN  media-->
-				<div class="media">
-					<div class="media__top">
-						<h2  class="media__title"><a href="#">Владимир Путин принял участие в церемонии открытия Всемирной студенческой Универсиады в Казани</a></h2>
-						<div class="media__meta">
-							<a href="#" class="media__type">Интервью</a>
-							<div class="media__published">4 сентября 2013</div>
-							
-						</div>
-					</div>
-					<div class="media__pic">
-						<img src="img/media.jpg" height="420" alt="">
-					</div>
-				</div>
-				<!-- END media-->
-
-			</div>
-			<!-- END col-->
-			
-			<!-- BEGIN  col-->
-			<div class="col">
-				<!-- BEGIN  media-->
-				<div class="media">
-					<div class="media__top">
-						<h2  class="media__title"><a href="#">Владимир Путин принял участие в церемонии</a></h2>
-						<div class="media__meta">
-							<a href="#" class="media__type">Интервью</a>
-							
-							<div class="media__length">Длительность 1 час 40 минут</div>
-						</div>
-					</div>
-					<div class="media__pic">
-						<img src="img/media.jpg" height="420" alt="">
-					</div>
-				</div>
-				<!-- END media-->
-
-			</div>
-			<!-- END col-->
-			</div>
-			<!-- end cols -->
-				
-			<a href="#" class="more more_alt"><i><!-- &#8230; --></i></a>
-			
-		</div>
-	</div>
-	<!-- END content-->
-
-
-	<!-- BEGIN  promoted-->
-	<div class="promoted ">
-		<div class="promoted__in">
-			<a href='#' class="promoted__entry">
-				<img class="promoted__pic" src="img/1.jpg" width="140" height="100" alt="">
-				<h3 class="promoted__title">Послание Президента
-	Федеральному Собранию</h3>
-				<div class="promoted__date">12 декабря 2012 года, 10:00</div>
-				
-			</a>
-		</div>
-		<div class="promoted__toggle"><i></i></div>
-	</div>
-	<!-- END promoted-->
-	<!-- BEGIN  footer-->
-	<footer class="footer">
-		<div class="footer__in">
-			<!-- BEGIN  footer__col-->
-			<div class="footer__col">
-				<h3><a href='#'>Разделы сайта Президента России</a></h3>
-				<ul>
-					<li><a href="#">События</a></li>
-					<li><a href="#">Структура</a></li>
-					<li><a href="#">Видео и фото</a></li>
-					<li><a href="#">Документы</a></li>
-					<li><a href="#">Контакты</a></li>
-					<li class="footer__search"><a href="#"><i></i>Поиск</a></li>
-				</ul>
-				<ul>
-					<li><a href="#">Справочник</a></li>
-					<li><a href="#">Для СМИ</a></li>
-					<li class="footer__special"><a href="#"><i></i>Версия для людей с ограниченными  возможностями</a></li>
-					<li><a href="#">English</a></li>
-				</ul>
-				<ul>
-					<li><a href="#">Официальный Твиттер</a></li>
-					<li><a href="#">Канал на Youtube</a></li>
-				</ul>
-			</div>
-			<!-- END footer__col-->
-			<!-- BEGIN  footer__col-->
-			<div class="footer__col">
-				<h3><a href="#">Структура портала
-	Президента
-	России</a></h3>
-				<ul>
-					<li class="footer__currentsite"><a href="#">Президент России <span>Текущий ресурс</span></a></li>
-					<li><a href="#">Конституция России</a></li>
-					<li><a href="#">Государственная <br>символика</a></li>
-					<li><a href="#">Прием обращений <br>граждан России</a></li>
-					<li><a href="#">Президент России — <br>гражданам школьного возраста</a></li>
-					<li><a href="#">Виртуальный тур по Кремлю</a></li>
-					<li><a href="#">Владимир Путин — личный сайт</a></li>
-
-				</ul>
-			</div>
-			<!-- END footer__col-->
-			<!-- BEGIN  footer__col-->
-			<div class="footer__col">
-				<h3><a href="#">Специальные
-	проекты по
-	защите животных</a></h3>
-				<ul>
-					<li><a href="#">Амурский тигр</a></li>
-					<li><a href="#">Белуха — белый кит</a></li>
-					<li><a href="#">Белый медведь</a></li>
-					<li><a href="#">Ирбис — снежный барс</a></li>
-					<li><a href="#">Дальневосточный леопард</a></li>
-				</ul>
-			</div>
-			<!-- END footer__col-->
-			<!-- BEGIN  footer__col-->
-			<div class="footer__col footer__col_last">
-				<h3><a href='#'>Официальная
-	и техническая
-	информация</a></h3>
-				<ul>
-					<li><a href="#">О портале</a></li>
-					<li><a href="#">Об использовании информации с сайта</a></li>
-					<li><a href="#">Написать в редакцию</a></li>
-					<li><a href="#">Архив материалов за 2000 — 2008 годы</a></li>
-				</ul>
-				<div class="footer__license">
-					<i></i>
-					<p>Все опубликованные материалы доступны на условиях свободной  публичной лицензии</p> <p>Creative Commons Attribution 3.0</p>
-				</div>
-			</div>
-			<!-- END footer__col-->
-			<div class="footer__copy">Администрация Президента России. <span>2013.</span></div>
-			<div class="footer__logo"></div>
-		</div>
-	</footer>
-	<!-- END footer-->
-
 </div>
 <!-- end wrapsite -->
 

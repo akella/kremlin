@@ -1,0 +1,82 @@
+<!doctype html>
+<!--[if lte IE 8]><html class="lteie8"><![endif]-->
+<!--[if gt IE 8]><!--><html><!--<![endif]-->
+<head>
+	<meta charset="utf-8">
+	<title>Template</title>
+	<meta name="viewport" content="width=device-width"/>
+	<link rel="stylesheet" media="screen" href="css/screen.css" >
+	<script type="text/javascript" src="js/jquery.js"></script>
+	<script type="text/javascript" src="js/submenuscroll.js"></script>
+	<style type="text/css">
+	body{
+		padding-top: 60px;
+	}
+	.b1{height: 60px;background: red;}
+	.b2{height: 60px;background: green;}
+	.wrapfix{
+		width: 100%;
+		top: 0;
+		right: 0;
+	}
+	.state1{
+		position: fixed;
+		top: 0;
+	}
+	.state2{
+		position: absolute;
+	}
+	.state3{
+		position: fixed;
+		top: 60px;
+	}
+	</style>
+</head>
+<body>
+include "topline"
+<div class="wrapfix">
+	<div class="b1">
+		b1
+	</div>
+	<div class="b2">
+		b2
+	</div>
+</div>
+<!-- begin wrapsite -->
+<div class="wrapsite">
+<div class="wrapsite__overlay"></div>
+
+	include "aside"
+	<div style="line-height: 2.4;font-size: 30px;padding:40px">
+		Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
+		tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
+		quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
+		consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse
+		cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non
+		proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+		Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
+		tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
+		quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
+		consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse
+		cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non
+		proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+		Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
+		tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
+		quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
+		consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse
+		cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non
+		proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+		Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
+		tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
+		quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
+		consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse
+		cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non
+		proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+	</div>
+</div>
+<!-- end wrapsite -->
+
+	include "read"
+<div class="sidenavoverlay"></div>
+</body>
+</html>
