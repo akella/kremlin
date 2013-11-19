@@ -18,47 +18,52 @@ include "topline"
 	include "aside"
 	<!-- BEGIN content -->
 	<div class="content content_top content_subnav">
-		<div class="content__in">
-			include "date"
-			<ul class="subnav subnav_sub">
-				<li><a href="#" class="is-active">Все материалы</a></li>
-				<li><a href="#">Бюджетные послания</a></li>
-				<li><a href="#">Конституция России</a></li>
-			</ul>
-		</div>
-		<div class="content__sep content__sepshadow"></div>
-		<div class="fixme">
-			<div class="docsearch__wrap">
-				<div class="content__in content__flexible" >
-					<!-- BEGIN docsearch -->
-					<div class="docsearch">
-						<div class="docsearch__field">
-							<label for="">Название документа</label>
-							<input type="text" name="" id="">
-						</div>
-						<div class="docsearch__field">
-							<label for="">или его номер</label>
-							<input type="text" name="" id="">
-						</div>
-						<div class="docsearch__field docsearch__fieldlong">
-							<label for="">Текст в документе</label>
-							<input type="text" name="" id="">
-						</div>
-						<div class="docsearch__field">
-							<label for="">Вид документа</label>
-							<div class="select">
-								<select name="" id=""><option value="">What</option></select>
-								<input type="text" name="" id="">
+		<div class="wrapfix__holder">
+			<div class="wrapfix">
+				<div class="content__in">
+					include "date"
+					<ul class="subnav subnav_sub">
+						<li><a href="#" class="is-active">Все материалы</a></li>
+						<li><a href="#">Бюджетные послания</a></li>
+						<li><a href="#">Конституция России</a></li>
+					</ul>
+				</div>
+				<div class="content__sep content__sepshadow"></div>
+				<div class="docsearch__wrap">
+						<div class="content__in content__flexible" >
+							<!-- BEGIN docsearch -->
+							<div class="docsearch">
+								<div class="docsearch__field">
+									<label for="">Название документа</label>
+									<input type="text" name="" id="">
+								</div>
+								<div class="docsearch__field">
+									<label for="">или его номер</label>
+									<input type="text" name="" id="">
+								</div>
+								<div class="docsearch__field docsearch__fieldlong">
+									<label for="">Текст в документе</label>
+									<input type="text" name="" id="">
+								</div>
+								<div class="docsearch__field">
+									<label for="">Вид документа</label>
+									<div class="select">
+										<select name="" id=""><option value="">What</option></select>
+										<input type="text" name="" id="">
+									</div>
+								</div>
+								<div class="docsearch__submit">
+									<div class="submit">Найти документы</div>
+								</div>
 							</div>
-						</div>
-						<div class="docsearch__submit">
-							<div class="submit">Найти документы</div>
+							<!-- END docsearch -->
 						</div>
 					</div>
-					<!-- END docsearch -->
-				</div>
+				
 			</div>
+			<!-- end wpapfix -->
 		</div>
+		<!-- end wrapfix__holder -->
 	</div>
 	<!-- END content -->
 

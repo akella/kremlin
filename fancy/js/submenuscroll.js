@@ -9,16 +9,14 @@ $(document).ready(function() {
 			}
 		}
 		else{
-			
 			if(curstate == 1 || curstate == 3){
-				b1.css({"top": "",'position': 'fixed'});
+				setTimeout(function(){
+					b1.removeAttr("style");
+				}, 320);
 			}
 		}
 	});
 
-
-
-	
 	//init
 	b1.addClass('state2').css({'top': '60px'}).data('state',2);
 	//states
