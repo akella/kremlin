@@ -179,10 +179,11 @@ a img,fieldset
 		color: #181c40 
 		border-bottom: 1px solid #E1E2E7
 		+transition(all .2s ease-in-out)
+		position: relative
 		&:before
 			position: absolute
 			top: 50%
-			right: 80px 
+			right: 50px 
 			+s(hentryactive)
 			content: ' '
 			margin-top: -10px 
@@ -190,7 +191,6 @@ a img,fieldset
 			+transition(all .2s ease-in-out)
 		&.is-active,&:hover
 			color: #3656cc 
-			position: relative
 			z-index: 2 
 			+box-shadow(0 0 28px rgba(#000, .15))
 			border-bottom-color: #FCFCFD 
