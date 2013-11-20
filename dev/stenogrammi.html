@@ -18,24 +18,28 @@ include "topline"
 	include "aside"
 	<!-- BEGIN content -->
 	<div class="content content_top content_subnav">
-		<div class="content__in">
-			<ul class="subnav">
-				<li><a href="#" class="is-active">Деятельность Президента</a></li>
-				<li><a href="#">Администрация Президента</a></li>
-				<li><a href="#">Комиссии и Советы</a></li>
-			</ul>
-		</div>
-		<div class="content__sep"></div>
-		<div class="fixme">
-			<div class="content__in " >
-				include "date"
-				<ul class="subnav subnav_sub"> 
-					<li><a href="#">Новости</a></li>
-					<li><a href="#">Поездки</a></li>
-					<li><a href="#" class='is-active'>Стенограммы</a></li>
-					<li><a href="#">Телеграммы</a></li>
-				</ul>
+	<div class="wrapfix__holder">
+			<div class="wrapfix">
+				<div class="content__in">
+					<ul class="subnav">
+						<li><a href="#" class="is-active">Деятельность Президента</a></li>
+						<li><a href="#">Администрация Президента</a></li>
+						<li><a href="#">Комиссии и Советы</a></li>
+					</ul>
+				</div>
+				<div class="content__sep"></div>
+			
+				<div class="content__in " >
+					include "date"
+					<ul class="subnav subnav_sub"> 
+						<li><a href="#">Новости</a></li>
+						<li><a href="#">Поездки</a></li>
+						<li><a href="#" class='is-active'>Стенограммы</a></li>
+						<li><a href="#">Телеграммы</a></li>
+					</ul>
+				</div>
 			</div>
+		</div>
 			<div class="content__sep content__sepshadow"></div>
 			<!-- begin rubr -->
 			<div class="rubr">
@@ -61,7 +65,7 @@ include "topline"
 				</div>
 			</div>
 			<!-- end rubr -->
-		</div>
+		
 	</div>
 	<!-- END content -->
 

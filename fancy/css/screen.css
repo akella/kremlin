@@ -1163,12 +1163,7 @@ body {
         top: 0px;
         height: 14px;
         width: 100%;
-        content: " ";
-        background-image: -webkit-gradient(linear, 50% 0%, 50% 100%, color-stop(0%, #f3f4f6), color-stop(100%, rgba(243, 244, 246, 0)));
-        background-image: -webkit-linear-gradient(#f3f4f6, rgba(243, 244, 246, 0));
-        background-image: -moz-linear-gradient(#f3f4f6, rgba(243, 244, 246, 0));
-        background-image: -o-linear-gradient(#f3f4f6, rgba(243, 244, 246, 0));
-        background-image: linear-gradient(#f3f4f6, rgba(243, 244, 246, 0)); }
+        content: " "; }
 
 .cols {
   margin-right: -50px; }

@@ -1,9 +1,1 @@
-<?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<svg width="19px" height="12px" viewBox="0 0 19 12" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" xmlns:sketch="http://www.bohemiancoding.com/sketch/ns">
-    <title>promoted__toggle</title>
-    <description>Created with Sketch (http://www.bohemiancoding.com/sketch)</description>
-    <defs></defs>
-    <g id="Page-1" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd" sketch:type="MSPage">
-        <path d="M11.7999878,6.19995117 L4,14 L5.40002441,15.3999023 L14.6000366,6.19995117 L5.40002441,-3 L4,-1.60009766 L11.7999878,6.19995117 Z" id="(Icon)-Close" fill="#C4C8D0" sketch:type="MSShapeGroup" transform="translate(9.300018, 6.199951) rotate(-90.000000) translate(-9.300018, -6.199951) "></path>
-    </g>
-</svg>
+<svg width="19" height="12" xmlns="http://www.w3.org/2000/svg" xmlns:sketch="http://www.bohemiancoding.com/sketch/ns"><title>promoted__toggle</title><path d="M9.3 3.7l7.8 7.8 1.4-1.4-9.2-9.2-9.2 9.2 1.4 1.4 7.8-7.8z" fill="#C4C8D0" sketch:type="MSShapeGroup"/></svg>
