@@ -4,6 +4,12 @@
 		//box-shadow: 0 0 15px rgba(black, 0.4)
 		background: #fbfbfd
 		padding-top: 0
+		position: fixed
+		top: 10px 
+		right: 10px 
+		bottom: 10px 
+		left: auto 
+		margin: 0 
 
 .read
 	background: #fbfbfd
@@ -13,6 +19,10 @@
 	.read__tabs
 		background: #DADCE0
 		height: 60px
+		// position: fixed
+		// bottom: 10px 
+		// right: 10px 
+		// width: 100% 
 		*
 			float: left
 		i
@@ -99,21 +109,21 @@
 			bottom: 0
 			display: none
 	.read__in
-		padding: 25px 40px
+		padding: 25px 120px
 	.read__meta
-		font-size: 11px
+		font-size: 13px
 		color: #aaafb6
 		margin-bottom: 31px
 	.read__categ
 		font-size: 15px 
 		color: #5c5e6c 
 		margin-bottom: 37px
-		+lite
+		+book
 	.read__published, .read__time
 		margin-right: 14px
 		display: inline-block
 		color: #5c5e6c 
-		+reg
+		+book
 	.read__tags
 		display: inline-block
 		border-radius:  10px
@@ -133,6 +143,8 @@
 		display: inline-block
 		color: #9c9ea8
 		font-size: 11px  
+	.read__place
+		display: inline-block
 	.read__location
 		display: inline-block
 		i
@@ -141,21 +153,36 @@
 			position: relative
 			top: 2px
 			margin-right: 6px
-
+.read__top
+	margin: -25px -120px 0 -120px
+	background: #ECECEC  
+	padding: 85px 120px 45px 120px
+	margin-bottom: 38px 
 .read__content
 	font-size: 15px
 	color: #343646
 	line-height: 1.4em
+	strong
+		font-weight: normal
+		+reg
+	.read__categ
+		font-size: 16px 
+		+regcond
+		font-weight: normal
+		text-decoration: none
+		color: #2A40C8 
+		margin-bottom: 70px 
 	h1
 		font-size: 33px
 		color: #3656cc
-		line-height: 1.2
+		line-height: 41px
 		margin-bottom: 24px
 		font-weight: normal
-		+condbold
-	.lead
-		color: #343646
-		font-size: 22px
+		+regcond
+		color: #000 
+	.read__lead
+		color: #555267
+		font-size: 20px
 		line-height: 1.4
 		font-weight: normal
 		margin-bottom: 23px
@@ -168,19 +195,19 @@
 	ol
 		list-style: decimal
 	.slider
-		margin: 0 -40px 1.5em -40px
+		margin: 0 -120px 1.5em -120px
 		img
 			display: block
 			width: 100%
 	blockquote
-		font-size: 30px 
+		font-size: 26px 
 		color: #1e2032
 		+lite
-		background: #F5F5F6
+		background: #EEF2CB
 		text-align: center
-		padding: 80px 80px 70px 80px  
+		padding: 80px 120px 70px 120px  
 		line-height: 1.4
-		margin: 35px  -40px
+		margin: 35px  -120px
 		p
 			margin: 0 
 		// float: right
@@ -195,7 +222,20 @@
 		// line-height: 1.1
 		// p
 		// 	margin: 0
-		
+	.file
+		float: right
+		margin: 30px 0 30px 63px
+		font-size: 13px 
+		width: 190px 
+		h3
+			font-weight: normal
+			+reg
+			font-size: 16px 
+			margin-bottom: 14px 
+		.file__size
+			font-size: 13px 
+			color: #B0AEB8
+			margin-top: 14px  
 
 .materials
 	margin: 0 0 1em 0 !important
@@ -277,5 +317,25 @@
 			+transform(translate(0,0))
 	img
 		display: block
-	
-
+.subtle
+	color: #B0AEB8 
+.keyevents
+	margin-bottom: 60px 
+	h3
+		font-weight: normal
+		+reg
+		font-size: 16px 
+		margin-bottom: 13px 
+	ul
+		list-style: none
+		margin: 0
+		padding: 0  
+		font-size: 15px 
+		a
+			display: block
+			padding: 13px 0
+			text-decoration: none
+			color: #222
+			border-top: 1px solid #F2F2F2   
+	.keyevents__more
+		color: #B0AEB8 

@@ -48,10 +48,10 @@
 		+r(wide)
 			left: 840px + 40px
 			position: fixed
-			right: 40px
+			right: 10px
 			overflow: auto
 			min-width: 0 
-			max-width: 760px 
+			//max-width: 760px 
 			// bottom: auto;
 			// overflow: visible;
 	// @include r(wide){
@@ -104,13 +104,13 @@
 		background: #000
 		z-index: -1   
 		opacity: 0    
-	&.is-focusedonread
-		.overlayforeverything
-			z-index: 9000
-			opacity: .3
-		.read__wrap
-			opacity: 1 
-			z-index: 10000 
+	.overlayforeverything
+		z-index: 9000
+		opacity: .3
+		display: none
+	.read__wrap
+		opacity: 1 
+		z-index: 10000 
 //scrolling states
 .wrapfix__holder
 	height: 120px 

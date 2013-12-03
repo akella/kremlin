@@ -13,6 +13,7 @@
 //           @include rotate(360);
 //         }
 //     }
+// 
 // ## animation usage
 //     body:hover{
 // 	    @include animation(rotate 200s linear infinite);
@@ -37,62 +38,32 @@
 // BTW these comments will not render into css
 //*{-webkit-transition: .3s all;}
 
-@font-face
-	font-family: 'franklingothicdemicmpcregular'
-	src: url("fonts/franklingothicdemicmpc-webfont.eot")
-	src: url("fonts/franklingothicdemicmpc-webfont.eot?#iefix") format("embedded-opentype"), url("fonts/franklingothicdemicmpc-webfont.woff") format("woff"), url("fonts/franklingothicdemicmpc-webfont.ttf") format("truetype")
-	font-weight: normal
-	font-style: normal
-
-
-@font-face
-	font-family: 'glite'
-	src: url("fonts/ngt45.eot")
-	src: url("fonts/ngt45.eot?#iefix") format("embedded-opentype"), url("fonts/ngt45.woff") format("woff"), url("fonts/ngt45.ttf") format("truetype")
-	font-weight: normal
-	font-style: normal
-
-
-@font-face
-	font-family: 'gcond'
-	src: url("fonts/ngt57.eot")
-	src: url("fonts/ngt57.eot?#iefix") format("embedded-opentype"), url("fonts/ngt57.woff") format("woff"), url("fonts/ngt57.ttf") format("truetype")
-	font-weight: normal
-	font-style: normal
-
-
-@font-face
-	font-family: 'gregu'
-	src: url("fonts/ngt65.eot")
-	src: url("fonts/ngt65.eot?#iefix") format("embedded-opentype"), url("fonts/ngt65.woff") format("woff"), url("fonts/ngt65.ttf") format("truetype")
-	font-weight: normal
-	font-style: normal
-
-
-@font-face
-	font-family: 'gcondbold'
-	src: url("fonts/ngt77.eot")
-	src: url("fonts/ngt77.eot?#iefix") format("embedded-opentype"), url("fonts/ngt77.woff") format("woff"), url("fonts/ngt77.ttf") format("truetype")
-	font-weight: normal
-	font-style: normal
-
-
-=reg
-	font-family: "gregu", arial, sans-serif
-
-=cond
-	font-family: "gcond", "arial narrow", sans-serif
-
++font(book, frg55-webfont)
++font(bookcond, frg57-webfont)
++font(regular, frg65-webfont)
++font(regularcond, frg67-webfont)
++font(demi, frg75-webfont)
++font(demicond, frg77-webfont)
 =lite
-	font-family: "glite", arial, sans-serif
-
+	font-family: "book",arial,sans-serif 
+=book
+	font-family: "book",arial,sans-serif 
+=bookcond
+	font-family: "bookcond",arial,sans-serif 
+=reg
+	font-family: "regular",arial,sans-serif 
+=regcond
+	font-family: "regularcond",arial,sans-serif 
+=bold
+	font-family: "demi",arial,sans-serif 
+=boldcond
+	font-family: "demicond",arial,sans-serif 
+//old font
 =condbold
-	font-family: "gcondbold", arial, sans-serif
-
+	font-family: "regularcond",arial,sans-serif
 //cond bold
 =frank
-	//font-family: "franklingothicdemicmpcregular","arial narrow",sans-serif;
-	font-family: "gcondbold", "arial narrow", sans-serif
+	font-family: "regularcond",arial,sans-serif 
 
 *
 	margin: 0
@@ -112,7 +83,7 @@ input[type="submit"]::-moz-focus-inner
 	border: 0
 
 body
-	+reg
+	+book
 	line-height: 1.4
 	//background: #545460 
 	//text-rendering: optimizeLegibility
@@ -133,7 +104,6 @@ a img,fieldset
 	padding: 0 82px  
 	height: 39px 
 	line-height: 39px 
-	+lite
 	cursor: pointer
 	
 .content

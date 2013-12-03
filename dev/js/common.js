@@ -162,7 +162,10 @@ $(document).ready(function() {
 			newtop = 0;
 			newheight = $(window).height() - 80;
 		}
-		// set
+		// set new width height
+		newtop = '10';
+		newheight = $(window).height() - 20;
+
 		readwrap.css("top",newtop);
 		//readwrap.css("height",newheight);
 		readwrap.css("min-height", newheight);
@@ -275,16 +278,16 @@ $(document).ready(function() {
     $(".fixme").stickyPanel(stickyPanelSettings);
 
     //focusing on material
-	$('body').on('mouseenter', '.read__wrap', function(){
-		if($('body').hasClass('is-wide')){
-			$('body').addClass('is-focusedonread');
-		}
-	});
-	$('body').on('mouseleave', '.read__wrap', function(){
-		if($('body').hasClass('is-wide')){
-			$('body').removeClass('is-focusedonread');
-		}
-	});
+	// $('body').on('mouseenter', '.read__wrap', function(){
+	// 	if($('body').hasClass('is-wide')){
+	// 		$('body').addClass('is-focusedonread');
+	// 	}
+	// });
+	// $('body').on('mouseleave', '.read__wrap', function(){
+	// 	if($('body').hasClass('is-wide')){
+	// 		$('body').removeClass('is-focusedonread');
+	// 	}
+	// });
 	// admin comis
 	// $(selector1).swapWith(selector2);
 	$('.admincomis__block h2').click(function(event) {
