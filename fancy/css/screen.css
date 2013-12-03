@@ -51,10 +51,9 @@
       .is-reading .read__wrap {
         left: 880px;
         position: fixed;
-        right: 40px;
+        right: 10px;
         overflow: auto;
-        min-width: 0;
-        max-width: 760px; } }
+        min-width: 0; } }
 
 .read__overlay {
   position: absolute;
@@ -93,10 +92,11 @@
   background: black;
   z-index: -1;
   opacity: 0; }
-.is-wide.is-reading.is-focusedonread .overlayforeverything {
+.is-wide.is-reading .overlayforeverything {
   z-index: 9000;
-  opacity: 0.3; }
-.is-wide.is-reading.is-focusedonread .read__wrap {
+  opacity: 0.3;
+  display: none; }
+.is-wide.is-reading .read__wrap {
   opacity: 1;
   z-index: 10000; }
 
@@ -120,37 +120,44 @@
   top: 60px; }
 
 @font-face {
-  font-family: "franklingothicdemicmpcregular";
-  src: url("fonts/franklingothicdemicmpc-webfont.eot");
-  src: url("fonts/franklingothicdemicmpc-webfont.eot?#iefix") format("embedded-opentype"), url("fonts/franklingothicdemicmpc-webfont.woff") format("woff"), url("fonts/franklingothicdemicmpc-webfont.ttf") format("truetype");
+  font-family: book;
+  src: url("fonts/frg55-webfont.eot");
+  src: url("fonts/frg55-webfont.eot?#iefix") format("embedded-opentype"), url("fonts/frg55-webfont.woff") format("woff"), url("fonts/frg55-webfont.ttf") format("truetype");
   font-weight: normal;
   font-style: normal; }
 
 @font-face {
-  font-family: "glite";
-  src: url("fonts/ngt45.eot");
-  src: url("fonts/ngt45.eot?#iefix") format("embedded-opentype"), url("fonts/ngt45.woff") format("woff"), url("fonts/ngt45.ttf") format("truetype");
+  font-family: bookcond;
+  src: url("fonts/frg57-webfont.eot");
+  src: url("fonts/frg57-webfont.eot?#iefix") format("embedded-opentype"), url("fonts/frg57-webfont.woff") format("woff"), url("fonts/frg57-webfont.ttf") format("truetype");
   font-weight: normal;
   font-style: normal; }
 
 @font-face {
-  font-family: "gcond";
-  src: url("fonts/ngt57.eot");
-  src: url("fonts/ngt57.eot?#iefix") format("embedded-opentype"), url("fonts/ngt57.woff") format("woff"), url("fonts/ngt57.ttf") format("truetype");
+  font-family: regular;
+  src: url("fonts/frg65-webfont.eot");
+  src: url("fonts/frg65-webfont.eot?#iefix") format("embedded-opentype"), url("fonts/frg65-webfont.woff") format("woff"), url("fonts/frg65-webfont.ttf") format("truetype");
   font-weight: normal;
   font-style: normal; }
 
 @font-face {
-  font-family: "gregu";
-  src: url("fonts/ngt65.eot");
-  src: url("fonts/ngt65.eot?#iefix") format("embedded-opentype"), url("fonts/ngt65.woff") format("woff"), url("fonts/ngt65.ttf") format("truetype");
+  font-family: regularcond;
+  src: url("fonts/frg67-webfont.eot");
+  src: url("fonts/frg67-webfont.eot?#iefix") format("embedded-opentype"), url("fonts/frg67-webfont.woff") format("woff"), url("fonts/frg67-webfont.ttf") format("truetype");
   font-weight: normal;
   font-style: normal; }
 
 @font-face {
-  font-family: "gcondbold";
-  src: url("fonts/ngt77.eot");
-  src: url("fonts/ngt77.eot?#iefix") format("embedded-opentype"), url("fonts/ngt77.woff") format("woff"), url("fonts/ngt77.ttf") format("truetype");
+  font-family: demi;
+  src: url("fonts/frg75-webfont.eot");
+  src: url("fonts/frg75-webfont.eot?#iefix") format("embedded-opentype"), url("fonts/frg75-webfont.woff") format("woff"), url("fonts/frg75-webfont.ttf") format("truetype");
+  font-weight: normal;
+  font-style: normal; }
+
+@font-face {
+  font-family: demicond;
+  src: url("fonts/frg77-webfont.eot");
+  src: url("fonts/frg77-webfont.eot?#iefix") format("embedded-opentype"), url("fonts/frg77-webfont.woff") format("woff"), url("fonts/frg77-webfont.ttf") format("truetype");
   font-weight: normal;
   font-style: normal; }
 
@@ -170,7 +177,7 @@ input[type="submit"]::-moz-focus-inner {
   border: 0; }
 
 body {
-  font-family: "gregu", arial, sans-serif;
+  font-family: "book", arial, sans-serif;
   line-height: 1.4; }
 
 a img, fieldset {
@@ -186,7 +193,6 @@ a img, fieldset {
   padding: 0 82px;
   height: 39px;
   line-height: 39px;
-  font-family: "glite", arial, sans-serif;
   cursor: pointer; }
 
 .h1 {
@@ -194,10 +200,10 @@ a img, fieldset {
   color: #3656cc;
   margin-bottom: 37px;
   font-weight: normal;
-  font-family: "gcondbold", arial, sans-serif; }
+  font-family: "regularcond", arial, sans-serif; }
 
 .h2 {
-  font-family: "glite", arial, sans-serif;
+  font-family: "book", arial, sans-serif;
   color: #141018;
   font-size: 24px;
   font-weight: normal;
@@ -218,7 +224,7 @@ a img, fieldset {
   background: #fcfcfd; }
   .links li {
     font-size: 20px;
-    font-family: "glite", arial, sans-serif;
+    font-family: "book", arial, sans-serif;
     color: #181c40; }
     .links li:last-child a {
       border-bottom: none; }
@@ -299,11 +305,7 @@ a img, fieldset {
     opacity: 0.4; } }
 
 .topline {
-  background-image: -webkit-gradient(linear, 50% 0%, 50% 100%, color-stop(0%, #181d3e), color-stop(100%, #15216e));
-  background-image: -webkit-linear-gradient(#181d3e, #15216e);
-  background-image: -moz-linear-gradient(#181d3e, #15216e);
-  background-image: -o-linear-gradient(#181d3e, #15216e);
-  background-image: linear-gradient(#181d3e, #15216e);
+  background: #272446;
   height: 60px;
   position: fixed;
   top: 0;
@@ -404,11 +406,7 @@ a img, fieldset {
     height: 42px;
     left: 320px;
     z-index: 20;
-    background-image: -webkit-gradient(linear, 50% 0%, 50% 100%, color-stop(0%, #181d3e), color-stop(100%, #15216e));
-    background-image: -webkit-linear-gradient(#181d3e, #15216e);
-    background-image: -moz-linear-gradient(#181d3e, #15216e);
-    background-image: -o-linear-gradient(#181d3e, #15216e);
-    background-image: linear-gradient(#181d3e, #15216e); }
+    background: #272446; }
     .topline .search .search__dots {
       background: url('../../dev/img/icons-sf5b4bba9c2.png') 0 -1030px no-repeat;
       width: 36px;
@@ -483,7 +481,7 @@ a img, fieldset {
       padding-bottom: 100px; }
   .footer h3 {
     font-size: 18px;
-    font-family: "gcondbold", "arial narrow", sans-serif;
+    font-family: "regularcond", arial, sans-serif;
     font-weight: normal;
     color: #848cae;
     line-height: 1.3;
@@ -674,7 +672,7 @@ a img, fieldset {
     left: 0;
     bottom: 0; }
   .sidenav h3 {
-    font-family: "gcondbold", arial, sans-serif;
+    font-family: "regularcond", arial, sans-serif;
     color: white;
     font-size: 16px;
     font-weight: normal;
@@ -811,7 +809,7 @@ body {
     text-decoration: none;
     font-size: 20px;
     color: #697891;
-    font-family: "glite", arial, sans-serif;
+    font-family: "book", arial, sans-serif;
     line-height: 1.2;
     position: relative;
     -webkit-transition: all 0.2s linear;
@@ -846,7 +844,13 @@ body {
   @media only screen and (min-width: 1480px) {
     .read__wrap {
       background: #fbfbfd;
-      padding-top: 0; } }
+      padding-top: 0;
+      position: fixed;
+      top: 10px;
+      right: 10px;
+      bottom: 10px;
+      left: auto;
+      margin: 0; } }
 
 .read {
   background: #fbfbfd; }
@@ -956,21 +960,21 @@ body {
         bottom: 0;
         display: none; } }
   .read .read__in {
-    padding: 25px 40px; }
+    padding: 25px 120px; }
   .read .read__meta {
-    font-size: 11px;
+    font-size: 13px;
     color: #aaafb6;
     margin-bottom: 31px; }
   .read .read__categ {
     font-size: 15px;
     color: #5c5e6c;
     margin-bottom: 37px;
-    font-family: "glite", arial, sans-serif; }
+    font-family: "book", arial, sans-serif; }
   .read .read__published, .read .read__time {
     margin-right: 14px;
     display: inline-block;
     color: #5c5e6c;
-    font-family: "gregu", arial, sans-serif; }
+    font-family: "book", arial, sans-serif; }
   .read .read__tags {
     display: inline-block;
     border-radius: 10px;
@@ -990,6 +994,8 @@ body {
     display: inline-block;
     color: #9c9ea8;
     font-size: 11px; }
+  .read .read__place {
+    display: inline-block; }
   .read .read__location {
     display: inline-block; }
     .read .read__location i {
@@ -1001,24 +1007,41 @@ body {
       top: 2px;
       margin-right: 6px; }
 
+.read__top {
+  margin: -25px -120px 0 -120px;
+  background: #ececec;
+  padding: 85px 120px 45px 120px;
+  margin-bottom: 38px; }
+
 .read__content {
   font-size: 15px;
   color: #343646;
   line-height: 1.4em; }
+  .read__content strong {
+    font-weight: normal;
+    font-family: "regular", arial, sans-serif; }
+  .read__content .read__categ {
+    font-size: 16px;
+    font-family: "regularcond", arial, sans-serif;
+    font-weight: normal;
+    text-decoration: none;
+    color: #2a40c8;
+    margin-bottom: 70px; }
   .read__content h1 {
     font-size: 33px;
     color: #3656cc;
-    line-height: 1.2;
+    line-height: 41px;
     margin-bottom: 24px;
     font-weight: normal;
-    font-family: "gcondbold", arial, sans-serif; }
-  .read__content .lead {
-    color: #343646;
-    font-size: 22px;
+    font-family: "regularcond", arial, sans-serif;
+    color: black; }
+  .read__content .read__lead {
+    color: #555267;
+    font-size: 20px;
     line-height: 1.4;
     font-weight: normal;
     margin-bottom: 23px;
-    font-family: "glite", arial, sans-serif; }
+    font-family: "book", arial, sans-serif; }
   .read__content p {
     margin-bottom: 1.5em; }
   .read__content ul, .read__content ol {
@@ -1027,21 +1050,35 @@ body {
   .read__content ol {
     list-style: decimal; }
   .read__content .slider {
-    margin: 0 -40px 1.5em -40px; }
+    margin: 0 -120px 1.5em -120px; }
     .read__content .slider img {
       display: block;
       width: 100%; }
   .read__content blockquote {
-    font-size: 30px;
+    font-size: 26px;
     color: #1e2032;
-    font-family: "glite", arial, sans-serif;
-    background: #f5f5f6;
+    font-family: "book", arial, sans-serif;
+    background: #eef2cb;
     text-align: center;
-    padding: 80px 80px 70px 80px;
+    padding: 80px 120px 70px 120px;
     line-height: 1.4;
-    margin: 35px -40px; }
+    margin: 35px -120px; }
     .read__content blockquote p {
       margin: 0; }
+  .read__content .file {
+    float: right;
+    margin: 30px 0 30px 63px;
+    font-size: 13px;
+    width: 190px; }
+    .read__content .file h3 {
+      font-weight: normal;
+      font-family: "regular", arial, sans-serif;
+      font-size: 16px;
+      margin-bottom: 14px; }
+    .read__content .file .file__size {
+      font-size: 13px;
+      color: #b0aeb8;
+      margin-top: 14px; }
 
 .materials {
   margin: 0 0 1em 0 !important;
@@ -1067,7 +1104,7 @@ body {
     color: #aaafb6;
     font-size: 15px;
     padding: 15px 15px 15px 0;
-    font-family: "gcondbold", arial, sans-serif; }
+    font-family: "regularcond", arial, sans-serif; }
 
 .slider {
   position: relative;
@@ -1141,6 +1178,30 @@ body {
     transform: translate(0, 0); }
   .slider img {
     display: block; }
+
+.subtle {
+  color: #b0aeb8; }
+
+.keyevents {
+  margin-bottom: 60px; }
+  .keyevents h3 {
+    font-weight: normal;
+    font-family: "regular", arial, sans-serif;
+    font-size: 16px;
+    margin-bottom: 13px; }
+  .keyevents ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    font-size: 15px; }
+    .keyevents ul a {
+      display: block;
+      padding: 13px 0;
+      text-decoration: none;
+      color: #222222;
+      border-top: 1px solid #f2f2f2; }
+  .keyevents .keyevents__more {
+    color: #b0aeb8; }
 
 .content {
   background: #f5f5f6; }
@@ -1232,7 +1293,7 @@ body {
     float: right;
     margin-left: 100px; }
   .promoted__entry .promoted__title {
-    font-family: "glite", arial, sans-serif;
+    font-family: "book", arial, sans-serif;
     color: #181c40;
     font-size: 22px;
     text-decoration: none;
@@ -1268,7 +1329,7 @@ body {
     font-weight: normal;
     line-height: 1.2;
     margin-bottom: 10px;
-    font-family: "gcondbold", "arial narrow", sans-serif; }
+    font-family: "regularcond", arial, sans-serif; }
     .hentry .hentry__title a {
       color: #2d3746;
       text-decoration: none;
@@ -1541,7 +1602,7 @@ body {
     box-sizing: border-box;
     border: 1px solid #ececee;
     padding: 10px;
-    font-family: "glite", arial, sans-serif;
+    font-family: "book", arial, sans-serif;
     font-size: 15px; }
   .docsearch .docsearch__submit {
     position: absolute;
@@ -1582,7 +1643,7 @@ body {
     line-height: 1.3; }
 
 .events .events__title {
-  font-family: "gcondbold", arial, sans-serif;
+  font-family: "regularcond", arial, sans-serif;
   font-size: 20px;
   font-weight: normal;
   margin: 28px 0;
@@ -1631,7 +1692,7 @@ body {
     font-size: 20px;
     font-weight: normal;
     min-height: 115px;
-    font-family: "gcondbold", arial, sans-serif;
+    font-family: "regularcond", arial, sans-serif;
     color: #181c40; }
     .media .media__title a {
       color: #181c40;
@@ -1693,7 +1754,7 @@ body {
       bottom: 30px;
       background: #ccf8a6;
       border-radius: 4px;
-      font-family: "gcondbold", arial, sans-serif;
+      font-family: "regularcond", arial, sans-serif;
       font-size: 12px;
       text-transform: uppercase;
       height: 21px;
@@ -1731,14 +1792,14 @@ body {
   border-top: 1px solid #e5e6ea;
   margin-bottom: 40px; }
   .sprav .sprav__item {
-    font-family: "gcondbold", arial, sans-serif;
+    font-family: "regularcond", arial, sans-serif;
     padding-bottom: 34px;
     padding-top: 34px; }
     .sprav .sprav__item:first-child {
       border-bottom: 1px solid #e5e6ea; }
     .sprav .sprav__item dt {
       font-size: 32px;
-      font-family: "gcondbold", arial, sans-serif;
+      font-family: "regularcond", arial, sans-serif;
       color: #181c40;
       line-height: 1.1;
       margin-bottom: 1em; }
@@ -1756,7 +1817,7 @@ body {
   .contactform .contactform__text {
     font-size: 20px;
     color: #414664;
-    font-family: "gcondbold", arial, sans-serif;
+    font-family: "regularcond", arial, sans-serif;
     margin-bottom: 35px; }
   .contactform .contactform__field {
     float: left;
@@ -1767,7 +1828,7 @@ body {
       display: block;
       color: #414664;
       font-size: 15px;
-      font-family: "glite", arial, sans-serif;
+      font-family: "book", arial, sans-serif;
       padding-bottom: 4px; }
   .contactform .contactform__textarea {
     clear: both;
@@ -1789,7 +1850,7 @@ body {
     box-sizing: border-box;
     border-style: none;
     padding: 10px;
-    font-family: "glite", arial, sans-serif;
+    font-family: "book", arial, sans-serif;
     font-size: 15px; }
   .contactform textarea {
     height: 300px; }
@@ -1814,10 +1875,10 @@ body {
     color: #343646;
     line-height: 1.4; }
   .page .slider {
-    margin: 20px -40px 28px -40px; }
+    margin: 20px -120px 28px -120px; }
   .page .lead {
     font-size: 22px;
-    font-family: "glite", arial, sans-serif;
+    font-family: "book", arial, sans-serif;
     color: #343646; }
 
 #calroot {
@@ -1836,7 +1897,7 @@ body {
 #caltitle {
   display: inline-block;
   margin: 0 10px;
-  font-family: "gcondbold", arial, sans-serif;
+  font-family: "regularcond", arial, sans-serif;
   font-size: 15px;
   color: #3656cc;
   vertical-align: middle;
@@ -1864,7 +1925,7 @@ body {
   height: 13px; }
 
 #caldays {
-  font-family: "gcondbold", arial, sans-serif;
+  font-family: "regularcond", arial, sans-serif;
   font-size: 12px;
   color: #c4c8d0; }
 
@@ -1892,7 +1953,7 @@ body {
   height: 26px;
   text-decoration: none;
   font-size: 16px;
-  font-family: "gcondbold", arial, sans-serif;
+  font-family: "regularcond", arial, sans-serif;
   margin-left: 1px;
   text-align: center;
   line-height: 28px;
