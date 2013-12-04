@@ -119,6 +119,19 @@
 		color: #5c5e6c 
 		margin-bottom: 37px
 		+book
+		position: relative
+		i
+			position: absolute
+			left: -34px + 4px
+			+svg(arr_left,8,14)
+			top: 4px 
+			opacity: 0 
+			+transition(all .2s ease-in-out)
+		&:hover
+			i
+				display: block
+				left: -34px 
+				opacity: 1 
 	.read__published, .read__time
 		margin-right: 14px
 		display: inline-block
@@ -174,9 +187,15 @@
 			text-overflow: ellipsis
 			max-width: 100% 
 			border-radius: 6px
+			&:hover
+				color: #ffffff 
+				background: #30BE9A 
+				border-color: #30BE9A 
 		.read__tagsmore
 			a
 				color: #B0AEB8 
+				&:hover
+					color: #fff 
 .read__status
 	padding-top: 25px 
 	border-top: 1px solid #ECECEC
@@ -377,6 +396,10 @@
 			padding: 13px 0
 			text-decoration: none
 			color: #222
-			border-top: 1px solid #F2F2F2   
+			border-top: 1px solid #F2F2F2 
+			&:hover
+				color: #2A40C8   
 	.keyevents__more
 		color: #B0AEB8 
+		&:hover
+			color: #30BE9A 

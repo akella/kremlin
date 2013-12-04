@@ -21,6 +21,7 @@ module.exports = function(grunt) {
 			main: {
 				files: [
 					{expand: true, cwd: 'dev/img/', src: ['**'], dest: 'fancy/img'}, 
+					{expand: true, cwd: 'dev/img/svg', src: ['**'], dest: 'fancy/img/svg'}, 
 					{expand: true, cwd: 'dev/js', src: ['**'], dest: 'fancy/js'}
 				]
 			}

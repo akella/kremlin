@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<svg width="8px" height="14px" viewBox="0 0 8 14" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" xmlns:sketch="http://www.bohemiancoding.com/sketch/ns">
+    <title>arr_left</title>
+    <description>Created with Sketch (http://www.bohemiancoding.com/sketch)</description>
+    <defs></defs>
+    <g id="Page-1" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd" sketch:type="MSPage">
+        <path d="M4.00450211,5.41871567 L9.29289322,10.7071068 C9.68341751,11.0976311 10.3165825,11.0976311 10.7071068,10.7071068 C11.0976311,10.3165825 11.0976311,9.68341751 10.7071068,9.29289322 L4.70710678,3.29289322 C4.31658249,2.90236893 3.68341751,2.90236893 3.29289322,3.29289322 L-2.70710678,9.29289322 C-3.09763107,9.68341751 -3.09763107,10.3165825 -2.70710678,10.7071068 C-2.31658249,11.0976311 -1.68341751,11.0976311 -1.29289322,10.7071068 L4.00450211,5.41871567 Z" id="Line" fill="#2A40C8" sketch:type="MSShapeGroup" transform="translate(4.000000, 7.000000) rotate(-90.000000) translate(-4.000000, -7.000000) "></path>
+    </g>
+</svg>
