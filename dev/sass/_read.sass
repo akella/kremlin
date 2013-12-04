@@ -124,21 +124,6 @@
 		display: inline-block
 		color: #5c5e6c 
 		+book
-	.read__tags
-		display: inline-block
-		border-radius:  10px
-		color: #9c9ea8 
-		font-size: 11px 
-		text-decoration: none
-		background: #ECECEE
-		padding: 4px  8px
-		line-height: 1
-		margin-right: 22px 
-		a
-			text-decoration: none
-			color: #868892 
-			span
-				color: #9c9ea8 
 	.read__copy
 		display: inline-block
 		color: #9c9ea8
@@ -158,10 +143,56 @@
 	background: #ECECEC  
 	padding: 85px 120px 45px 120px
 	margin-bottom: 38px 
+.read__tags
+	padding-top: 25px 
+	border-top: 1px solid #ECECEC
+	margin-bottom: 15px
+	+clr
+	.read__tagscol
+		float: left
+		width: 31% 
+		margin-right: 2% 
+	h3
+		font-size: 16px 
+		font-weight: normal
+		+reg
+		margin-bottom: 27px 
+	ul
+		list-style: none 
+		li
+			margin-bottom: 4px 
+		a
+			font-size: 13px 
+			color: #565268
+			text-decoration: none
+			display: inline-block
+			border: 1px solid #ECECEC  
+			padding: 4px 13px
+			white-space: nowrap
+			overflow: hidden
+			-ms-text-overflow: ellipsis
+			text-overflow: ellipsis
+			max-width: 100% 
+			border-radius: 6px
+.read__status
+	padding-top: 25px 
+	border-top: 1px solid #ECECEC
+	h3
+		width: 33%  
+		float: left
+		font-size: 16px 
+		font-weight: normal
+		+reg
+	p
+		overflow: hidden
+		font-size: 13px 
+		color: #868492
+		padding-top: 3px  
 .read__content
 	font-size: 15px
 	color: #343646
 	line-height: 1.4em
+	+clr
 	strong
 		font-weight: normal
 		+reg
@@ -172,6 +203,9 @@
 		text-decoration: none
 		color: #2A40C8 
 		margin-bottom: 70px 
+		a
+			text-decoration: none
+			color: #2A40C8 
 	h1
 		font-size: 33px
 		color: #3656cc
@@ -204,62 +238,66 @@
 		color: #1e2032
 		+lite
 		background: #EEF2CB
-		text-align: center
-		padding: 80px 120px 70px 120px  
+		text-align: left
+		padding: 70px 120px 70px 120px  
 		line-height: 1.4
 		margin: 35px  -120px
 		p
 			margin: 0 
-		// float: right
-		// width: 50%
-		// +box-sizing(border-box)
-		// border-left: 1px solid #E8E8EC
-		// padding: 10px 0 10px 30px
-		// margin: 5px 0 10px 10px
-		// +frank
-		// font-size: 23px
-		// color: #2d78e1
-		// line-height: 1.1
-		// p
-		// 	margin: 0
-	.file
+	.cut
 		float: right
-		margin: 30px 0 30px 63px
+		margin: 0px 0 30px 63px
 		font-size: 13px 
 		width: 190px 
-		h3
+		.cut__title
 			font-weight: normal
 			+reg
 			font-size: 16px 
 			margin-bottom: 14px 
-		.file__size
+		.cut__meta
 			font-size: 13px 
 			color: #B0AEB8
 			margin-top: 14px  
+		.cut__filetype
+			+svg(filetype,60,80)
+			position: relative
+			margin-top: 20px 
+			text-decoration: none
+			span
+				position: absolute
+				font-size: 14px 
+				text-transform: uppercase
+				color: #30BE9A
+				+reg
+				position: absolute
+				bottom: 14px  
+				left: 0
+				width: 100%
+				text-align: center  
 
-.materials
-	margin: 0 0 1em 0 !important
-	padding: 0
-	list-style: none !important
-	width: 50%
-	li
-		border-bottom: 1px solid #E8E8EC
-		position: relative
-		&:last-child
-			border-bottom: none
-	i
-		position: absolute
-		right: 0
-		top: 17px
-		+s(clip)
-		display: inline-block
-	a
-		display: block
-		text-decoration: none
-		color: #aaafb6
-		font-size: 15px
-		padding: 15px 15px 15px 0
-		+condbold
+// .materials
+// 	margin: 0 0 1em 0 !important
+// 	padding: 0
+// 	list-style: none !important
+// 	width: 50%
+// 	li
+// 		border-bottom: 1px solid #E8E8EC
+// 		position: relative
+// 		&:last-child
+// 			border-bottom: none
+// 	i
+// 		position: absolute
+// 		right: 0
+// 		top: 17px
+// 		+s(clip)
+// 		display: inline-block
+// 	a
+// 		display: block
+// 		text-decoration: none
+// 		color: #aaafb6
+// 		font-size: 15px
+// 		padding: 15px 15px 15px 0
+// 		+condbold
 
 .slider
 	position: relative
