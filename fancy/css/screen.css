@@ -876,8 +876,8 @@ body {
       font-size: 8px;
       font-family: Arial, sans-serif;
       color: white;
-      border-radius: 10px;
-      background: #3559c5;
+      border-radius: 4px;
+      background: #868492;
       text-align: center;
       border: 2px solid #dadce0; }
     .read .read__tabs .read__loadarticle {
@@ -886,39 +886,60 @@ body {
       padding: 20px 30px 0 30px;
       margin-left: 10px; }
       .read .read__tabs .read__loadarticle i {
-        background: url('../../dev/img/icons-sf5b4bba9c2.png') 0 -1241px no-repeat;
-        width: 20px;
-        height: 18px; }
+        background: url("../img/svg/article.svg") no-repeat 0 0;
+        -webkit-background-size: 26px 22px;
+        -moz-background-size: 26px 22px;
+        -o-background-size: 26px 22px;
+        background-size: 26px 22px;
+        width: 26px;
+        height: 22px;
+        display: inline-block; }
       .read .read__tabs .read__loadarticle:hover i, .read .read__tabs .read__loadarticle:active i, .read .read__tabs .read__loadarticle.is-active i {
-        background: url('../../dev/img/icons-sf5b4bba9c2.png') 0 -1241px no-repeat;
-        width: 20px;
-        height: 18px; }
+        background: url("../img/svg/article_active.svg") no-repeat 0 0;
+        -webkit-background-size: 26px 22px;
+        -moz-background-size: 26px 22px;
+        -o-background-size: 26px 22px;
+        background-size: 26px 22px; }
     .read .read__tabs .read__loadphoto {
       position: relative;
       cursor: pointer;
       height: 40px;
       padding: 20px 30px 0 30px; }
       .read .read__tabs .read__loadphoto i {
-        background: url('../../dev/img/icons-sf5b4bba9c2.png') 0 -802px no-repeat;
-        width: 24px;
-        height: 20px; }
+        background: url("../img/svg/photo.svg") no-repeat 0 0;
+        -webkit-background-size: 26px 22px;
+        -moz-background-size: 26px 22px;
+        -o-background-size: 26px 22px;
+        background-size: 26px 22px;
+        width: 26px;
+        height: 22px;
+        display: inline-block; }
       .read .read__tabs .read__loadphoto:hover i, .read .read__tabs .read__loadphoto:active i, .read .read__tabs .read__loadphoto.is-active i {
-        background: url('../../dev/img/icons-sf5b4bba9c2.png') 0 -802px no-repeat;
-        width: 24px;
-        height: 20px; }
+        background: url("../img/svg/photo_active.svg") no-repeat 0 0;
+        -webkit-background-size: 26px 22px;
+        -moz-background-size: 26px 22px;
+        -o-background-size: 26px 22px;
+        background-size: 26px 22px; }
     .read .read__tabs .read__loadvideo {
       position: relative;
       cursor: pointer;
       height: 40px;
       padding: 20px 30px 0 30px; }
       .read .read__tabs .read__loadvideo i {
-        background: url('../../dev/img/icons-sf5b4bba9c2.png') 0 -1000px no-repeat;
-        width: 24px;
-        height: 20px; }
+        background: url("../img/svg/video.svg") no-repeat 0 0;
+        -webkit-background-size: 26px 22px;
+        -moz-background-size: 26px 22px;
+        -o-background-size: 26px 22px;
+        background-size: 26px 22px;
+        width: 26px;
+        height: 22px;
+        display: inline-block; }
       .read .read__tabs .read__loadvideo:hover i, .read .read__tabs .read__loadvideo:active i, .read .read__tabs .read__loadvideo.is-active i {
-        background: url('../../dev/img/icons-sf5b4bba9c2.png') 0 -1000px no-repeat;
-        width: 24px;
-        height: 20px; }
+        background: url("../img/svg/video_active.svg") no-repeat 0 0;
+        -webkit-background-size: 26px 22px;
+        -moz-background-size: 26px 22px;
+        -o-background-size: 26px 22px;
+        background-size: 26px 22px; }
     .read .read__tabs .read__loadvideo.is-active, .read .read__tabs .read__loadphoto.is-active, .read .read__tabs .read__loadarticle.is-active {
       position: relative; }
       .read .read__tabs .read__loadvideo.is-active:before, .read .read__tabs .read__loadphoto.is-active:before, .read .read__tabs .read__loadarticle.is-active:before {
@@ -936,13 +957,23 @@ body {
       height: 40px;
       padding: 20px 40px 0 20px; }
       .read .read__tabs .read__share i {
-        background: url('../../dev/img/icons-sf5b4bba9c2.png') 0 -832px no-repeat;
-        width: 25px;
-        height: 22px; }
+        background: url("../img/svg/export.svg") no-repeat 0 0;
+        -webkit-background-size: 26px 22px;
+        -moz-background-size: 26px 22px;
+        -o-background-size: 26px 22px;
+        background-size: 26px 22px;
+        width: 26px;
+        height: 22px;
+        display: inline-block; }
       .read .read__tabs .read__share:hover i, .read .read__tabs .read__share:active i, .read .read__tabs .read__share.is-active i {
-        background: url('../../dev/img/icons-sf5b4bba9c2.png') 0 -832px no-repeat;
-        width: 25px;
-        height: 22px; }
+        background: url("../img/svg/export_active.svg") no-repeat 0 0;
+        -webkit-background-size: 26px 22px;
+        -moz-background-size: 26px 22px;
+        -o-background-size: 26px 22px;
+        background-size: 26px 22px;
+        width: 26px;
+        height: 22px;
+        display: inline-block; }
     .read .read__tabs .read__sep {
       position: relative;
       top: 16px;
@@ -1034,6 +1065,8 @@ body {
       text-overflow: ellipsis;
       max-width: 100%;
       border-radius: 6px; }
+    .read__tags ul .read__tagsmore a {
+      color: #b0aeb8; }
 
 .read__status {
   padding-top: 25px;
