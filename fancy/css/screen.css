@@ -1230,7 +1230,7 @@ body {
     .slider .slider__next i, .slider .slider__prev i {
       position: absolute;
       bottom: 110px; }
-  .slider:hover .slider__next, .slider:hover .slider__prev {
+  .slider:hover .slider__next, .slider:hover .slider__prev, .slider:hover .slider__page {
     opacity: 1; }
   .slider .slider__next {
     right: 0px; }
@@ -1275,6 +1275,15 @@ body {
     overflow: hidden; }
   .slider img {
     display: block; }
+  .slider .slider__page {
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    padding: 12px 0 14px;
+    width: 120px;
+    text-align: center;
+    font-size: 13px;
+    opacity: 0; }
 
 .subtle {
   color: #b0aeb8; }
