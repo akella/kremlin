@@ -859,7 +859,8 @@ body {
       box-shadow: none; } }
   .read .read__tabs {
     background: #dadce0;
-    height: 60px; }
+    height: 60px;
+    padding-left: 80px; }
     .read .read__tabs * {
       float: left; }
     .read .read__tabs i {
