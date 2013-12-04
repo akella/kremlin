@@ -327,54 +327,46 @@
 	.slider__next, .slider__prev
 		position: absolute
 		top: 0
-		bottom: 0
-		width: 100px
+		bottom: 0px
+		width: 180px
+		height: 100% 
 		cursor: pointer
-		z-index: 11
+		z-index: 150
 		opacity: 0
 		+transition(opacity 0.2s ease-in-out)
 		i
 			position: absolute
-			top: 50%
-			left: 50%
-			margin-top: -12px
-			margin-left: -12px
+			bottom: 60px + 50px
 	&:hover
 		.slider__next, .slider__prev
 			opacity: 1
 	.slider__next
-		right: 0
+		right: 0px
 		i
-			+s(next)
+			+svg(next, 60, 60)
+			right: 60px 
 	.slider__prev
-		left: 0
+		left: 0 
 		i
-			+s(prev)
+			+svg(prev, 60, 60)
+			left: 60px 
 	.slider__title
 		font-size: 11px
 		color: #c2c6d2
 		text-align: right
 		padding: 10px 20px 0 0
 	.slider__slidetitle
-		position: absolute
-		bottom: 0
-		left: 0
-		width: 100%
+		margin: 0 120px 
 		z-index: 10 
-		font-size: 11px    
+		font-size: 13px    
 		color: #9c9ea8
-		text-align: center
-		background-color: rgba(#f5f5f5, .9) 
-		padding: 13px 0 
-		+transform(translate(0,100%))
-		+transition(all .2s ease-in-out)
+		border-bottom: 1px solid #EAEAEA 
+		text-align: left
+		padding: 13px 0
 	.slider__slide
 		position: relative
 		width: 100% 
 		overflow: hidden
-	&:hover
-		.slider__slidetitle
-			+transform(translate(0,0))
 	img
 		display: block
 .subtle
