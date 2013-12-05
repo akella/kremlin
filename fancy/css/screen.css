@@ -1243,6 +1243,8 @@ body {
       bottom: 110px; }
   .slider:hover .slider__next, .slider:hover .slider__prev, .slider:hover .slider__page {
     opacity: 1; }
+  .slider:hover .slider__slidetitle {
+    color: black; }
   .slider .slider__next {
     right: 0px; }
     .slider .slider__next i {
