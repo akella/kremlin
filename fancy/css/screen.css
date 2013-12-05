@@ -563,7 +563,7 @@ a img, fieldset {
 
 .sidenav {
   height: 400px;
-  background: #51515d; }
+  background: #182472; }
 
 .wrapsite__overlay, .wrapsite__overlayfixed {
   position: absolute;
@@ -589,7 +589,7 @@ a img, fieldset {
     display: block; }
 
 .wrapsite__overlayfixed {
-  background: rgba(218, 220, 224, 0.8);
+  background: rgba(224, 224, 224, 0.8);
   left: 0;
   opacity: 0;
   height: 100%;
@@ -619,7 +619,6 @@ a img, fieldset {
   height: 400px;
   left: -240px;
   width: 240px;
-  background: #545460;
   -webkit-transition: left 0.3s ease-in-out;
   -moz-transition: left 0.3s ease-in-out;
   -o-transition: left 0.3s ease-in-out;
@@ -646,6 +645,7 @@ a img, fieldset {
     display: block; }
   .sidenav .sidenav__content {
     padding: 75px 24px 20px 24px;
+    padding: 24px 24px 20px 24px;
     width: 192px;
     top: 0;
     z-index: 50;
@@ -658,7 +658,7 @@ a img, fieldset {
       position: absolute; }
   .sidenav .sidenav__top {
     height: 60px;
-    background: #545460;
+    background: #182472;
     position: absolute;
     top: 0;
     left: 0;
@@ -666,7 +666,7 @@ a img, fieldset {
     width: 240px; }
   .sidenav .sidenav__bg {
     width: 240px;
-    background: #545460;
+    background: #182472;
     position: fixed;
     top: 0;
     left: 0;
@@ -680,7 +680,6 @@ a img, fieldset {
   .sidenav ul {
     margin: 0 -24px 22px -24px;
     padding: 0 24px 4px 24px;
-    border-bottom: 1px solid #73737c;
     list-style: none;
     font-size: 12px;
     -webkit-transform: translate3d(0, 0, 0);
@@ -696,10 +695,20 @@ a img, fieldset {
       .sidenav ul a:hover {
         color: white; }
       .sidenav ul a span {
-        color: #c2c6d2;
+        color: #98a0dc;
         display: block; }
     .sidenav ul li {
-      margin-bottom: 1.2em; }
+      margin-bottom: 1.2em;
+      position: relative; }
+      .sidenav ul li.is-active:before {
+        position: absolute;
+        right: 0px;
+        height: 2px;
+        top: 7px;
+        width: 6px;
+        background: #30be9a;
+        border-radius: 2px;
+        content: " "; }
     .sidenav ul:last-child {
       border-bottom: none; }
   .sidenav .sidenav__special {
@@ -713,6 +722,8 @@ a img, fieldset {
       left: -34px; }
   .sidenav .sidenav__pre {
     padding-left: 62px; }
+  .sidenav .sidenav__other a {
+    color: #98a0dc; }
 
 body {
   -webkit-transition: all 0.3s ease-in-out;

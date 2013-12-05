@@ -1,7 +1,8 @@
+$sidenav: 240px
 .sidenav
 	height: 400px 
-	background: #51515D 
-$sidenav: 240px
+	background: #182472 
+
 .wrapsite__overlay,.wrapsite__overlayfixed
 	position: absolute
 	left: 0
@@ -24,7 +25,7 @@ $sidenav: 240px
 		display: block
 .wrapsite__overlayfixed
 	//position: fixed
-	background: rgba(218, 220, 224, .8)
+	background: rgba(#E0E0E0, .8)
 	left: 0
 	opacity: 0
 	height: 100% 
@@ -52,7 +53,6 @@ $sidenav: 240px
 	left: -($sidenav)
 	width: $sidenav
 	//overflow: auto;
-	background: #545460
 	//padding: 75px 40px 20px 40px;
 	//left: -320px;
 	+transition(left 0.3s ease-in-out)
@@ -78,6 +78,7 @@ $sidenav: 240px
 		display: block
 	.sidenav__content
 		padding: 75px 24px 20px 24px
+		padding: 24px 24px 20px 24px
 		width: $sidenav - 48px
 		top: 0
 		z-index: 50
@@ -91,7 +92,7 @@ $sidenav: 240px
 			position: absolute
 	.sidenav__top
 		height: 60px
-		background: #545460
+		background: #182472
 		//background: red;
 		position: absolute
 		top: 0
@@ -100,7 +101,7 @@ $sidenav: 240px
 		width: $sidenav
 	.sidenav__bg
 		width: $sidenav
-		background: #545460
+		background: #182472
 		position: fixed
 		top: 0
 		left: 0
@@ -114,7 +115,6 @@ $sidenav: 240px
 	ul
 		margin: 0 -24px 22px -24px
 		padding: 0 24px 4px 24px
-		border-bottom: 1px solid  #73737C
 		list-style: none
 		font-size: 12px
 		+translate3d(0, 0, 0)
@@ -126,10 +126,20 @@ $sidenav: 240px
 			&:hover
 				color: #fff
 			span
-				color: #c2c6d2
+				color: #98A0DC
 				display: block
 		li
 			margin-bottom: 1.2em
+			position: relative
+			&.is-active:before
+				position: absolute
+				right: 0px 
+				height: 2px 
+				top: 7px 
+				width: 6px 
+				background: #30BE9A 
+				border-radius: 2px
+				content: ' '
 		&:last-child
 			border-bottom: none
 	.sidenav__special
@@ -141,6 +151,9 @@ $sidenav: 240px
 			left: -34px
 	.sidenav__pre
 		padding-left: 38px + 24px
+	.sidenav__other
+		a
+			color: #98A0DC 
 
 body
 	+transition(all .3s ease-in-out)
