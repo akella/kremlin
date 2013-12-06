@@ -1479,7 +1479,7 @@ body {
       -o-transition: all 1.3s ease-in-out;
       transition: all 1.3s ease-in-out; }
       .hentry .hentry__title a:hover {
-        color: #245fc0;
+        color: #2a40c8;
         -webkit-transition: all 0.1s ease-in-out;
         -moz-transition: all 0.1s ease-in-out;
         -o-transition: all 0.1s ease-in-out;
@@ -1491,7 +1491,7 @@ body {
     -o-transition: all 1.3s ease-in-out;
     transition: all 1.3s ease-in-out; }
     .hentry.hentry_inactive .hentry__title a:hover {
-      color: #245fc0;
+      color: #2a40c8;
       -webkit-transition: all 0.1s ease-in-out;
       -moz-transition: all 0.1s ease-in-out;
       -o-transition: all 0.1s ease-in-out;
