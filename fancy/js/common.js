@@ -36,12 +36,13 @@ $(document).ready(function() {
 			fromtop = $('.wrapsite').css('top').substring(1);
 			fromtop = fromtop.slice(0, -2);
 			$('.wrapsite').css('top', 'auto');
+			$('.read__wrap').css('margin-top', 0);
 			$('body').removeClass('is-reading');
 			$(window).scrollTop(fromtop);
 		}
 		else{
 			$('.wrapsite').css('top', -($(window).scrollTop()));
-			$('.read__wrap').css('top', ($(window).scrollTop()));
+			$('.read__wrap').css('margin-top', ($(window).scrollTop()));
 			$('body').addClass('is-reading');
 			
 			$('.read__wrap').height($(window).height() - 60);
@@ -173,6 +174,9 @@ $(document).ready(function() {
 
 	function setsidenav(){
 		side.height($(window).height());
+		//side.css('top',$(window).scrollTop());
+		//console.log($(window).scrollTop());
+
 	}
 	
 
@@ -192,7 +196,6 @@ $(document).ready(function() {
 		});
 		$('.sidenav,.wrapsite__overlayfixed').css({'top': $(window).scrollTop()});
 		$('body').toggleClass('is-withsidebar');
-
 	});
 
 

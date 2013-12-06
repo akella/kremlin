@@ -734,8 +734,6 @@ body {
     transition: left 0.3s ease-in-out, transform 0.3s ease-in-out; }
   body.is-withsidebar {
     overflow: hidden; }
-    body.is-withsidebar .read {
-      opacity: 0.9; }
     body.is-withsidebar .topline__toggleaside {
       display: none; }
     body.is-withsidebar .wrapsite, body.is-withsidebar .topline {
