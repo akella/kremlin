@@ -1439,6 +1439,8 @@ body {
     line-height: 1.3;
     font-weight: normal;
     padding-top: 5px; }
+    .promoted__entry .promoted__title:hover {
+      color: #2a40c8; }
   .promoted__entry .promoted__date {
     margin-top: 10px;
     color: #9c9ea8;
