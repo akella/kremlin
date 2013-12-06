@@ -1,17 +1,33 @@
 $(document).ready(function() {
-	// header search
-	$('.search__dots, .topline__search').click(function (e) {
-		$('.topline').toggleClass('is-withsearch');
-		return false
-	});
+	// ===============================================================
+	// ===========================elements============================
+	// ===============================================================
+	b = $('body');
+	readwrap = $('.read__wrap');
+	read = $('.read');
+	header = $('.topline');
+	footer = $('.footer');
+	promoted  = $('.promoted ');
+	body = $('body');
+	side = $('.sidenav');
 
+	// static parameters
+	fh = footer.height();
+	fTop = footer.offset().top;
+	hh = 60;
+	ph  = promoted.height();
+	bh = $(document).height();
+	margintop = 40;
+	marginbot = 40;
+	topareah = hh + ph;
+	newtop = 0;
+	newheight = 0;
 
 	// ===============================================================
 	// ===========================read layer==========================
 	// ===============================================================
 	//opening read in narrow
 	$('.hentry,.read__overlay').click(function (e) {
-		b = $('body');
 		if($(this).hasClass('hentry')){
 			$(this).addClass('is-active');
 		}
@@ -25,7 +41,9 @@ $(document).ready(function() {
 		}
 		else{
 			$('.wrapsite').css('top', -($(window).scrollTop()));
+
 			$('body').addClass('is-reading');
+			$('.read__overlay').height(read.height() + 60);
 			//console.log($('.read__wrap').height()+'===='+$(window).height());
 			if($('.read__wrap').height()+60<$(window).height()){
 				//console.log($('.read__wrap').height()+'===='+$(window).height());
@@ -39,11 +57,47 @@ $(document).ready(function() {
 			$(this).addClass('is-active')
 		}
 		return false;
-
 	});
-	// ===============================
-	// ================promoted module
-	// ===============================
+	
+	function setread(){
+		if(b.hasClass('is-narrow')){
+			readwrap.css('top', $(window).scrollTop());
+		}
+		else{
+			readwrap.css('top', 10);
+		}
+	}
+
+	// ===============================================================
+	// ===========================datepicker==========================
+	// ===============================================================
+	$('.search__dots, .topline__search').click(function (e) {
+		$('.topline').toggleClass('is-withsearch');
+		return false
+	});
+
+	// ===============================================================
+	// ===========================datepicker==========================
+	// ===============================================================
+	// docs here http://jquerytools.org/documentation/dateinput/
+	$.tools.dateinput.localize("ru",  {
+	   months:        'январь,февраль,март,апрель,май,июнь,июль,август,' +
+	                  'сентябрь,октябрь,ноябрь,декабрь',
+	   shortMonths:   'янв,фев;мар,апр,май,июн,июл,' +
+	                  'авг,сеп,ноя,дек',
+	   days:          'понедельник,вторник,среда,четверг,пятница,суббота,воскресенье',
+	   shortDays:     'Пн,Вт,Ср,Чт,Пт,Сб,Вс'
+	});
+	$(".dateblock").dateinput({
+		lang: 'ru',
+		change: function() {
+			var isoDate = this.getValue('mmmm yyyy');
+			$(".dateblock").text(isoDate);
+		}
+	});
+	// =========================================================
+	// ================promoted module==========================
+	// =========================================================
 	promotedrun = 0;
 	$('.promoted__toggle').click(function (e) {
 		p = $('.promoted');
@@ -61,10 +115,28 @@ $(document).ready(function() {
 
 		}
 	});
-	//sites toggling
-	// @todo use data-min and set data-max on load, to switch between heights and use
-	// css animations for toggling
-	//alert($('.sites').data('minheight'));
+	// =========================================================
+	// ================.admincomis==============================
+	// =========================================================
+	$('.admincomis__block h2').click(function(event) {
+		if($(this).parent().hasClass('is-active')){
+			// something
+		}
+		else{
+			$('.admincomis__block').removeClass('is-inactive').toggleClass('is-active');
+			$('.admincomis__block[data-block=admin]').swapWith('.admincomis__block[data-block=comis]');
+		}
+		return false;
+	});
+	// fading on hover
+	$('.admincomis__block h2').hoverIntent(function(){
+		$('.admincomis__block.is-active').addClass('is-inactive');
+	},function(){
+		$('.admincomis__block.is-active').removeClass('is-inactive');
+	});
+	// =========================================================
+	// ================.sites module=============================
+	// =========================================================
 	toanimate = $('.sites').find('ul');
 	maxheight = toanimate.height();
 	toanimate.height($('.sites').data('minheight'));
@@ -74,7 +146,6 @@ $(document).ready(function() {
 	});
 
 	$('.sites').click(function (e) {
-		
 		if($(this).hasClass('is-active')){
 			$(this).removeClass('is-active');	
 			$('.sites').find('ul').height($('.sites').data('minheight')).afterTransition(function(){
@@ -87,110 +158,24 @@ $(document).ready(function() {
 				setpopup();
 			});
 		}
-		// $('.sites').find('ul').height($('.sites').data('maxheight')).afterTransition(function(){
-		// 	setpopup();
-		// });
 	});
+	
 
-	// ===============================================================
-	// ===========================VARs================================
-	// ===============================================================
-	// lets have fun with scroll, oh dear
-	//elements
-	readwrap = $('.read__wrap');
-	header = $('.topline');
-	footer = $('.footer');
-	promoted  = $('.promoted ');
-	body = $('body');
-	side = $('.sidenav');
-	//sidewrap = $('.sidenav');
-	//alert($('.footer').offset().top);
-
-	// static parameters
-	fh = footer.height();
-	fTop = footer.offset().top;
-	hh = 60;
-	ph  = promoted.height();
-	bh = $(document).height();
-	margintop = 40;
-	marginbot = 40;
-	topareah = hh + ph;
-	newtop = 0;
-	newheight = 0;
-
-	// ===============================================================
-	// ===========================READ POSITION=======================
-	// ===============================================================
-	function setpopup(){
-		fTop = footer.offset().top;
-		if(body.hasClass('is-wide')){
-			curpos = $(window).scrollTop(); //current screen scroll from top
-			wh = $(window).height(); //window height
-
-			if($('.promoted').hasClass('is-collapsed')){
-				topareah = 160 - 45;
-			}
-			else{
-				topareah = 240;
-			}
-
-			//console.log(curpos);
-				//determine top and height
-				if(curpos < topareah - 55 ){ // we are at top
-					//newtop = topareah + margintop;
-					
-					newtop = topareah + margintop - curpos;
-					newheight = wh - newtop - marginbot;
-					//console.log(newheight);
-					console.log('header');
-
-				}
-				else{ // at middle
-					console.log('middle');
-					//newtop = curpos + margintop;
-					
-					newtop = hh + margintop;
-					newheight = wh - newtop - marginbot;
-				}
-				// we are at bottom
-				// if(curpos+wh> fTop){
-				// 	console.log('footer');
-				// 	newheight = fTop - curpos - marginbot - margintop - 60;
-				// }
-		}
-		else{
-			newtop = 0;
-			newheight = $(window).height() - 80;
-		}
-		// set new width height
-		newtop = '10';
-		newheight = $(window).height() - 20;
-
-		readwrap.css("top",newtop);
-		//readwrap.css("height",newheight);
-		readwrap.css("min-height", newheight);
-	}
-
-
+	//wide
 	function setwideclass(){
 		if($(window).width()>1480){
-			body.addClass('is-wide');
+			b.addClass('is-wide').removeClass('is-narrow');
 		}
 		else{
-			body.removeClass('is-wide');
+			b.removeClass('is-wide').addClass('is-narrow');
 		}
 	}
+	
+
 	function setsidenav(){
 		side.height($(window).height());
 	}
-	setsidenav();
-
-
-
 	
-
-	
-
 
 	// ==================================================================
 	// ===========================SIDENAV================================
@@ -209,135 +194,40 @@ $(document).ready(function() {
 		$('.sidenav,.wrapsite__overlayfixed').css({'top': $(window).scrollTop()});
 		$('body').toggleClass('is-withsidebar');
 
-		
 	});
-	//sidebar fixed
-	// (function () {
-	// 	var previousScroll = 0;
-	// 	$(window).scroll(function(){
-	// 	   var currentScroll = $(this).scrollTop();
-	// 	   if(currentScroll>100){
-	// 		if (currentScroll > previousScroll){
-	// 			//going down
-	// 			   if(side.hasClass('is-fixed')){
-	// 				console.log('removing fix');
-	// 				side.removeClass('is-fixed').css('top', currentScroll);
-	// 			   }
-	// 		} else {
-	// 			//going up
-	// 			//console.log('up');
-	// 			if(!(side.hasClass('is-fixed')) && currentScroll < side.offset().top){
-	// 				side.addClass('is-fixed');
-	// 			}
-	// 		}
-	// 		previousScroll = currentScroll;
-	// 	   }
-	// 	});
-	// }()); //run this anonymous function immediately
 
 
-	// all of this for wide screen only
+
 	setwideclass();
-	setpopup();
+	setsidenav();
+	setread();
 	$(window).scroll(function () {
 		setwideclass();
 		setpopup();
+		setread();
 	});
 	$(window).resize(function() {
 		setwideclass();
-		setpopup();
 		setsidenav();
+		setread();
 	});
 
 
 
 
-	var stickyPanelSettings = {
-        // Use this to set the top margin of the detached panel.
-        topPadding: 60,
 
-        // This class is applied when the panel detaches.
-        afterDetachCSSClass: "",
 
-        // When set to true the space where the panel was is kept open.
-        savePanelSpace: true,
 
-        // Event fires when panel is detached
-        // function(detachedPanel, panelSpacer){....}
-        onDetached: null,
 
-        // Event fires when panel is reattached
-        // function(detachedPanel){....}
-        onReAttached: null,
 
-        // Set this using any valid jquery selector to 
-        // set the parent of the sticky panel.
-        // If set to null then the window object will be used.
-        parentSelector: null
-    };
-    $(".fixme").stickyPanel(stickyPanelSettings);
-
-    //focusing on material
-	// $('body').on('mouseenter', '.read__wrap', function(){
-	// 	if($('body').hasClass('is-wide')){
-	// 		$('body').addClass('is-focusedonread');
-	// 	}
-	// });
-	// $('body').on('mouseleave', '.read__wrap', function(){
-	// 	if($('body').hasClass('is-wide')){
-	// 		$('body').removeClass('is-focusedonread');
-	// 	}
-	// });
-	// admin comis
-	// $(selector1).swapWith(selector2);
-	$('.admincomis__block h2').click(function(event) {
-		if($(this).parent().hasClass('is-active')){
-			// something
-		}
-		else{
-			$('.admincomis__block').removeClass('is-inactive').toggleClass('is-active');
-			$('.admincomis__block[data-block=admin]').swapWith('.admincomis__block[data-block=comis]');
-		}
-		return false;
-	});
-	// fading on hover
-	$('.admincomis__block h2').hoverIntent(function(){
-		$('.admincomis__block.is-active').addClass('is-inactive');
-	},function(){
-		$('.admincomis__block.is-active').removeClass('is-inactive');
-	});
+	
 
 
 
 	// =============================
 	// =============================
-	// datepicker
-	// docs here http://jquerytools.org/documentation/dateinput/
-	$.tools.dateinput.localize("ru",  {
-	   months:        'январь,февраль,март,апрель,май,июнь,июль,август,' +
-	                  'сентябрь,октябрь,ноябрь,декабрь',
-	   shortMonths:   'янв,фев;мар,апр,май,июн,июл,' +
-	                  'авг,сеп,ноя,дек',
-	   days:          'понедельник,вторник,среда,четверг,пятница,суббота,воскресенье',
-	   shortDays:     'Пн,Вт,Ср,Чт,Пт,Сб,Вс'
-	});
-	$(".dateblock").dateinput({
-		lang: 'ru',
-		change: function() {
-			var isoDate = this.getValue('mmmm yyyy');
-			$(".dateblock").text(isoDate);
-		}
-	});
-
-
-
-
-
-	// =============================
-	// =============================
-	// debug debug
+	// debug debug, adding active class for nav
 	var filename= location.pathname.split('\\').pop().split('/').pop();
-	//console.log(leafname);
 	$('.topline__nav a[href$="'+filename+'"]').addClass('is-active');
 });
 // =============================
