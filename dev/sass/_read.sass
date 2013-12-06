@@ -10,6 +10,11 @@
 		bottom: 10px 
 		left: auto 
 		margin: 0 
+		height: auto !important
+		
+	+r(notwide)
+		top: 0 !important 
+		
 
 .read
 	background: #fbfbfd
@@ -173,8 +178,7 @@
 		margin-bottom: 27px 
 	ul
 		list-style: none 
-		li
-			margin-bottom: 4px 
+		
 		a
 			font-size: 13px 
 			color: #565268
@@ -188,6 +192,7 @@
 			text-overflow: ellipsis
 			max-width: 100% 
 			border-radius: 6px
+			+box-sizing(border-box)
 			&:hover
 				color: #ffffff 
 				background: #30BE9A 
@@ -197,6 +202,24 @@
 				color: #B0AEB8 
 				&:hover
 					color: #fff 
+		li
+			margin-bottom: 4px 
+			position: relative
+			height: 32px 
+			&:hover
+				z-index: 20 
+				a
+					color: #ffffff 
+					background: #30BE9A 
+					border-color: #30BE9A 
+					position: absolute
+					left: 0
+					top: 0
+					-ms-text-overflow: auto
+					text-overflow: auto
+					max-width: 300px 
+
+
 .read__status
 	padding-top: 25px 
 	border-top: 1px solid #ECECEC
