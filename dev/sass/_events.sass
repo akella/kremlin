@@ -151,15 +151,23 @@
 		&:first-child
 			margin-top: 0 
 .more
-	border-radius: 3px
+	border-radius: 2px
+	color: #30BE9A
 	background-color: #fbfbfd
-	box-shadow: 0 1px 4px rgba(70,76,98,.1)
-	background: #ffffff 
-	height: 40px 
+	background: #ffffff
+	border: 1px solid rgba(48,190, 154, 0.3)
+	height: 40px
 	text-align: center
 	display: block
 	position: relative
 	margin-bottom: 40px 
+	line-height: 40px
+	font-size: 13px
+	text-decoration: none
+	+transition(background-color 0.2s ease-in-out, color 0.2s ease-in-out)
+	&:hover
+		background-color: #30BE9A
+		color: white
 	i
 		display: inline-block
 		+s(more)
