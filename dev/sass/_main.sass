@@ -3,8 +3,6 @@
 .content
 	background: #F5F5F6
 	&.content_main
-		//box-shadow: inset 0 15px 15px -15px rgba(black, 0.1)
-		padding: 0 40px 
 	&.content_alt
 		background: #ECECEE
 	.content__in
@@ -12,8 +10,8 @@
 		padding-top: 40px 
 		padding-bottom: 40px 
 		+mob
-			padding-top: 20px 
-			padding-bottom: 20px 
+			padding-top: 30px 
+			padding-bottom: 30px 
 	&.content_top
 		background: #fff 
 		.content__in
@@ -30,6 +28,10 @@
 				width: 100% 
 				content: ' '
 				//+g(#F3F4F6, rgba(#F3F4F6, 0))
+.previously
+	+mob
+		padding: 30px 40px
+		background: #F4F4F4   
 				
 
 
@@ -54,10 +56,15 @@
 	height: 180px
 	+transition(all 0.3s linear)
 	overflow: hidden
+	+mob
+		overflow: visible
+		height: auto 
 	.promoted__in
 		@extend %in
 		padding-top: 40px 
 		padding-bottom: 40px 
+		+mob
+			padding: 0 
 	.promoted__toggle
 		position: absolute
 		right: 20px
@@ -66,6 +73,8 @@
 		width: 18px + 40px
 		height: 11px   + 40px
 		opacity: .5 
+		+mob
+			display: none
 		i
 			position: absolute
 			margin-left: -9px 
@@ -87,9 +96,16 @@
 	overflow: hidden
 	text-decoration: none
 	display: block
+	padding: 40px 40px  
+	+mob
+		overflow: visible
 	.promoted__pic
 		float: right
 		margin-left: 100px
+		+mob
+			float: none
+			display: block
+			margin: 0 10px 0 0
 	.promoted__title
 		+lite
 		color: #181c40
@@ -98,6 +114,9 @@
 		line-height: 1.3
 		font-weight: normal
 		padding-top: 5px
+		+mob
+			margin-bottom: 15px 
+			margin-top: 15px 
 		&:hover
 			color: #2A40C8 
 	.promoted__date

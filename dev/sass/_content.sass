@@ -48,28 +48,58 @@
 		border-bottom: none
 		margin-bottom: 45px
 		+transition(all .3s linear)
+		+mob
+			transition: none
+			padding: 25px 40px
+			margin-top: 10px  
 		&:hover
 			background: #fcfcfc
 			+box-shadow(0px 6px 32px 4px rgba(34,30,74,0.15))
+			+mob
+				+box-shadow(none)
 			.hentry__title
 				a
 					color: #245FC0 
 		.hentry__title
 			font-size: 24px
 			min-height: 127px
+			+mob
+				min-height: 0 
 		.hentry__pic
 			margin: 22px -28px -28px -28px
+			+mob
+				margin: 22px -20px 0 -20px 
+			img
+				+mob
+					width: 100% 
+					display: block
+					height: auto 
 	&.hentry_wide
 		margin-bottom: 42px
 		border-bottom-style: none
 		padding-bottom: 0
+		padding: 0 40px 
+		+mob
+			margin-bottom: 0 
 		.hentry__title
 			font-size: 33px
 			line-height: 1.2
 			padding-top: 13px
-		.hentry__meta
+			+mob
+				font-size: 30px 
+		.hentry__pic
+			+mob
+				margin: 0 -40px
+				margin-top: 24px 
+			img 
+				+mob
+					display: block
+					width: 100% 
+					height: auto 
 	&.hentry_equal
 		min-height: 385px
+		+mob
+			min-height: 0 
 	&.hentry_last
 		border-bottom: none
 		padding-bottom: 0

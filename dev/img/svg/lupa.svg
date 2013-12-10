@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<svg width="14px" height="14px" viewBox="0 0 14 14" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" xmlns:sketch="http://www.bohemiancoding.com/sketch/ns">
+    <title>lupa</title>
+    <description>Created with Sketch (http://www.bohemiancoding.com/sketch)</description>
+    <defs></defs>
+    <g id="Page-1" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd" sketch:type="MSPage">
+        <path d="M5,10 C7.76142389,10 10,7.76142389 10,5 C10,2.23857611 7.76142389,0 5,0 C2.23857611,0 0,2.23857611 0,5 C0,7.76142389 2.23857611,10 5,10 Z M5,8 C6.65685433,8 8,6.65685433 8,5 C8,3.34314567 6.65685433,2 5,2 C3.34314567,2 2,3.34314567 2,5 C2,6.65685433 3.34314567,8 5,8 Z M8.29289322,9.70710678 L11.7928932,13.2071068 L13.2071068,11.7928932 L9.70710678,8.29289322 L8.29289322,9.70710678 Z" id="(Icon)-Search" fill="#B8B4C8" sketch:type="MSShapeGroup"></path>
+    </g>
+</svg>
