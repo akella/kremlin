@@ -19,6 +19,7 @@
 .read
 	background: #fbfbfd
 	//box-shadow: 0 0 15px rgba(black, 0.4)
+	padding-bottom: 60px 
 	+r(wide)
 		box-shadow: none
 	.read__tabs
@@ -29,6 +30,18 @@
 		// right: 10px 
 		// width: 100% 
 		padding-left: 80px 
+		+r(wide)
+			position: fixed
+			bottom: 10px 
+			right: 10px 
+			left: 880px 
+			z-index: 1400 
+		+r(notwide)
+			position: fixed
+			bottom: 0
+			left: 160px  
+			width: 600px 
+			z-index: 1400 
 		*
 			float: left
 		i
