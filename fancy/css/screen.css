@@ -746,6 +746,9 @@ body {
       -ms-transform: translate3d(220px, 0, 0);
       -o-transform: translate3d(220px, 0, 0);
       transform: translate3d(220px, 0, 0); }
+    body.is-withsidebar .wrapsite {
+      position: relative;
+      z-index: 300; }
 
 .sites {
   background: #dadce0;
