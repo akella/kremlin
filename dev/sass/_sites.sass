@@ -3,12 +3,21 @@
 	padding-top: 30px
 	+transition(all .3s linear)
 	position: relative
+	+mob
+		padding: 20px 20px 0 20px 
+		position: relative
+		overflow: hidden
 	ul
 		list-style: none
 		margin-right: -60px
 		overflow: hidden
 		padding-top: 10px 
 		+transition(all 0.3s ease-in-out)
+		+mob
+			margin-right: 0
+			padding-top: 0  
+			height: auto !important
+			overflow: visible
 	.sites__toggle
 		position: absolute
 		bottom: 0
@@ -16,6 +25,8 @@
 		cursor: pointer
 		width: 100%
 		z-index: 10
+		+mob
+			display: none
 	.sites__toggleicon
 		position: absolute
 		right: 20px
@@ -23,6 +34,8 @@
 		cursor: pointer
 		width: 18px + 40px
 		height: 11px   + 40px
+		+mob
+			display: none
 		i
 			position: absolute
 			margin-left: -9px 
@@ -60,6 +73,12 @@
 		line-height: 1.2
 		position: relative
 		+transition(all .2s linear)
+		+mob
+			width: auto 
+			margin: 0 
+			margin-bottom: 20px 
+			float: none
+			display: block
 		&:hover
 			background: #FCFCFD 
 			//url(../img/site.jpg) no-repeat 0 0
@@ -75,7 +94,7 @@
 			bottom: 29px
 			left: 27px
 			text-transform: uppercase
-			color: #2d78e1
+			color: #182E84
 			font-family: Arial,sans-serif
 			font-size: 10px
 		.site__arrow

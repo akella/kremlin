@@ -4,12 +4,16 @@
 	background: #F5F5F6
 	&.content_main
 		//box-shadow: inset 0 15px 15px -15px rgba(black, 0.1)
+		padding: 0 40px 
 	&.content_alt
 		background: #ECECEE
 	.content__in
 		@extend %in
 		padding-top: 40px 
 		padding-bottom: 40px 
+		+mob
+			padding-top: 20px 
+			padding-bottom: 20px 
 	&.content_top
 		background: #fff 
 		.content__in
@@ -33,10 +37,16 @@
 .cols
 	margin-right: -50px
 	@extend %clr
+	+mob
+		margin-right: 0 
 	.col
 		width: 320px
 		float: left
 		margin-right: 40px
+		+mob
+			width: auto 
+			float: none
+			margin: 0 
 
 .promoted
 	background: #fff

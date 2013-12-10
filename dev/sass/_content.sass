@@ -121,13 +121,17 @@
 		.hentry__assets
 			width: 76px
 
-
+.admincomis
+	+mob
+		padding: 0 40px 
 .admincomis__block
 	+transition(all .2s linear)
 	.cols
 		display: none
 	&.is-inactive
 		opacity: .5
+		+mob
+			opacity: 1 
 	&.is-active
 		.cols
 			display: block
@@ -136,6 +140,8 @@
 			opacity: .5 
 			margin-bottom: 0
 			margin-top: 20px  
+			+mob
+				opacity: 1 
 			&:hover
 				opacity: 1 
 	h2

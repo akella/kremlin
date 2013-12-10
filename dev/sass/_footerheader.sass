@@ -17,6 +17,8 @@
 	z-index: 220
 	width: 100% 
 	//+transition(all .3s ease-in-out)
+	+mob
+		display: none
 	&:hover
 		.topline__toggleaside
 			i
@@ -158,9 +160,11 @@
 .footer
 	background: #1E2031
 	padding: 50px 0
-	font-size: 12px
+	font-size: 13px
 	color: #68718b
 	line-height: 1.4
+	+mob
+		padding: 0 0 40px 0
 	.footer__in
 		@extend %in
 		position: relative
@@ -169,10 +173,21 @@
 		float: left
 		margin-bottom: 38px
 		margin-right: 20px
+		+mob
+			width: auto 
+			float: none
+			padding: 26px 40px 1px 40px
+			border-bottom: 1px solid #4D4E6E  
+			margin-bottom: 0 
+			margin-right: 0 
 		&.footer__col_last
 			float: right
 			margin-right: 0
 			padding-bottom: 100px
+			+mob
+				float: none
+				padding: 26px 40px 1px 40px
+				border-bottom: none 
 	h3
 		font-size: 18px
 		+frank
@@ -181,10 +196,14 @@
 		line-height: 1.3
 		margin-bottom: 30px
 		margin-right: 24px
+		+mob
+			margin-right: 0 
 		a
 			text-decoration: none
 			color: #6c7396
 			display: inline-block
+			+mob
+				color: #fff 
 			&:hover
 				color: #c2c6d2
 	ul
@@ -193,21 +212,26 @@
 		li
 			margin-bottom: 1.1em
 		a
-			color: #6c7396
+			color: #D6DCF6
 			text-decoration: none
 			&:hover
-				color: #a0afc3
+				color: #fff
+			i
+				+mob
+					display: none
 		.footer__currentsite
-			a
-				color: #6c7396
 			span
 				display: block
-				color: #414664
+				color: #6C7494
 	.footer__copy
 		clear: both
 		position: relative
 		top: -15px
-		color: #414664 
+		color: #6C7494 
+		+mob
+			position: static
+			margin-left: 40px 
+			margin-top: 30px 
 		span
 			display: block
 			// margin-top: 1em;
@@ -229,14 +253,18 @@
 			opacity: .3
 	.footer__license
 		margin-top: 30px
-		color: #414664 
+		color: #6C7494 
 		p
 			margin-bottom: 1em 
+			+mob
+				margin-bottom: 0 
 		i
 			display: inline-block
 			+s(cc)
 			margin-bottom: 8px
 			display: inline-block
+			+mob
+				display: none
 	.footer__logo
 		position: absolute
 		right: 34px
@@ -245,3 +273,9 @@
 		//+s(bigorel)
 		+svg(biglogo, 120, 120)
 		opacity: .2 
+		+mob
+			+svg(biglogo, 65, 65)
+			position: static
+			display: inline-block
+			margin-left: 40px 
+			margin-top: 30px 

@@ -2,6 +2,8 @@ $sidenav: 220px
 .sidenav
 	height: 400px 
 	background: #182472 
+	+mob
+		display: none
 
 .wrapsite__overlay,.wrapsite__overlayfixed
 	position: absolute
@@ -21,8 +23,8 @@ $sidenav: 220px
 	
 .wrapsite__overlay
 	display: none
-	.is-wide &
-		display: block
+	// .is-wide &
+	// 	display: block
 .wrapsite__overlayfixed
 	//position: fixed
 	background: rgba(#E0E0E0, .8)
