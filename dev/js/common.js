@@ -179,7 +179,13 @@ $(document).ready(function() {
 
 	}
 	
-
+	// ======
+	// ======
+	// ======
+	$('.topline__togglemore').click(function(event) {
+		$('.topline__more').slideToggle();
+		$(this).toggleClass('is-active');
+	});
 	// ==================================================================
 	// ===========================SIDENAV================================
 	// ==================================================================
@@ -213,6 +219,8 @@ $(document).ready(function() {
 		setsidenav();
 		setread();
 	});
+
+
 
 
 

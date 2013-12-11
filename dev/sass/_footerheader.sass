@@ -66,6 +66,7 @@
 			background: #282246 
 			padding-left: 15px 
 			float: none
+			margin: 0 
 		&:before
 			border-left: 1px solid #1E3D63
 			position: absolute
@@ -228,11 +229,24 @@
 			+mob
 				display: none
 	.topline__togglemore
+		cursor: pointer
 		+mob
 			position: absolute
-			top: 22px 
-			right: 22px 
-			+svg(togglearrowmob, 16,9)
+			right: 0 
+			top: 0
+			height: 60px 
+			width: 50% 
+		i
+			+mob
+				position: absolute
+				top: 22px 
+				right: 22px 
+				+svg(togglearrowmob, 16,9)
+		&.is-active 
+			i
+				+mob
+					+transform(rotate(180deg))
+
 
 
 .footer

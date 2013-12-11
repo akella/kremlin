@@ -377,7 +377,8 @@ a img, fieldset {
         display: block;
         background: #282246;
         padding-left: 15px;
-        float: none; } }
+        float: none;
+        margin: 0; } }
     .topline .topline__head:before {
       border-left: 1px solid #1e3d63;
       position: absolute;
@@ -569,19 +570,35 @@ a img, fieldset {
       @media only screen and (max-width: 700px) {
         .topline .search .search__advanced {
           display: none; } }
-  @media only screen and (max-width: 700px) {
-    .topline .topline__togglemore {
-      position: absolute;
-      top: 22px;
-      right: 22px;
-      background: url("../img/svg/togglearrowmob.svg") no-repeat 0 0;
-      -webkit-background-size: 16px 9px;
-      -moz-background-size: 16px 9px;
-      -o-background-size: 16px 9px;
-      background-size: 16px 9px;
-      width: 16px;
-      height: 9px;
-      display: inline-block; } }
+  .topline .topline__togglemore {
+    cursor: pointer; }
+    @media only screen and (max-width: 700px) {
+      .topline .topline__togglemore {
+        position: absolute;
+        right: 0;
+        top: 0;
+        height: 60px;
+        width: 50%; } }
+    @media only screen and (max-width: 700px) {
+      .topline .topline__togglemore i {
+        position: absolute;
+        top: 22px;
+        right: 22px;
+        background: url("../img/svg/togglearrowmob.svg") no-repeat 0 0;
+        -webkit-background-size: 16px 9px;
+        -moz-background-size: 16px 9px;
+        -o-background-size: 16px 9px;
+        background-size: 16px 9px;
+        width: 16px;
+        height: 9px;
+        display: inline-block; } }
+    @media only screen and (max-width: 700px) {
+      .topline .topline__togglemore.is-active i {
+        -webkit-transform: rotate(180deg);
+        -moz-transform: rotate(180deg);
+        -ms-transform: rotate(180deg);
+        -o-transform: rotate(180deg);
+        transform: rotate(180deg); } }
 
 .footer {
   background: #1e2031;
