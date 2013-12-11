@@ -107,9 +107,11 @@
 			color: #a0afc3
 			text-decoration: none
 			display: block
-			padding: 13px 0 13px 20px
-			color: #D6DCF6   
-			border-bottom: 1px solid #3B375E 
+			
+			+mob
+				color: #D6DCF6   
+				border-bottom: 1px solid #3B375E 
+				padding: 13px 0 13px 20px
 			&:hover, &.is-active
 				color: #F5F5F6
 			&.topline__search
@@ -128,6 +130,7 @@
 		left: 160px + 160px
 		z-index: 20 
 		//+background-image(linear-gradient(#181D3E, #15216E))
+		background: #272446 
 		+mob
 			position: relative
 			padding: 3px 

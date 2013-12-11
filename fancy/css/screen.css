@@ -434,10 +434,12 @@ a img, fieldset {
     .topline .topline__nav a {
       color: #a0afc3;
       text-decoration: none;
-      display: block;
-      padding: 13px 0 13px 20px;
-      color: #d6dcf6;
-      border-bottom: 1px solid #3b375e; }
+      display: block; }
+      @media only screen and (max-width: 700px) {
+        .topline .topline__nav a {
+          color: #d6dcf6;
+          border-bottom: 1px solid #3b375e;
+          padding: 13px 0 13px 20px; } }
       .topline .topline__nav a:hover, .topline .topline__nav a.is-active {
         color: #f5f5f6; }
       @media only screen and (max-width: 700px) {
@@ -454,7 +456,8 @@ a img, fieldset {
     top: -50px;
     height: 42px;
     left: 320px;
-    z-index: 20; }
+    z-index: 20;
+    background: #272446; }
     @media only screen and (max-width: 700px) {
       .topline .search {
         position: relative;
@@ -1666,8 +1669,10 @@ body {
 .promoted__entry {
   overflow: hidden;
   text-decoration: none;
-  display: block;
-  padding: 40px 40px; }
+  display: block; }
+  @media only screen and (max-width: 700px) {
+    .promoted__entry {
+      padding: 40px 40px; } }
   @media only screen and (max-width: 700px) {
     .promoted__entry {
       overflow: visible; } }
@@ -1809,11 +1814,11 @@ body {
   .hentry.hentry_wide {
     margin-bottom: 42px;
     border-bottom-style: none;
-    padding-bottom: 0;
-    padding: 0 40px; }
+    padding-bottom: 0; }
     @media only screen and (max-width: 700px) {
       .hentry.hentry_wide {
-        margin-bottom: 0; } }
+        margin-bottom: 0;
+        padding: 0 40px; } }
     .hentry.hentry_wide .hentry__title {
       font-size: 33px;
       line-height: 1.2;
