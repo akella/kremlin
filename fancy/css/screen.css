@@ -272,6 +272,9 @@ a img, fieldset {
 
 .wrapsite {
   padding-top: 60px; }
+  @media only screen and (max-width: 700px) {
+    .wrapsite {
+      padding-top: 0; } }
 
 @-moz-keyframes fade {
   from {
