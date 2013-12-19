@@ -270,6 +270,58 @@ a img, fieldset {
     .links a:hover {
       z-index: 3; }
 
+.welcome {
+  height: 60px;
+  background: #1e1c2c;
+  position: fixed;
+  z-index: 10001;
+  left: 0;
+  top: 0;
+  right: 0;
+  font-size: 15px;
+  height: 60px;
+  line-height: 60px;
+  padding-left: 160px;
+  display: none; }
+  .welcome a {
+    color: #50e3c2;
+    text-decoration: none;
+    margin-right: 15px; }
+  .welcome .welcome__start {
+    color: #aca8ba; }
+
+.welcome__overlay {
+  background: #e0e0e0;
+  opacity: 0;
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  top: 0px;
+  right: 0;
+  z-index: 10000;
+  z-index: -1;
+  -webkit-transition: all 0.2s linear;
+  -moz-transition: all 0.2s linear;
+  -o-transition: all 0.2s linear;
+  transition: all 0.2s linear; }
+
+.is-firsttime {
+  overflow: hidden; }
+  .is-firsttime .promoted {
+    margin-top: 60px;
+    -webkit-transition: none;
+    -moz-transition: none;
+    -o-transition: none;
+    transition: none; }
+  .is-firsttime .welcome__overlay {
+    opacity: 0.8;
+    z-index: 10000; }
+  .is-firsttime .welcome {
+    display: block; }
+  .is-firsttime .topline {
+    margin-top: 60px;
+    position: fixed; }
+
 .wrapsite {
   padding-top: 60px; }
   @media only screen and (max-width: 700px) {
@@ -1660,10 +1712,10 @@ body {
   background: white;
   position: relative;
   height: 180px;
-  -webkit-transition: all 0.3s linear;
-  -moz-transition: all 0.3s linear;
-  -o-transition: all 0.3s linear;
-  transition: all 0.3s linear;
+  -webkit-transition: height 0.3s linear;
+  -moz-transition: height 0.3s linear;
+  -o-transition: height 0.3s linear;
+  transition: height 0.3s linear;
   overflow: hidden; }
   @media only screen and (max-width: 700px) {
     .promoted {
