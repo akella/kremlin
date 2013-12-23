@@ -20,10 +20,57 @@
 		+r(notwide)
 			position: fixed
 			width: 100%
+		+mob
+			position: static
 	+r(wide)
 		overflow: auto
 		overflow-x: hidden
+//mobile version of material
+.is-reading
+	.footer, .content,.promoted,.sidenav,.topline
+		+mob
+			display: none
+	.read__wrap
+		+mob
+			display: block
+			min-width: 0 !important 
+			height: auto !important
+			padding-top: 0
+			padding-bottom: 120px 
+			margin: 0 !important
+			top: 0 !important 
+			position: static !important
+		.read
+			+mob
+				padding: 0 !important 
+				width: auto 
+				min-width: 0
+				margin: 0   
+	.read__overlay
+		+mob
+			display: none
+		 
+	
 
+	// .topline,.sidenav,.footer,.wrapsite>div
+	// 	+mob
+	// 		// display: none
+	// .wrapsite>.read__wrap
+	// 	+mob
+	// 		display: block
+	// 		height: auto !important
+	// 		padding-top: 0
+	// 		margin: 0
+	// 		position: absolute  
+	// .read__in
+	// 	+mob
+	// 		padding:  20px 
+	// .read
+	// 	+mob
+	// 		min-width: 0
+	// 		width: auto  
+	// 		margin: 0 
+		
 .read__wrap
 	// position: fixed
 	// top: 100px 
