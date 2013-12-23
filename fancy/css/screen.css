@@ -2079,15 +2079,20 @@ body {
       @media only screen and (max-width: 700px) {
         .hentry.hentry_wide .hentry__title {
           font-size: 30px; } }
-    @media only screen and (max-width: 700px) {
-      .hentry.hentry_wide .hentry__pic {
-        margin: 0 -40px;
-        margin-top: 24px; } }
-    @media only screen and (max-width: 700px) {
-      .hentry.hentry_wide .hentry__pic img {
-        display: block;
-        width: 100%;
-        height: auto; } }
+    .hentry.hentry_wide .hentry__pic {
+      -webkit-transition: all 0.3s linear;
+      -moz-transition: all 0.3s linear;
+      -o-transition: all 0.3s linear;
+      transition: all 0.3s linear; }
+      @media only screen and (max-width: 700px) {
+        .hentry.hentry_wide .hentry__pic {
+          margin: 0 -40px;
+          margin-top: 24px; } }
+      @media only screen and (max-width: 700px) {
+        .hentry.hentry_wide .hentry__pic img {
+          display: block;
+          width: 100%;
+          height: auto; } }
   .hentry.hentry_equal {
     min-height: 385px; }
     @media only screen and (max-width: 700px) {
