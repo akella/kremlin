@@ -752,7 +752,7 @@ a img, fieldset {
       color: #9694a4;
       text-decoration: none; }
       .footer ul a:hover {
-        color: white; }
+        color: #30be9a; }
       @media only screen and (max-width: 700px) {
         .footer ul a i {
           display: none; } }
