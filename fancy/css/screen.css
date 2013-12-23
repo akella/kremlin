@@ -805,12 +805,12 @@ a img, fieldset {
     .footer .footer__smi i {
       position: absolute;
       background: url("../img/svg/smi.svg") no-repeat 0 0;
-      -webkit-background-size: 14px 12px;
-      -moz-background-size: 14px 12px;
-      -o-background-size: 14px 12px;
-      background-size: 14px 12px;
+      -webkit-background-size: 14px 14px;
+      -moz-background-size: 14px 14px;
+      -o-background-size: 14px 14px;
+      background-size: 14px 14px;
       width: 14px;
-      height: 12px;
+      height: 14px;
       display: inline-block;
       top: 1px;
       left: -36px; }
@@ -2224,21 +2224,24 @@ body {
   .subnav li {
     display: inline-block;
     font-size: 15px;
-    color: #9c9ea8; }
+    color: #565268; }
     .subnav li a {
-      color: #9c9ea8;
+      color: #565268;
       text-decoration: none;
       margin-right: 25px; }
       .subnav li a.is-active {
-        color: #3656cc; }
+        color: #2a40c8; }
+      .subnav li a.is-special {
+        color: #78c8b4; }
   .subnav.subnav_sub li a.is-active {
     position: relative; }
     .subnav.subnav_sub li a.is-active:before {
       position: absolute;
       bottom: -5px;
-      background: url('../../dev/img/icons-sf5b4bba9c2.png') 0 -1269px no-repeat;
-      width: 3px;
-      height: 3px;
+      width: 6px;
+      height: 2px;
+      background: #2a40c8;
+      border-radius: 2px;
       content: " ";
       left: 50%; }
 

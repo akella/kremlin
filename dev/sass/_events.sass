@@ -22,13 +22,15 @@
 	li
 		display: inline-block
 		font-size: 15px 
-		color: #9c9ea8 
+		color: #565268 
 		a
-			color: #9c9ea8
+			color: #565268
 			text-decoration: none
 			margin-right: 25px  
 			&.is-active
-				color: #3656cc  
+				color: #2A40C8  
+			&.is-special
+				color: #78C8B4 
 	&.subnav_sub
 		li 
 			a.is-active
@@ -36,7 +38,10 @@
 				&:before
 					position: absolute
 					bottom: -5px 
-					+s(dot)
+					width: 6px 
+					height: 2px 
+					background: #2A40C8
+					border-radius: 2px 
 					content: ' '
 					left: 50% 
 .rubr
