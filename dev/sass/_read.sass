@@ -446,6 +446,7 @@
 			bottom: 60px + 50px
 			+mob
 				bottom: 100px 
+				display: none !important
 	&:hover
 		.slider__next, .slider__prev,.slider__page
 			opacity: 1
@@ -476,6 +477,7 @@
 		padding: 13px 0
 		+mob
 			margin: 0 40px 
+			font-size: 11px 
 	.slider__slide
 		position: relative
 		width: 100% 
@@ -491,6 +493,10 @@
 		text-align: center
 		font-size: 13px 
 		opacity: 0 
+		+mob
+			display: none
+			color: #fff
+			font-size: 0  
 .subtle
 	color: #B0AEB8 
 .keyevents
