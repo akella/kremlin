@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<svg width="120px" height="120px" viewBox="0 0 120 120" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" xmlns:sketch="http://www.bohemiancoding.com/sketch/ns">
+    <title>play</title>
+    <description>Created with Sketch (http://www.bohemiancoding.com/sketch)</description>
+    <defs></defs>
+    <g id="Page-1" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd" sketch:type="MSPage">
+        <path d="M52.7305492,36.0289668 C49.0133695,33.6381445 46,35.2835224 46,39.7043209 L46,80.2956791 C46,84.7163435 49.0069809,86.3659646 52.7305492,83.9710332 L83.2694508,64.3289668 C86.9866305,61.9381445 86.9930191,58.0659646 83.2694508,55.6710332 L52.7305492,36.0289668 Z" id="(Icon)-Play" stroke="#FCFCFC" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" sketch:type="MSShapeGroup"></path>
+        <circle id="Oval-12" stroke="#FCFCFC" stroke-width="2" sketch:type="MSShapeGroup" cx="60" cy="60" r="60"></circle>
+    </g>
+</svg>

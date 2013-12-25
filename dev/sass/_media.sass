@@ -1,29 +1,29 @@
 .media
-	background: #fff 
-	margin-bottom: 40px 
+	background: #fff
+	margin-bottom: 40px
 	.media__top
 		padding: 22px 30px 18px 30px
 	.media__title
-		font-size: 20px 
+		font-size: 20px
 		font-weight: normal
-		min-height: 115px 
+		min-height: 115px
 		+condbold
-		
-		color: #181c40 
+
+		color: #181c40
 		a
-			color: #181c40 
+			color: #181c40
 			text-decoration: none
 	.media__meta
-		font-size: 11px 
-		color: #b4b6c0 
+		font-size: 11px
+		color: #b4b6c0
 		.media__type
-			margin-right: 15px 
+			margin-right: 15px
 			display: inline-block
 			color: #37a58c
-			text-decoration: none 
+			text-decoration: none
 		.media__published
 			color: #868892
-			margin-right: 15px  
+			margin-right: 15px
 			display: inline-block
 		.media__length
 			display: inline-block
@@ -34,47 +34,47 @@
 		img
 			display: block
 			width: 100%
-			height: auto !important  
+			height: auto !important
 		.media__videolink
 			position: absolute
-			left: 0 
+			left: 0
 			top: 0
 			bottom: 0
 			right: 0
-			z-index: 2   
+			z-index: 2
 			opacity: 0
-			+transition(all .2s ease-in-out) 
-			background: #45A48D 
-			background: rgba(#45A48D, .6) 
+			+transition(all .2s ease-in-out)
+			background: #45A48D
+			background: rgba(#45A48D, .6)
 			+transform(scale(1.2))
 			&:before
 				content: ' '
 				position: absolute
-				top: 9px 
-				left: 10px 
-				+s(media)
+				top: 50%
+				left: 50%
+				+s(in_sidebar)
 		.media__quality
 			position: absolute
 			left: 50%
-			width: 50px 
-			margin-left: -25px   
-			bottom: 30px 
+			width: 50px
+			margin-left: -25px
+			bottom: 30px
 			background: #CCF8A6
-			border-radius: 4px 
+			border-radius: 4px
 			+condbold
-			font-size: 12px 
+			font-size: 12px
 			text-transform: uppercase
-			height: 21px 
-			color: #fff 
-			span,a
-				border: 2px solid #E3F9CF 
+			height: 21px
+			color: #fff
+			span, a
+				border: 2px solid #E3F9CF
 				background: #50AC8F
 				line-height: 19px
 				height: 17px
 				text-align: center
-				width: 24px    
+				width: 24px
 				display: block
-				border-radius: 4px 
+				border-radius: 4px
 				&.is-hd
 					float: right
 		&:hover
@@ -83,5 +83,8 @@
 				+transform(scale(1))
 	&.media_wide
 		.media__title
-			font-size: 24px 
-			min-height: 75px 
+			font-size: 24px
+			min-height: 75px
+		.media__videolink
+			&:before
+				+svg(play, 120, 120)

@@ -1,58 +1,60 @@
 .dateblock
 	float: right
-	font-size: 11px 
+	font-size: 11px
 	color: #9c9ea8
 	text-decoration: none
-	border-radius: 3px 
-	border: 1px solid #ECECEE 
-	height: 28px 
+	border-radius: 3px
+	border: 1px solid #ECECEE
+	height: 28px
 	line-height: 28px
-	padding: 0 38px 
-	margin-top: 15px 
+	padding: 0 38px
+	margin-top: 15px
 	cursor: pointer
 	&:hover
-		color: #fff 
+		color: #fff
 		background: #3559C5
-		border-color: #3559C5  
+		border-color: #3559C5
 	&:first-letter
 		text-transform: uppercase
+
 .subnav
 	list-style: none
 	font-size: 0
 	li
 		display: inline-block
-		font-size: 15px 
-		color: #565268 
+		font-size: 15px
+		color: #565268
 		a
 			color: #565268
 			text-decoration: none
-			margin-right: 25px  
+			margin-right: 25px
 			&.is-active
-				color: #2A40C8  
+				color: #2A40C8
 			&.is-special
-				color: #78C8B4 
+				color: #78C8B4
 	&.subnav_sub
-		li 
+		li
 			a.is-active
 				position: relative
 				&:before
 					position: absolute
-					bottom: -5px 
-					width: 6px 
-					height: 2px 
+					bottom: -5px
+					width: 6px
+					height: 2px
 					background: #2A40C8
-					border-radius: 2px 
+					border-radius: 2px
 					content: ' '
-					left: 50% 
+					left: 50%
+
 .rubr
-	background: #FCFCFD 
+	background: #FCFCFD
 	.rubr__head
-		font-size: 15px 
+		font-size: 15px
 		font-weight: normal
-		color: #37a58c 
+		color: #37a58c
 		a
 			color: #37a58c
-			text-decoration: none 
+			text-decoration: none
 	.rubr__list
 		overflow: hidden
 		padding: 10px 0
@@ -61,42 +63,44 @@
 			content: ' '
 			position: absolute
 			left: 45%
-			top: 0 
+			top: 0
 			height: 100%
 			border-left: 1px solid #ECECEE
 		ul
 			list-style: none
 			float: left
-			width: 40% 
-			margin-right: 10% 
+			width: 40%
+			margin-right: 10%
 		li
-			margin-bottom: 6px 
+			margin-bottom: 6px
 		a
-			font-size: 15px 
+			font-size: 15px
 			color: #5c5e6c
 			text-decoration: none
-			&.is-active,&:hover
+			&.is-active, &:hover
 				color: #3559C5
+
 .docsearch__wrap
-	background: #FCFCFD  
+	background: #FCFCFD
+
 .docsearch
 	padding: 25px 0
-	margin-right: -20px 
+	margin-right: -20px
 	overflow: hidden
-	margin-left: -10px 
-	padding-left: 10px 
+	margin-left: -10px
+	padding-left: 10px
 	position: relative
 	.docsearch__field
 		float: left
-		width: 330px 
-		margin-right: 20px 
-		margin-bottom: 14px 
+		width: 330px
+		margin-right: 20px
+		margin-bottom: 14px
 		&.docsearch__fieldlong
-			width: 680px 
+			width: 680px
 	label
 		display: block
-		font-size: 15px 
-		padding-bottom: 6px 
+		font-size: 15px
+		padding-bottom: 6px
 		color: #343646
 	input
 		background: #F5F5F6
@@ -104,10 +108,10 @@
 		display: block
 		width: 100%
 		+box-sizing(border-box)
-		border: 1px solid #ECECEE 
-		padding: 10px 
+		border: 1px solid #ECECEE
+		padding: 10px
 		+lite
-		font-size: 15px 
+		font-size: 15px
 	.docsearch__submit
 		position: absolute
 		bottom: 40px
@@ -118,54 +122,67 @@
 			content: ' '
 			position: absolute
 			top: 50%
-			margin-top: -4px 
-			right: 15px  
+			margin-top: -4px
+			right: 15px
 			+s(select)
 		select
 			-webkit-appearance: none
 			position: absolute
-			left: 0 
+			left: 0
 			top: 0
-			bottom: 0 
+			bottom: 0
 			width: 100%
 			height: 100%
-			opacity: 0    
-			z-index: 10 
+			opacity: 0
+			z-index: 10
+
 .fixme
 	background: #fff
 	z-index: 200
-	box-shadow: 0 3px 5px rgba(#000, .1)  		
+	box-shadow: 0 3px 5px rgba(#000, .1)
+	position: relative
+
+.notifications
+	background: #30BE9A
+	color: #ffffff
+	position: relative
+	z-index: 1
+	height: 60px
+	top: 0px
+	margin-top: -60px
+
 .content_subnav
 	.content__in
 		height: 60px
-		line-height: 60px 
+		line-height: 60px
 		&.content__flexible
-			height: auto 
+			height: auto
 			line-height: 1.3
 
 .events
 	.events__title
 		+condbold
-		font-size: 20px 
+		font-size: 20px
 		font-weight: normal
-		margin: 28px 0 
-		color: #848cae 
+		margin: 28px 0
+		color: #848cae
 		a
 			color: #3656cc
-			text-decoration: none 
+			text-decoration: none
 		&:first-child
-			margin-top: 0 
+			margin-top: 0
+
 .more
 	border-radius: 2px
 	color: #30BE9A
 	background-color: #fbfbfd
 	background: #ffffff
-	border: 1px solid rgba(48,190, 154, 0.3)
+	border: 1px solid rgba(48, 190, 154, 0.3)
 	height: 40px
 	text-align: center
 	display: block
 	position: relative
-	margin-bottom: 40px 
+	margin-bottom: 40px
 	line-height: 40px
 	font-size: 13px
 	text-decoration: none
@@ -177,13 +194,13 @@
 		display: inline-block
 		+s(more)
 		position: absolute
-		left: 50% 
+		left: 50%
 		top: 50%
-		margin-left: -17px  
-		margin-top: -3px 
+		margin-left: -17px
+		margin-top: -3px
 	&.more_alt
 		border: 1px solid #DEDEE2
-		background: #ECECEE
+		background: #ECECEC
 		box-shadow: none
 		i
 			+s(more_alt)

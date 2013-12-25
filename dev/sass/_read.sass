@@ -1,25 +1,25 @@
 .read__wrap
-	padding-top: 80px 
+	padding-top: 80px
 	+r(wide)
 		//box-shadow: 0 0 15px rgba(black, 0.4)
 		background: #fbfbfd
 		padding-top: 0
 		position: fixed
-		top: 10px 
-		right: 10px 
-		bottom: 10px 
-		left: auto 
-		margin: 0 
+		top: 10px
+		right: 690px
+		bottom: 10px
+		left: auto
+		margin: 0
+		opacity: 0
 		height: auto !important
-		
+
 	+r(notwide)
-		top: 0 !important 
-		
+		top: 0 !important
 
 .read
 	background: #fbfbfd
 	//box-shadow: 0 0 15px rgba(black, 0.4)
-	padding-bottom: 60px 
+	padding-bottom: 60px
 	+r(wide)
 		box-shadow: none
 	.read__tabs
@@ -29,27 +29,26 @@
 		// bottom: 10px 
 		// right: 10px 
 		// width: 100% 
-		padding-left: 80px 
+		padding-left: 80px
 		+r(wide)
 			position: fixed
-			bottom: 10px 
-			right: 10px 
-			left: 880px 
-			z-index: 1400 
+			bottom: 10px
+			right: 10px
+			left: 880px
+			z-index: 1400
 		+r(notwide)
 			position: fixed
 			bottom: 0
-			left: 160px  
-			width: 600px 
-			z-index: 1400 
+			left: 160px
+			width: 600px
+			z-index: 1400
 		+mob
 			left: 0 !important
-			width: auto  
-			margin: 0 
-			right: 0 
-			padding-left: 0 
-		*
-			float: left
+			width: auto
+			margin: 0
+			right: 0
+			padding-left: 0
+		*float: left
 		i
 			display: inline-block
 			position: relative
@@ -62,7 +61,7 @@
 			height: 12px
 			line-height: 12px
 			font-size: 8px
-			font-family: Arial,sans-serif
+			font-family: Arial, sans-serif
 			color: #fff
 			border-radius: 4px
 			background: #868492
@@ -71,33 +70,33 @@
 		.read__loadarticle
 			margin-left: 10px
 			+mob
-				margin-left: 0 
+				margin-left: 0
 			i
-				+svg(article,26,22)
+				+svg(article, 26, 22)
 			&:hover, &:active, &.is-active
 				i
-					+svgi(article_active,26,22)
+					+svgi(article_active, 26, 22)
 		.read__loadphoto
-			
+
 			i
-				+svg(photo,26,22)
+				+svg(photo, 26, 22)
 			&:hover, &:active, &.is-active
 				i
-					+svgi(photo_active,26,22)
+					+svgi(photo_active, 26, 22)
 		.read__loadvideo
 
 			i
-				+svg(video,26,22)
+				+svg(video, 26, 22)
 			&:hover, &:active, &.is-active
 				i
-					+svgi(video_active,26,22)
-		.read__loadvideo, .read__loadphoto, .read__loadarticle,.read__options
+					+svgi(video_active, 26, 22)
+		.read__loadvideo, .read__loadphoto, .read__loadarticle, .read__options
 			position: relative
 			cursor: pointer
 			height: 40px
 			padding: 20px 30px 0 30px
 			+mob
-				padding: 20px 20px 0 20px 
+				padding: 20px 20px 0 20px
 			&.is-active
 				position: relative
 				&:before
@@ -113,9 +112,9 @@
 			cursor: pointer
 			height: 40px
 			padding: 20px 30px 0 30px
-			margin-left: 10px 
+			margin-left: 10px
 			i
-				+svg(options,26,22)
+				+svg(options, 26, 22)
 			+mob
 				display: block
 		.read__share
@@ -126,10 +125,10 @@
 			+mob
 				display: none
 			i
-				+svg(export,26,22)
+				+svg(export, 26, 22)
 			&:hover, &:active, &.is-active
 				i
-					+svg(export_active,26,22)
+					+svg(export_active, 26, 22)
 
 		.read__sep
 			position: relative
@@ -148,7 +147,7 @@
 			display: none
 		+mob
 			position: static
-			padding: 0 40px 
+			padding: 0 40px
 	.read__in
 		padding: 25px 120px
 		+mob
@@ -158,35 +157,35 @@
 		color: #aaafb6
 		margin-bottom: 31px
 		+mob
-			font-size: 11px 
-			margin-bottom: 0 
+			font-size: 11px
+			margin-bottom: 0
 	.read__categ
-		font-size: 15px 
-		color: #5c5e6c 
+		font-size: 15px
+		color: #5c5e6c
 		margin-bottom: 37px
 		+book
 		position: relative
 		i
 			position: absolute
 			left: -34px + 4px
-			+svg(arr_left,8,14)
-			top: 4px 
-			opacity: 0 
+			+svg(arr_left, 8, 14)
+			top: 4px
+			opacity: 0
 			+transition(all .2s ease-in-out)
 		&:hover
 			i
 				display: block
-				left: -34px 
-				opacity: 1 
+				left: -34px
+				opacity: 1
 	.read__published, .read__time
 		margin-right: 14px
 		display: inline-block
-		color: #5c5e6c 
+		color: #5c5e6c
 		+book
 	.read__copy
 		display: inline-block
 		color: #9c9ea8
-		font-size: 11px  
+		font-size: 11px
 	.read__place
 		display: inline-block
 	.read__location
@@ -197,96 +196,98 @@
 			position: relative
 			top: 2px
 			margin-right: 6px
+
 .read__top
 	margin: -25px -120px 0 -120px
-	background: #ECECEC  
+	background: #ECECEC
 	padding: 85px 120px 45px 120px
-	margin-bottom: 38px 
+	margin-bottom: 38px
 	+mob
 		margin: 0 -40px 30px -40px
-		padding: 30px 40px  30px 40px 
+		padding: 30px 40px 30px 40px
+
 .read__tags
-	padding-top: 25px 
+	padding-top: 25px
 	border-top: 1px solid #ECECEC
 	margin-bottom: 15px
 	+clr
 	.read__tagscol
 		float: left
-		width: 31% 
-		margin-right: 2% 
+		width: 31%
+		margin-right: 2%
 		+mob
 			float: none
-			width: auto 
+			width: auto
 			margin: 0 0 30px 0
 	h3
-		font-size: 16px 
+		font-size: 16px
 		font-weight: normal
 		+reg
-		margin-bottom: 27px 
+		margin-bottom: 27px
 	ul
-		list-style: none 
-		
+		list-style: none
+
 		a
-			font-size: 13px 
+			font-size: 13px
 			color: #565268
 			text-decoration: none
 			display: inline-block
-			border: 1px solid #ECECEC  
+			border: 1px solid #ECECEC
 			padding: 4px 13px
 			white-space: nowrap
 			overflow: hidden
 			-ms-text-overflow: ellipsis
 			text-overflow: ellipsis
-			max-width: 100% 
+			max-width: 100%
 			border-radius: 6px
 			+box-sizing(border-box)
 			&:hover
-				color: #ffffff 
-				background: #30BE9A 
-				border-color: #30BE9A 
+				color: #ffffff
+				background: #30BE9A
+				border-color: #30BE9A
 		.read__tagsmore
 			a
-				color: #B0AEB8 
+				color: #B0AEB8
 				&:hover
-					color: #fff 
+					color: #fff
 		li
-			margin-bottom: 4px 
+			margin-bottom: 4px
 			position: relative
-			height: 32px 
+			height: 32px
 			&:hover
-				z-index: 20 
+				z-index: 20
 				a
-					color: #ffffff 
-					background: #30BE9A 
-					border-color: #30BE9A 
+					color: #ffffff
+					background: #30BE9A
+					border-color: #30BE9A
 					position: absolute
 					left: 0
 					top: 0
 					-ms-text-overflow: auto
 					text-overflow: auto
-					max-width: 300px 
-
+					max-width: 300px
 
 .read__status
-	padding-top: 25px 
+	padding-top: 25px
 	border-top: 1px solid #ECECEC
 	+mob
 		margin-bottom: 10px
 	h3
-		width: 33%  
+		width: 33%
 		float: left
-		font-size: 16px 
+		font-size: 16px
 		font-weight: normal
 		+reg
 		+mob
 			float: none
-			width: auto 
-			margin-bottom: 20px 
+			width: auto
+			margin-bottom: 20px
 	p
 		overflow: hidden
-		font-size: 13px 
+		font-size: 13px
 		color: #868492
-		padding-top: 3px  
+		padding-top: 3px
+
 .read__content
 	font-size: 15px
 	color: #343646
@@ -296,18 +297,18 @@
 		font-weight: normal
 		+reg
 	.read__categ
-		font-size: 16px 
+		font-size: 16px
 		+regcond
 		font-weight: normal
 		text-decoration: none
-		color: #2A40C8 
-		margin-bottom: 70px 
+		color: #2A40C8
+		margin-bottom: 70px
 		+mob
-			margin-bottom: 30px 
-			font-size: 15px 
+			margin-bottom: 30px
+			font-size: 15px
 		a
 			text-decoration: none
-			color: #2A40C8 
+			color: #2A40C8
 	h1
 		font-size: 33px
 		color: #3656cc
@@ -315,11 +316,11 @@
 		margin-bottom: 24px
 		font-weight: normal
 		+regcond
-		color: #000 
+		color: #000
 		+mob
-			font-size: 22px 
-			color: #282345 
-			line-height: 1.2 
+			font-size: 22px
+			color: #282345
+			line-height: 1.2
 	.read__lead
 		color: #555267
 		font-size: 20px
@@ -328,71 +329,71 @@
 		margin-bottom: 23px
 		+lite
 		+mob
-			font-size: 15px  
+			font-size: 15px
 	p
 		margin-bottom: 1.5em
-	ul,ol
+	ul, ol
 		margin: 1em 2em
 		list-style: disc
 	ol
 		list-style: decimal
 	blockquote
-		font-size: 26px 
+		font-size: 26px
 		color: #1e2032
 		+lite
 		background: #EEF2CB
 		text-align: left
-		padding: 70px 120px 70px 120px  
+		padding: 70px 120px 70px 120px
 		line-height: 1.4
 		margin: 35px  -120px
 		+mob
-			font-size: 18px 
+			font-size: 18px
 			background: #C8E8E0
 			padding: 60px 40px
-			margin: 30px -40px   
+			margin: 30px -40px
 			+reg
 		p
-			margin: 0 
-			
+			margin: 0
+
 	.cut
 		float: right
 		margin: 0px 0 30px 63px
-		font-size: 13px 
-		width: 190px 
+		font-size: 13px
+		width: 190px
 		+mob
 			float: none
-			width: auto 
-			margin-left: 0 
+			width: auto
+			margin-left: 0
 			background: #ECECEC
 			margin: 20px -40px
-			padding: 40px 40px   
+			padding: 40px 40px
 		.cut__title
 			font-weight: normal
 			+reg
-			font-size: 16px 
-			margin-bottom: 14px 
+			font-size: 16px
+			margin-bottom: 14px
 		.cut__meta
-			font-size: 13px 
+			font-size: 13px
 			color: #B0AEB8
-			margin-top: 14px  
+			margin-top: 14px
 			+mob
-				font-size: 11px 
+				font-size: 11px
 		.cut__filetype
-			+svg(filetype,60,80)
+			+svg(filetype, 60, 80)
 			position: relative
-			margin-top: 20px 
+			margin-top: 20px
 			text-decoration: none
 			span
 				position: absolute
-				font-size: 14px 
+				font-size: 14px
 				text-transform: uppercase
 				color: #30BE9A
 				+reg
 				position: absolute
-				bottom: 14px  
+				bottom: 14px
 				left: 0
 				width: 100%
-				text-align: center  
+				text-align: center
 
 // .materials
 // 	margin: 0 0 1em 0 !important
@@ -423,64 +424,64 @@
 	margin-bottom: 1.5em
 	margin: 0 -120px 1.5em -120px
 	+mob
-		margin: 0 -40px 25px -40px 
+		margin: 0 -40px 25px -40px
 	img
 		display: block
 		width: 100%
 		+mob
-			height: auto  !important
+			height: auto !important
 	.slider__next, .slider__prev
 		position: absolute
 		top: 0
 		bottom: 0px
 		width: 180px
-		height: 100% 
+		height: 100%
 		cursor: pointer
 		z-index: 150
 		opacity: 0
 		+transition(opacity 0.2s ease-in-out)
 		+mob
-			width: 100px 
+			width: 100px
 		i
 			position: absolute
 			bottom: 60px + 50px
 			+mob
-				bottom: 100px 
+				bottom: 100px
 				display: none !important
 	&:hover
-		.slider__next, .slider__prev,.slider__page
+		.slider__next, .slider__prev, .slider__page
 			opacity: 1
 		.slider__slidetitle
-			color: #000 
+			color: #000
 	.slider__next
 		right: 0px
 		i
 			+svg(next, 60, 60)
-			right: 60px 
+			right: 60px
 	.slider__prev
-		left: 0 
+		left: 0
 		i
 			+svg(prev, 60, 60)
-			left: 60px 
+			left: 60px
 	.slider__title
 		font-size: 11px
 		color: #c2c6d2
 		text-align: right
 		padding: 10px 20px 0 0
 	.slider__slidetitle
-		margin: 0 120px 
-		z-index: 10 
-		font-size: 13px    
+		margin: 0 120px
+		z-index: 10
+		font-size: 13px
 		color: #9c9ea8
-		border-bottom: 1px solid #EAEAEA 
+		border-bottom: 1px solid #EAEAEA
 		text-align: left
 		padding: 13px 0
 		+mob
-			margin: 0 40px 
-			font-size: 11px 
+			margin: 0 40px
+			font-size: 11px
 	.slider__slide
 		position: relative
-		width: 100% 
+		width: 100%
 		overflow: hidden
 	img
 		display: block
@@ -489,37 +490,39 @@
 		left: 0
 		bottom: 0
 		padding: 12px 0 14px
-		width: 120px    
+		width: 120px
 		text-align: center
-		font-size: 13px 
-		opacity: 0 
+		font-size: 13px
+		opacity: 0
 		+mob
 			display: none
 			color: #fff
-			font-size: 0  
+			font-size: 0
+
 .subtle
-	color: #B0AEB8 
+	color: #B0AEB8
+
 .keyevents
-	margin-bottom: 60px 
+	margin-bottom: 60px
 	h3
 		font-weight: normal
 		+reg
-		font-size: 16px 
-		margin-bottom: 13px 
+		font-size: 16px
+		margin-bottom: 13px
 	ul
 		list-style: none
 		margin: 0
-		padding: 0  
-		font-size: 15px 
+		padding: 0
+		font-size: 15px
 		a
 			display: block
 			padding: 13px 0
 			text-decoration: none
 			color: #222
-			border-top: 1px solid #F2F2F2 
+			border-top: 1px solid #F2F2F2
 			&:hover
-				color: #2A40C8   
+				color: #2A40C8
 	.keyevents__more
-		color: #B0AEB8 
+		color: #B0AEB8
 		&:hover
 			color: #30BE9A 

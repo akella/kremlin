@@ -3,52 +3,49 @@
 .content
 	background: #F5F5F6
 	&.content_main
-	&.content_alt
-		background: #ECECEE
-	.content__in
-		@extend %in
-		padding-top: 40px 
-		padding-bottom: 40px 
-		+mob
-			padding-top: 30px 
-			padding-bottom: 30px 
-	&.content_top
-		background: #fff 
+		&.content_alt
+			background: #ECECEE
 		.content__in
-			padding-top: 0 
-			padding-bottom: 0 
-	.content__sep
-		border-top: 1px solid #EEEFF2 
-		&.content__sepshadow
-			position: relative
-			&:before
-				position: absolute
-				top: 0px 
-				height: 14px 
-				width: 100% 
-				content: ' '
-				//+g(#F3F4F6, rgba(#F3F4F6, 0))
+			@extend %in
+			padding-top: 40px
+			padding-bottom: 40px
+			+mob
+				padding-top: 30px
+				padding-bottom: 30px
+		&.content_top
+			background: #fff
+			.content__in
+				padding-top: 0
+				padding-bottom: 0
+		.content__sep
+			border-top: 1px solid #EEEFF2
+			&.content__sepshadow
+				position: relative
+				&:before
+					position: absolute
+					top: 0px
+					height: 14px
+					width: 100%
+					content: ' '
+//+g(#F3F4F6, rgba(#F3F4F6, 0))
 .previously
 	+mob
 		padding: 30px 40px
-		background: #F4F4F4   
-				
-
-
+		background: #F4F4F4
 
 .cols
 	margin-right: -50px
 	@extend %clr
 	+mob
-		margin-right: 0 
+		margin-right: 0
 	.col
 		width: 320px
 		float: left
 		margin-right: 40px
 		+mob
-			width: auto 
+			width: auto
 			float: none
-			margin: 0 
+			margin: 0
 
 .promoted
 	background: #fff
@@ -58,13 +55,13 @@
 	overflow: hidden
 	+mob
 		overflow: visible
-		height: auto 
+		height: auto
 	.promoted__in
 		@extend %in
-		padding-top: 40px 
-		padding-bottom: 40px 
+		padding-top: 40px
+		padding-bottom: 40px
 		+mob
-			padding: 0 
+			padding: 0
 	.promoted__toggle
 		position: absolute
 		right: 20px
@@ -72,22 +69,22 @@
 		cursor: pointer
 		width: 18px + 40px
 		height: 11px   + 40px
-		opacity: .5 
+		opacity: .5
 		+mob
 			display: none
 		i
 			position: absolute
-			margin-left: -9px 
-			margin-top: -6px 
-			top: 50% 
-			left: 50% 
+			margin-left: -9px
+			margin-top: -6px
+			top: 50%
+			left: 50%
 			+s(promotedarrow)
-			+svg(arrow__top,19,12)
+			+svg(arrow__top, 19, 12)
 	&.is-collapsed
 		height: 60px
 		.promoted__in
 			padding-top: 0
-			padding-bottom: 0 
+			padding-bottom: 0
 		.promoted__toggle
 			bottom: 5px
 			+rotate(180)
@@ -97,7 +94,7 @@
 	text-decoration: none
 	display: block
 	+mob
-		padding: 40px 40px  
+		padding: 40px 40px
 	+mob
 		overflow: visible
 	.promoted__pic
@@ -116,23 +113,23 @@
 		font-weight: normal
 		padding-top: 5px
 		+mob
-			margin-bottom: 15px 
-			margin-top: 15px 
+			margin-bottom: 15px
+			margin-top: 15px
 		&:hover
-			color: #2A40C8 
+			color: #2A40C8
 	.promoted__date
 		margin-top: 10px
 		color: #9c9ea8
 		font-size: 11px
 	.is-collapsed &
 		position: relative
-		padding-top: 15px 
+		padding-top: 15px
 		.promoted__pic
 			display: none
 		.promoted__date
 			font-size: 11px
 			color: #C9C6CA
-			margin: 0 
+			margin: 0
 		.promoted__title
 			color: #a0afc3
 			font-size: 12px

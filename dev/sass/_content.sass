@@ -51,61 +51,61 @@
 		+mob
 			transition: none
 			padding: 25px 40px
-			margin-top: 10px  
+			margin-top: 10px
 		&:hover
 			background: #fcfcfc
-			+box-shadow(0px 6px 32px 4px rgba(34,30,74,0.15))
+			+box-shadow(0px 6px 32px 4px rgba(34, 30, 74, 0.15))
 			+mob
 				+box-shadow(none)
 			.hentry__title
 				a
-					color: #245FC0 
+					color: #245FC0
 		.hentry__title
 			font-size: 24px
 			min-height: 127px
 			+mob
-				min-height: 0 
+				min-height: 0
 		.hentry__pic
 			margin: 22px -28px -28px -28px
 			+mob
-				margin: 22px -20px 0 -20px 
+				margin: 22px -20px 0 -20px
 			img
 				+mob
-					width: 100% 
+					width: 100%
 					display: block
-					height: auto 
+					height: auto
 	&.hentry_wide
 		margin-bottom: 42px
 		border-bottom-style: none
 		padding-bottom: 0
-		
+
 		+mob
-			margin-bottom: 0 
-			padding: 0 40px 
+			margin-bottom: 0
+			padding: 0 40px
 		&:hover
 			.hentry__pic
 				+transition(all .3s linear)
-				+box-shadow(0px 6px 32px 4px rgba(34,30,74,0.15))
+				+box-shadow(0px 6px 32px 4px rgba(34, 30, 74, 0.15))
 		.hentry__title
 			font-size: 33px
 			line-height: 1.2
 			padding-top: 13px
 			+mob
-				font-size: 30px 
+				font-size: 30px
 		.hentry__pic
 			+transition(all .3s linear)
 			+mob
 				margin: 0 -40px
-				margin-top: 24px 
-			img 
+				margin-top: 24px
+			img
 				+mob
 					display: block
-					width: 100% 
-					height: auto 
+					width: 100%
+					height: auto
 	&.hentry_equal
 		min-height: 385px
 		+mob
-			min-height: 0 
+			min-height: 0
 	&.hentry_last
 		border-bottom: none
 		padding-bottom: 0
@@ -114,22 +114,22 @@
 		.hentry__title
 			color: #245FC0
 			a
-				color: #245FC0 
+				color: #245FC0
 		.hentry__meta
-			color: #3656cc 
+			color: #3656cc
 		&:before
 			position: absolute
-			bottom: 25px 
-			right: 20px 
+			bottom: 25px
+			right: 20px
 			+s(hentryactive)
 			content: ' '
 	&.hentry_event, &.hentry_doc
 		position: relative
-		margin-bottom: 29px 
-		&:last-child,&.hentry_lastchild
+		margin-bottom: 29px
+		&:last-child, &.hentry_lastchild
 			border-bottom: none
 		.hentry__title
-			margin-right: 150px 
+			margin-right: 150px
 		.hentry__inst
 			padding-right: 60px
 	.hentry__assets
@@ -138,7 +138,7 @@
 		right: 0
 		list-style: none
 		font-size: 0
-		width: 124px 
+		width: 124px
 		li
 			display: inline-block
 			text-align: right
@@ -146,7 +146,7 @@
 			@extend %hide-text
 			vertical-align: middle
 			display: inline-block
-			margin-left: 12px 
+			margin-left: 12px
 	@each $s in text, photo, video, telegram, sadtelegram, doc
 		.hentry__#{$s}
 			+s(#{$s})
@@ -159,7 +159,8 @@
 
 .admincomis
 	+mob
-		padding: 0 40px 
+		padding: 0 40px
+
 .admincomis__block
 	+transition(all .2s linear)
 	.cols
@@ -167,19 +168,19 @@
 	&.is-inactive
 		opacity: .5
 		+mob
-			opacity: 1 
+			opacity: 1
 	&.is-active
 		.cols
 			display: block
-	&+.admincomis__block
+	& + .admincomis__block
 		h2
-			opacity: .5 
+			opacity: .5
 			margin-bottom: 0
-			margin-top: 20px  
+			margin-top: 20px
 			+mob
-				opacity: 1 
+				opacity: 1
 			&:hover
-				opacity: 1 
+				opacity: 1
 	h2
 		a
 			&:hover

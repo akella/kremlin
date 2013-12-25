@@ -1,80 +1,84 @@
 .welcome
-	height: 60px 
+	height: 60px
 	background: #1E1C2C
 	position: fixed
 	z-index: 10001
 	left: 0
 	top: 0
-	right: 0  
-	font-size: 15px   
-	height: 60px 
+	right: 0
+	font-size: 15px
+	height: 60px
 	line-height: 60px
-	padding-left: 160px 
+	padding-left: 160px
 	display: none
 	a
-		color: #50E3C2 
+		color: #50E3C2
 		text-decoration: none
-		margin-right: 15px 
+		margin-right: 15px
 	.welcome__start
-		color: #ACA8BA 
+		color: #ACA8BA
+
 .welcome__overlay
 	background: #E0E0E0
 	opacity: 0
-	position: fixed  
+	position: fixed
 	bottom: 0
 	left: 0
-	top: 0px   
+	top: 0px
 	right: 0
-	z-index: 10000  
-	z-index: -1 
+	z-index: 10000
+	z-index: -1
 	+transition(all .2s linear)
+
 .is-firsttime
 	//padding-top: 60px
 	overflow: hidden
-	
-	.promoted 
-		margin-top: 60px 
+
+	.promoted
+		margin-top: 60px
 		+transition(none)
 	.welcome__overlay
-		opacity: .8 
-		z-index: 10000  
+		opacity: .8
+		z-index: 10000
 	.welcome
 		display: block
 	.wrapsite
 		// +transition(all .2s linear)
-	.topline
-		margin-top: 60px 
-		position: fixed
-		// +transition(all .2s linear)
+		.topline
+			margin-top: 60px
+			position: fixed
+// +transition(all .2s linear)
 
 .wrapsite
 	padding-top: 60px
 	+mob
-		padding-top: 0 
+		padding-top: 0
+
 +keyframes(fade)
 	from
-		opacity: 1 
+		opacity: 1
 	to
-		opacity: .4 
+		opacity: .4
+
 .topline
-	background: #272446 
+	background: #272446
 	height: 60px
 	position: fixed
 	top: 0
 	left: 0
 	right: 0
 	z-index: 220
-	width: 100% 
+	width: 100%
 	+mob
 		position: static
-		height: auto 
-		width: auto 
-		background: #2F2850 
-		
+		height: auto
+		width: auto
+		background: #2F2850
+
 	&:hover
 		.topline__toggleaside
 			i
-				opacity: 1 
+				opacity: 1
 				+animation(fade 3s linear 1 forwards)
 	.topline__toggleaside
 		position: fixed
@@ -95,9 +99,9 @@
 		&:hover
 			i
 				+s(togglesidebar)
-				opacity: 1 
+				opacity: 1
 				+animation(none)
-	
+
 	.topline__in
 		@extend %in
 		position: relative
@@ -114,10 +118,10 @@
 		margin-right: 23px
 		+mob
 			display: block
-			background: #282246 
-			padding-left: 15px 
+			background: #282246
+			padding-left: 15px
 			float: none
-			margin: 0 
+			margin: 0
 		&:before
 			border-left: 1px solid #1E3D63
 			position: absolute
@@ -138,10 +142,10 @@
 			+mob
 				+svg(biglogo, 22, 22)
 				position: static
-				margin-right: 15px 
+				margin-right: 15px
 				position: relative
-				top: 3px 
-				left: 0 
+				top: 3px
+				left: 0
 	.topline__nav
 		list-style: none
 		font-size: 15px
@@ -152,17 +156,17 @@
 			height: 60px
 			line-height: 60px
 			+mob
-				height: auto 
+				height: auto
 				line-height: 1
-				float: none 
+				float: none
 		a
 			color: #a0afc3
 			text-decoration: none
 			display: block
-			
+
 			+mob
-				color: #D6DCF6   
-				border-bottom: 1px solid #3B375E 
+				color: #D6DCF6
+				border-bottom: 1px solid #3B375E
 				padding: 13px 0 13px 20px
 			&:hover, &.is-active
 				color: #F5F5F6
@@ -170,84 +174,84 @@
 				//color: #68788F;
 				+mob
 					display: none
-					
-	&.is-withsearch 
+
+	&.is-withsearch
 		.search
-			top: 18px 
+			top: 18px
 	.search
 		+transition(all .3s ease-in-out)
 		position: absolute
 		top: -50px
-		height: 42px 
+		height: 42px
 		left: 160px + 160px
-		z-index: 20 
+		z-index: 20
 		//+background-image(linear-gradient(#181D3E, #15216E))
-		background: #272446 
+		background: #272446
 		+mob
 			position: relative
-			padding: 3px 
+			padding: 3px
 			left: 0
-			top: 0  
-			background: #272446 
+			top: 0
+			background: #272446
 		.search__dots
 			+s(asidetoggle)
 			display: inline-block
 			vertical-align: middle
-			margin-right: 10px 
+			margin-right: 10px
 			cursor: pointer
 			+mob
 				display: none
 		.search__input
-			display: inline-block 
-			width: 416px 
+			display: inline-block
+			width: 416px
 			position: relative
-			height: 24px 
+			height: 24px
 			vertical-align: middle
 			+mob
 				width: 100%
-				display: block 
-				height: auto 
+				display: block
+				height: auto
 			input
 				position: relative
-				height: 24px 
+				height: 24px
 				line-height: 24px
 				width: 416px - 20px
 				padding: 0 10px
-				background: #ffffff 
+				background: #ffffff
 				border-style: none
 				border-radius: 4px
-				+mob	
-					height: 40px 
+				+mob
+					height: 40px
 					line-height: 40px
 					display: block
-					border-radius: 4px 
+					border-radius: 4px
 					+mob
 					width: 100%
 					+box-sizing(border-box)
-					padding: 0 10px 
+					padding: 0 10px
 					color: #B8B4C8
-					font-size: 15px  
+					font-size: 15px
 
 		.search__submit
 			display: inline-block
 			position: relative
 			font-size: 15px
-			color: #a0afc3 
-			margin-left: 5px 
+			color: #a0afc3
+			margin-left: 5px
 			cursor: pointer
 			+mob
 				position: absolute
-				right: 15px 
-				top: 17px 
-				margin: 0 
+				right: 15px
+				top: 17px
+				margin: 0
 				cursor: pointer
 				+svg(lupa, 14, 14)
 				@extend %hide-text
-				text-indent: -1983em 
+				text-indent: -1983em
 				overflow: hidden
 			&:active
 				position: relative
-				top: 1px 
+				top: 1px
 			input
 				opacity: 0
 				position: absolute
@@ -260,21 +264,21 @@
 				+mob
 					width: 100%
 					+box-sizing(border-box)
-					padding: 0 10px 
+					padding: 0 10px
 					color: #B8B4C8
-					font-size: 15px  
-				 
+					font-size: 15px
+
 		.search__advanced
 			display: inline-block
 			position: absolute
-			font-family: Tahoma,sans-serf  
-			font-size: 10px 
+			font-family: Tahoma, sans-serf
+			font-size: 10px
 			color: #bcbec8
-			right: 10px  
-			top: 7px 
-			line-height: 1 
+			right: 10px
+			top: 7px
+			line-height: 1
 			cursor: pointer
-			
+
 			&:hover
 				text-decoration: underline
 			+mob
@@ -286,23 +290,21 @@
 		cursor: pointer
 		+mob
 			position: absolute
-			right: 0 
+			right: 0
 			top: 0
-			height: 60px 
-			width: 50% 
+			height: 60px
+			width: 50%
 		i
 			+mob
 				position: absolute
-				top: 22px 
-				right: 22px 
-				+svg(togglearrowmob, 16,9)
+				top: 22px
+				right: 22px
+				+svg(togglearrowmob, 16, 9)
 				+transform(rotate(180deg))
-		&.is-active 
+		&.is-active
 			i
 				+mob
 					+transform(rotate(0deg))
-
-
 
 .footer
 	background: #1E2031
@@ -321,21 +323,21 @@
 		margin-bottom: 38px
 		margin-right: 20px
 		+mob
-			width: auto 
+			width: auto
 			float: none
 			padding: 26px 40px 1px 40px
-			border-bottom: 1px solid #4D4E6E  
-			margin-bottom: 0 
-			margin-right: 0 
+			border-bottom: 1px solid #4D4E6E
+			margin-bottom: 0
+			margin-right: 0
 		&.footer__col_last
 			float: right
 			margin-right: 0
 			padding-bottom: 100px
-			width: 140px 
+			width: 140px
 			+mob
 				float: none
 				padding: 26px 40px 1px 40px
-				border-bottom: none 
+				border-bottom: none
 	h3
 		font-size: 15px
 		+reg
@@ -345,13 +347,13 @@
 		margin-bottom: 42px
 		margin-right: 5px
 		+mob
-			margin-right: 0 
+			margin-right: 0
 		a
 			text-decoration: none
 			color: #ACA8BA
 			display: inline-block
 			+mob
-				color: #fff 
+				color: #fff
 			&:hover
 				color: #c2c6d2
 	ul
@@ -375,11 +377,11 @@
 		clear: both
 		position: relative
 		top: -15px
-		color: #9694A4 
+		color: #9694A4
 		+mob
 			position: static
-			margin-left: 40px 
-			margin-top: 30px 
+			margin-left: 40px
+			margin-top: 30px
 		span
 			display: block
 	.footer__special
@@ -398,27 +400,27 @@
 			left: -36px
 	.footer__smi
 		position: relative
-		margin-bottom: 25px 
+		margin-bottom: 25px
 		i
 			position: absolute
-			+svg(smi,14,14)
+			+svg(smi, 14, 14)
 			top: 1px
 			left: -36px
 	.footer__lang
-		margin-top: 20px 
+		margin-top: 20px
 	.footer__license
 		margin-top: 30px
-		color: #666478 
+		color: #666478
 		position: relative
 		p
 			+mob
-				margin-bottom: 0 
+				margin-bottom: 0
 		i
 			display: inline-block
 			+svg(cc, 15, 15)
 			position: absolute
-			left: -32px 
-			top: 0px 
+			left: -32px
+			top: 0px
 			display: inline-block
 			+mob
 				display: none
@@ -429,10 +431,10 @@
 		bottom: 0
 		//+s(bigorel)
 		+svg(biglogo, 120, 120)
-		opacity: .2 
+		opacity: .2
 		+mob
 			+svg(biglogo, 65, 65)
 			position: static
 			display: inline-block
-			margin-left: 40px 
+			margin-left: 40px
 			margin-top: 30px 

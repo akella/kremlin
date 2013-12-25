@@ -1,11 +1,12 @@
+$animation-duration: .3s
 $sidenav: 220px
 .sidenav
-	height: 400px 
-	background: #182472 
+	height: 400px
+	background: #182472
 	+mob
 		display: none
 
-.wrapsite__overlay,.wrapsite__overlayfixed
+.wrapsite__overlay, .wrapsite__overlayfixed
 	position: absolute
 	left: 0
 	right: 0
@@ -20,18 +21,18 @@ $sidenav: 220px
 	.is-withsidebar &
 		z-index: 300
 		opacity: 1
-	
+
 .wrapsite__overlay
 	display: none
-	// .is-wide &
-	// 	display: block
+// .is-wide &
+// 	display: block
 .wrapsite__overlayfixed
 	//position: fixed
 	background: rgba(#E0E0E0, .8)
 	left: 0
 	opacity: 0
-	height: 100% 
-	z-index: -1 
+	height: 100%
+	z-index: -1
 	+transition(opacity 0s ease-in-out 0)
 	.is-withsidebar &
 		left: 0px
@@ -40,9 +41,9 @@ $sidenav: 220px
 		+transition(opacity .3s ease-in-out .3s)
 	.is-reading.is-withsidebar &
 		background: transparent
-		opacity: 1 
+		opacity: 1
 		z-index: 30000
-		
+
 .sidenav
 	// 	position: fixed;
 	// 	top: 0;
@@ -51,7 +52,7 @@ $sidenav: 220px
 	position: absolute
 	top: 0
 	//bottom: 0  
-	height: 400px 
+	height: 400px
 	left: -($sidenav)
 	width: $sidenav
 	//overflow: auto;
@@ -79,14 +80,13 @@ $sidenav: 220px
 		//left: 0;
 		display: block
 	.sidenav__content
-		padding: 75px 24px 20px 24px
 		padding: 24px 24px 20px 24px
 		width: $sidenav - 48px
 		top: 0
 		z-index: 50
 		left: 0
 		bottom: 0
-		overflow: auto 
+		overflow: auto
 		// &.is-fixed
 		position: absolute
 		top: 0
@@ -132,14 +132,14 @@ $sidenav: 220px
 		li
 			margin-bottom: 1.2em
 			position: relative
-			padding-right: 20px 
+			padding-right: 20px
 			&.is-active:before
 				position: absolute
-				right: 0px 
-				height: 2px 
-				top: 7px 
-				width: 6px 
-				background: #30BE9A 
+				right: 0px
+				height: 2px
+				top: 7px
+				width: 6px
+				background: #30BE9A
 				border-radius: 2px
 				content: ' '
 		&:last-child
@@ -155,13 +155,13 @@ $sidenav: 220px
 		padding-left: 38px + 24px
 	.sidenav__other
 		a
-			color: #98A0DC 
+			color: #98A0DC
 
 body
-	+transition(all .3s ease-in-out)
+	+transition(all $animation-duration ease-in-out)
 	.wrapsite, .topline, .read__wrap
-		+transition(left .3s ease-in-out,transform .3s ease-in-out)
-		//@include transition(all .3s ease-in-out);
+		+transition(left $animation-duration ease-in-out, right $animation-duration ease-in-out, transform $animation-duration ease-in-out, opacity $animation-duration ease-in-out)
+	//@include transition(all $animation-duration ease-in-out);
 	&.is-withsidebar
 		//padding-left: 320px;
 		//margin-left: $sidenav; !!!
@@ -169,20 +169,20 @@ body
 		overflow: hidden
 		.read
 			//opacity: .9
-		.sidenav
-			//left: 0 
-		.topline__toggleaside
-			display: none
-		.wrapsite,.topline
-			+transition(left .3s ease-in-out,transform .3s ease-in-out)
-			+translate3d($sidenav, 0, 0)
-			//+transition-delay(0.01s)
-			//position: relative
-			//margin-left: 320px;
-			//-webkit-transform: translate3d(320px, 0, 0);
-			//@include transition(all .3s ease-in-out);
-		.topline
-			//margin-left: 320px;
-		.wrapsite
-			position: relative
-			z-index: 300 
+			.sidenav
+				//left: 0
+				.topline__toggleaside
+					display: none
+				.wrapsite, .topline
+					+transition(left $animation-duration ease-in-out, transform $animation-duration ease-in-out)
+					+translate3d($sidenav, 0, 0)
+				//+transition-delay(0.01s)
+				//position: relative
+				//margin-left: 320px;
+				//-webkit-transform: translate3d(320px, 0, 0);
+				//@include transition(all $animation-duration ease-in-out);
+				.topline
+					//margin-left: 320px;
+					.wrapsite
+						position: relative
+						z-index: 300

@@ -1,46 +1,51 @@
 #calroot
-	background:  #FCFCFD 
-	+box-shadow(0 8px 36px rgba(24,46,132,.15))
-	border-radius:  4px
-	padding:  20px 37px
-	z-index: 1500 
+	background: #FCFCFD
+	+box-shadow(0 8px 36px rgba(24, 46, 132, .15))
+	border-radius: 4px
+	padding: 20px 37px
+	z-index: 1500
+
 #calhead
-	text-align:  center
-	margin-bottom:  20px 
+	text-align: center
+	margin-bottom: 20px
+
 #caltitle
-	display:  inline-block
-	margin:  0 10px
+	display: inline-block
+	margin: 0 10px
 	+condbold
-	font-size:  15px  
-	color:  #3656cc 
-	vertical-align:  middle
-	line-height:  1 
-	position:  relative
-	top:  1px 
-	width: 120px 
+	font-size: 15px
+	color: #3656cc
+	vertical-align: middle
+	line-height: 1
+	position: relative
+	top: 1px
+	width: 120px
 	text-align: center
 	&:first-letter
 		text-transform: uppercase
+
 #calnext
 	+s(calnext)
-	display:  inline-block
-	vertical-align:  middle
-	cursor:  pointer
+	display: inline-block
+	vertical-align: middle
+	cursor: pointer
 	&.caldisabled
-		visibility:  hidden
+		visibility: hidden
+
 #calprev
 	@extend #calnext
 	+s(calprev)
+
 #caldays
 	+condbold
-	font-size:  12px 
-	color:  #c4c8d0 
+	font-size: 12px
+	color: #c4c8d0
 //* names of the days */
-#caldays 
-	height:  14px
-	margin-bottom: 18px 
+#caldays
+	height: 14px
+	margin-bottom: 18px
 
-#caldays span 
+#caldays span
 	display: block
 	float: left
 	width: 31px
@@ -51,10 +56,10 @@
 	margin-top: 4px
 
 //* single week */
-.calweek 
+.calweek
 	clear: left
 	height: 22px
-	margin-bottom: 10px 
+	margin-bottom: 10px
 
 //* single day */
 .calweek a
@@ -70,7 +75,7 @@
 	color: #666
 	border-radius: 3px
 //* different states */
-.calweek a:hover, .calfocus 
+.calweek a:hover, .calfocus
 	background-color: #ddd
 //* sunday */
 a.calsun
@@ -78,17 +83,19 @@ a.calsun
 //* offmonth day */
 a.caloff
 	color: #ccc
+
 a.caloff:hover
 	background-color: rgb(245, 245, 250)
 //* unselecteble day 
 a.caldisabled
 	background-color: #efefef !important
-	color: #ccc	!important
+	color: #ccc !important
 	cursor: default
 // current day 
 #calcurrent
 	background-color: #C9F8A4
 	color: #56B18F
+
 #caltoday
 	background-color: #333
 	color: #fff

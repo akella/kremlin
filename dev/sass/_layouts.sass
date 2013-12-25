@@ -5,13 +5,12 @@
 	width: 680px
 	padding-left: 160px
 	+mob
-		width: auto 
-		padding: 0 
-	//margin: 0 auto 
-	// .is-reading &
-	// 	+r(wide)
-	// 		margin-left: 0 
-
+		width: auto
+		padding: 0
+//margin: 0 auto
+// .is-reading &
+// 	+r(wide)
+// 		margin-left: 0
 
 // reader layout
 .is-reading
@@ -27,54 +26,52 @@
 		overflow-x: hidden
 //mobile version of material
 .is-reading
-	.footer, .content,.promoted,.sidenav
+	.footer, .content, .promoted, .sidenav
 		+mob
 			display: none
 	.read__wrap
 		+mob
 			display: block
-			min-width: 0 !important 
+			min-width: 0 !important
 			height: auto !important
 			padding-top: 0
-			padding-bottom: 120px 
+			padding-bottom: 120px
 			margin: 0 !important
-			top: 0 !important 
+			top: 0 !important
 			position: static !important
 		.read
 			+mob
-				padding: 0 !important 
-				width: auto 
+				padding: 0 !important
+				width: auto
 				min-width: 0
-				margin: 0   
+				margin: 0
 	.read__overlay
 		+mob
 			display: none
-		 
-	
 
-	// .topline,.sidenav,.footer,.wrapsite>div
-	// 	+mob
-	// 		// display: none
-	// .wrapsite>.read__wrap
-	// 	+mob
-	// 		display: block
-	// 		height: auto !important
-	// 		padding-top: 0
-	// 		margin: 0
-	// 		position: absolute  
-	// .read__in
-	// 	+mob
-	// 		padding:  20px 
-	// .read
-	// 	+mob
-	// 		min-width: 0
-	// 		width: auto  
-	// 		margin: 0 
-		
+// .topline,.sidenav,.footer,.wrapsite>div
+// 	+mob
+// 		// display: none
+// .wrapsite>.read__wrap
+// 	+mob
+// 		display: block
+// 		height: auto !important
+// 		padding-top: 0
+// 		margin: 0
+// 		position: absolute
+// .read__in
+// 	+mob
+// 		padding:  20px
+// .read
+// 	+mob
+// 		min-width: 0
+// 		width: auto
+// 		margin: 0
+
 .read__wrap
 	// position: fixed
 	// top: 100px 
-	min-width: 840px 
+	min-width: 840px
 	bottom: 0
 	height: auto
 	right: 0
@@ -82,39 +79,39 @@
 	overflow: auto
 	position: absolute
 	z-index: -1
-	opacity: 0 
-	margin-top: -15px 
-	+transition(margin .3s ease-in-out,opacity .3s ease-in-out,left .3s ease-in-out)
+	opacity: 0
+	margin-top: -15px
+	+transition(margin .3s ease-in-out, opacity .3s ease-in-out, left .3s ease-in-out)
 	+mob
 		display: none
 	+r(notwide)
-		//height: auto !important
-		//top: 0 !important
+	//height: auto !important
+	//top: 0 !important
 	.is-reading &
-		opacity: 1 
-		z-index: 200 
+		opacity: 1
+		z-index: 200
 		position: absolute
-		margin-top: 0 
+		margin-top: 0
 		+r(wide)
 			left: 840px + 40px
 			position: fixed
 			right: 10px
 			overflow: auto
-			min-width: 0 
-	// .is-narrow.is-reading.is-withsidebar &
-	// 	left: 240px 
-	// .is-wide.is-reading.is-withsidebar &
-	// 	margin-left: 240px 
-			//max-width: 760px 
-			// bottom: auto;
-			// overflow: visible;
-	// @include r(wide){
-	// 	left: 760px;
-	// 	right: 40px;
-	// 	// bottom: auto;
-	// 	// overflow: visible;
-	// 	overflow: auto;
-	// }
+			min-width: 0
+// .is-narrow.is-reading.is-withsidebar &
+// 	left: 240px
+// .is-wide.is-reading.is-withsidebar &
+// 	margin-left: 240px
+		//max-width: 760px
+		// bottom: auto;
+		// overflow: visible;
+// @include r(wide){
+// 	left: 760px;
+// 	right: 40px;
+// 	// bottom: auto;
+// 	// overflow: visible;
+// 	overflow: auto;
+// }
 
 .read__overlay
 	position: absolute
@@ -136,15 +133,15 @@
 	//max-width: 760px;
 	//margin-top: 10px;
 	margin-bottom: 40px
-	margin-left: 160px 
+	margin-left: 160px
 	+r(med)
-		//margin: 0 auto;
-		//margin-left: 240px
+	//margin: 0 auto;
+	//margin-left: 240px
 	+r(wide)
 		width: auto
 		margin-left: 0
-		margin-bottom: 0 
-		left: 0 
+		margin-bottom: 0
+		left: 0
 //focusing on read and vice versa
 .is-wide.is-reading
 	.read__wrap
@@ -156,28 +153,31 @@
 		right: 0
 		bottom: 0
 		background: #000
-		z-index: -1   
-		opacity: 0    
+		z-index: -1
+		opacity: 0
 	.overlayforeverything
 		z-index: 9000
 		opacity: .3
 		display: none
 	.read__wrap
-		opacity: 1 
-		z-index: 10000 
+		opacity: 1
+		z-index: 10000
 //scrolling states
 .wrapfix__holder
-	height: 120px 
+	height: 120px
 	.wrapfix
 		background: #fff
-		z-index: 140  
-		width: 100% 
+		z-index: 140
+		width: 100%
 		box-shadow: 0 15px 15px -15px rgba(0, 0, 0, 0.1)
+
 .state1
 	position: fixed
 	top: 0
+
 .state2
 	position: absolute
+
 .state3
 	position: fixed
 	top: 60px
