@@ -1,10 +1,10 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
 <svg width="60px" height="80px" viewBox="0 0 60 80" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" xmlns:sketch="http://www.bohemiancoding.com/sketch/ns">
-    <title>filetype</title>
+    <title>Slice 1</title>
     <description>Created with Sketch (http://www.bohemiancoding.com/sketch)</description>
     <defs></defs>
     <g id="Page-1" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd" sketch:type="MSPage">
-        <path d="M40,0 L60,20 L60,80 L0,80 L0,0 L40,0 Z" id="(Icon)-File" stroke="#B0AEB8" stroke-width="2" fill="#ECECEC" sketch:type="MSShapeGroup"></path>
+        <path d="M40,0 L60,20 L60,80 L0,80 L0,0 L40,0 Z" id="(Icon)-File" stroke="#B0AEB8" stroke-width="2" sketch:type="MSShapeGroup"></path>
         <path d="M58.2928932,14.7071068 C58.6834175,15.0976311 59.3165825,15.0976311 59.7071068,14.7071068 C60.0976311,14.3165825 60.0976311,13.6834175 59.7071068,13.2928932 L46.7071068,0.292893219 C46.3165825,-0.0976310729 45.6834175,-0.0976310729 45.2928932,0.292893219 C44.9023689,0.683417511 44.9023689,1.31658249 45.2928932,1.70710678 L58.2928932,14.7071068 Z M58.2928932,8.70710678 C58.6834175,9.09763107 59.3165825,9.09763107 59.7071068,8.70710678 C60.0976311,8.31658249 60.0976311,7.68341751 59.7071068,7.29289322 L52.7071068,0.292893219 C52.3165825,-0.0976310729 51.6834175,-0.0976310729 51.2928932,0.292893219 C50.9023689,0.683417511 50.9023689,1.31658249 51.2928932,1.70710678 L58.2928932,8.70710678 Z" id="(Icon)-File" fill="#B0AEB8" sketch:type="MSShapeGroup"></path>
     </g>
 </svg>
