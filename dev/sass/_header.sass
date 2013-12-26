@@ -1,58 +1,5 @@
-.welcome
-	height: 60px
-	background: #1E1C2C
-	position: fixed
-	z-index: 10001
-	left: 0
-	top: 0
-	right: 0
-	font-size: 15px
-	height: 60px
-	line-height: 60px
-	padding-left: 160px
-	display: none
-	a
-		color: #50E3C2
-		text-decoration: none
-		margin-right: 15px
-	.welcome__start
-		color: #ACA8BA
-
-.welcome__overlay
-	background: #E0E0E0
-	opacity: 0
-	position: fixed
-	bottom: 0
-	left: 0
-	top: 0px
-	right: 0
-	z-index: 10000
-	z-index: -1
-	+transition(all .2s linear)
-
-.is-firsttime
-	//padding-top: 60px
-	overflow: hidden
-
-	.promoted
-		margin-top: 60px
-		+transition(none)
-	.welcome__overlay
-		opacity: .8
-		z-index: 10000
-	.welcome
-		display: block
-	.wrapsite
-		// +transition(all .2s linear)
-		.topline
-			margin-top: 60px
-			position: fixed
-// +transition(all .2s linear)
-
 .wrapsite
 	padding-top: 60px
-	+mob
-		padding-top: 0
 
 +keyframes(fade)
 	from
@@ -70,7 +17,7 @@
 	z-index: 220
 	width: 100%
 	+mob
-		position: static
+		position: fixed
 		height: auto
 		width: auto
 		background: #2F2850
@@ -306,135 +253,53 @@
 				+mob
 					+transform(rotate(0deg))
 
-.footer
-	background: #1E2031
-	padding: 50px 0
-	font-size: 13px
-	color: #68718b
-	line-height: 1.4
-	+mob
-		padding: 0 0 40px 0
-	.footer__in
-		@extend %in
-		position: relative
-	.footer__col
-		width: 160px
-		float: left
-		margin-bottom: 38px
-		margin-right: 20px
-		+mob
-			width: auto
-			float: none
-			padding: 26px 40px 1px 40px
-			border-bottom: 1px solid #4D4E6E
-			margin-bottom: 0
-			margin-right: 0
-		&.footer__col_last
-			float: right
-			margin-right: 0
-			padding-bottom: 100px
-			width: 140px
-			+mob
-				float: none
-				padding: 26px 40px 1px 40px
-				border-bottom: none
-	h3
-		font-size: 15px
-		+reg
-		font-weight: normal
+.welcome
+	height: 60px
+	background: #1E1C2C
+	position: fixed
+	z-index: 10001
+	left: 0
+	top: 0
+	right: 0
+	font-size: 15px
+	height: 60px
+	line-height: 60px
+	padding-left: 160px
+	display: none
+	a
+		color: #50E3C2
+		text-decoration: none
+		margin-right: 15px
+	.welcome__start
 		color: #ACA8BA
-		line-height: 1.3
-		margin-bottom: 42px
-		margin-right: 5px
-		+mob
-			margin-right: 0
-		a
-			text-decoration: none
-			color: #ACA8BA
-			display: inline-block
-			+mob
-				color: #fff
-			&:hover
-				color: #c2c6d2
-	ul
-		list-style: none
-		margin-bottom: 36px
-		li
-			margin-bottom: 11px
-		a
-			color: #9694A4
-			text-decoration: none
-			&:hover
-				color: #30BE9A
-			i
-				+mob
-					display: none
-		.footer__currentsite
-			span
-				display: block
-				color: #666478
-	.footer__copy
-		clear: both
-		position: relative
-		top: -15px
-		color: #9694A4
-		+mob
-			position: static
-			margin-left: 40px
-			margin-top: 30px
-		span
-			display: block
-	.footer__special
-		position: relative
-		i
-			position: absolute
-			+svg(special, 12, 9)
-			top: 3px
-			left: -36px
-	.footer__search
-		position: relative
-		i
-			position: absolute
-			+svg(footersearch, 13, 13)
-			top: 1px
-			left: -36px
-	.footer__smi
-		position: relative
-		margin-bottom: 25px
-		i
-			position: absolute
-			+svg(smi, 14, 14)
-			top: 1px
-			left: -36px
-	.footer__lang
-		margin-top: 20px
-	.footer__license
-		margin-top: 30px
-		color: #666478
-		position: relative
-		p
-			+mob
-				margin-bottom: 0
-		i
-			display: inline-block
-			+svg(cc, 15, 15)
-			position: absolute
-			left: -32px
-			top: 0px
-			display: inline-block
-			+mob
-				display: none
-	.footer__logo
-		position: absolute
-		right: 34px
-		// bottom: 50px;
-		bottom: 0
-		//+s(bigorel)
-		+svg(biglogo, 120, 120)
-		opacity: .2
-		+mob
-			+svg(biglogo, 65, 65)
-			position: static
-			display: inline-block
-			margin-left: 40px
-			margin-top: 30px 
+
+.welcome__overlay
+	background: #E0E0E0
+	opacity: 0
+	position: fixed
+	bottom: 0
+	left: 0
+	top: 0px
+	right: 0
+	z-index: 10000
+	z-index: -1
+	+transition(all .2s linear)
+
+.is-firsttime
+	//padding-top: 60px
+	overflow: hidden
+
+	.promoted
+		margin-top: 60px
+		+transition(none)
+	.welcome__overlay
+		opacity: .8
+		z-index: 10000
+	.welcome
+		display: block
+	.wrapsite
+		// +transition(all .2s linear)
+		.topline
+			margin-top: 60px
+			position: fixed
+// +transition(all .2s linear)
