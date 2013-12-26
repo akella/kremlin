@@ -169,20 +169,20 @@ body
 		overflow: hidden
 		.read
 			//opacity: .9
-			.sidenav
-				//left: 0
-				.topline__toggleaside
-					display: none
-				.wrapsite, .topline
-					+transition(left $animation-duration ease-in-out, transform $animation-duration ease-in-out)
-					+translate3d($sidenav, 0, 0)
-				//+transition-delay(0.01s)
-				//position: relative
-				//margin-left: 320px;
-				//-webkit-transform: translate3d(320px, 0, 0);
-				//@include transition(all $animation-duration ease-in-out);
-				.topline
-					//margin-left: 320px;
-					.wrapsite
-						position: relative
-						z-index: 300
+		.sidenav
+			//left: 0
+		.topline__toggleaside
+			display: none
+		.wrapsite, .topline
+			+transition(left $animation-duration ease-in-out, transform $animation-duration ease-in-out)
+			+translate3d($sidenav, 0, 0)
+		//+transition-delay(0.01s)
+		//position: relative
+		//margin-left: 320px;
+		//-webkit-transform: translate3d(320px, 0, 0);
+		//@include transition(all $animation-duration ease-in-out);
+		.topline
+			//margin-left: 320px;
+		.wrapsite
+			position: relative
+			z-index: 300

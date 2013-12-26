@@ -1,4 +1,5 @@
 $(document).ready(function() {
+	if($('.wrapfix').length>0){
 	b1 = $('.wrapfix');
 
 	$(document).on("sidenav", function(e){
@@ -73,4 +74,5 @@ $(document).ready(function() {
 	$(window).scroll(function () {
 		stickynav();
 	});
+	}
 });
