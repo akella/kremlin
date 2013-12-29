@@ -1623,8 +1623,8 @@ body {
       margin: 0; }
   .read__content .fotoset {
     background: #ececec;
-    padding: 60px 120px 60px 120px;
-    margin: 35px -120px;
+    padding: 60px 120px 30px 120px;
+    margin: 25px -120px;
     text-align: left; }
     @media only screen and (max-width: 700px) {
       .read__content .fotoset {
