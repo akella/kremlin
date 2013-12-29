@@ -1621,6 +1621,35 @@ body {
         font-family: "regular", arial, sans-serif; } }
     .read__content blockquote p {
       margin: 0; }
+  .read__content .fotoset {
+    background: #ececec;
+    padding: 60px 120px 60px 120px;
+    margin: 35px -120px;
+    text-align: left; }
+    @media only screen and (max-width: 700px) {
+      .read__content .fotoset {
+        padding: 30px 40px;
+        margin: 30px -40px; } }
+    .read__content .fotoset ul {
+      list-style: none;
+      font-size: 0;
+      width: 100%; }
+      .read__content .fotoset ul li {
+        display: inline-block;
+        vertical-align: middle;
+        width: 29%;
+        padding: 0 2%;
+        margin-bottom: 30px;
+        text-align: center; }
+        @media only screen and (max-width: 700px) {
+          .read__content .fotoset ul li {
+            width: 46%; } }
+        .read__content .fotoset ul li img {
+          width: 100%;
+          display: block; }
+          .read__content .fotoset ul li img.fotoset__vertical {
+            width: 60%;
+            margin: 0 auto; }
   .read__content .cut {
     float: right;
     margin: 0px 0 30px 63px;
