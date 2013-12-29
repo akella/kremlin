@@ -214,16 +214,15 @@ a img, fieldset {
   border: none; }
 
 .submit {
-  border-radius: 3px/3px 3px 2px 2px;
-  background-color: #fbfbfd;
-  box-shadow: 0 1px 4px rgba(70, 76, 98, 0.15);
+  border-radius: 3px;
   display: inline-block;
   font-size: 16px;
   color: #37a58c;
   padding: 0 82px;
   height: 39px;
   line-height: 39px;
-  cursor: pointer; }
+  cursor: pointer;
+  border: 1px solid #e0e0e0; }
 
 .h1 {
   font-size: 33px;
@@ -251,19 +250,20 @@ a img, fieldset {
 
 .links {
   list-style: none;
-  background: #fcfcfd; }
+  margin-bottom: 40px; }
   .links li {
-    font-size: 20px;
-    font-family: "book", arial, sans-serif;
-    color: #181c40; }
+    font-size: 17px;
+    font-family: "bookcond", arial, sans-serif;
+    color: #181c40;
+    margin-bottom: 4px;
+    background: #fcfcfd; }
     .links li:last-child a {
       border-bottom: none; }
   .links a {
     text-decoration: none;
     display: block;
-    padding: 32px 80px 32px 40px;
+    padding: 15px 80px 15px 23px;
     color: #181c40;
-    border-bottom: 1px solid #e1e2e7;
     -webkit-transition: all 0.2s ease-in-out;
     -moz-transition: all 0.2s ease-in-out;
     -o-transition: all 0.2s ease-in-out;
@@ -2234,7 +2234,17 @@ body {
       text-decoration: none;
       margin-right: 25px; }
       .subnav li a.is-active {
-        color: #2a40c8; }
+        color: #2a40c8;
+        position: relative; }
+        .subnav li a.is-active:before {
+          position: absolute;
+          bottom: -5px;
+          width: 6px;
+          height: 2px;
+          background: #2a40c8;
+          border-radius: 2px;
+          content: " ";
+          left: 50%; }
       .subnav li a.is-special {
         color: #78c8b4; }
   .subnav.subnav_sub li a.is-active {
@@ -2531,15 +2541,11 @@ body {
   background: #ececee; }
 
 .sprav {
-  border-bottom: 1px solid #e5e6ea;
-  border-top: 1px solid #e5e6ea;
   margin-bottom: 40px; }
   .sprav .sprav__item {
     font-family: "regularcond", arial, sans-serif;
-    padding-bottom: 34px;
-    padding-top: 34px; }
-    .sprav .sprav__item:first-child {
-      border-bottom: 1px solid #e5e6ea; }
+    padding-bottom: 14px;
+    padding-top: 14px; }
     .sprav .sprav__item dt {
       font-size: 32px;
       font-family: "regularcond", arial, sans-serif;
@@ -2550,18 +2556,31 @@ body {
         color: #181c40;
         text-decoration: none; }
     .sprav .sprav__item dd {
-      font-size: 20px;
-      color: #181c40; }
+      font-size: 16px;
+      color: #181c40;
+      font-family: "book", arial, sans-serif; }
     .sprav .sprav__item.sprav__itemspecial dt {
-      margin-bottom: 0.74em; }
+      min-height: 2.7em;
+      margin-bottom: 0; }
+
+.sep {
+  border-top: 1px solid #c1c1c1;
+  margin-left: -160px;
+  margin-bottom: 35px; }
 
 .contactform {
-  margin-right: -20px; }
+  margin-right: -20px;
+  padding-bottom: 60px; }
   .contactform .contactform__text {
-    font-size: 20px;
+    font-size: 16px;
     color: #414664;
-    font-family: "regularcond", arial, sans-serif;
-    margin-bottom: 35px; }
+    font-family: "book", arial, sans-serif;
+    margin-bottom: 45px; }
+    .contactform .contactform__text p {
+      margin-bottom: 1em; }
+    .contactform .contactform__text cite {
+      font-family: "regular", arial, sans-serif;
+      font-style: normal; }
   .contactform .contactform__field {
     float: left;
     margin-right: 20px;
@@ -2577,10 +2596,12 @@ body {
     clear: both;
     float: none;
     width: auto;
-    margin-bottom: 40px; }
+    margin-bottom: 14px; }
   .contactform .contactform__act {
     text-align: right;
-    margin-right: 20px; }
+    margin-right: 20px;
+    clear: both;
+    padding-top: 14px; }
   .contactform .contactform__submit {
     display: inline-block; }
   .contactform input, .contactform textarea {

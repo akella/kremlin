@@ -1,20 +1,21 @@
 //contacts
 .content_contacts1
 	background: #F5F5F6
+	//padding-top: 30px 
 
 .content_contacts2
 	background: #ECECEE
 
 .sprav
-	border-bottom: 1px solid #E5E6EA
-	border-top: 1px solid #E5E6EA
+	//border-bottom: 1px solid #E5E6EA
+	//border-top: 1px solid #E5E6EA
 	margin-bottom: 40px
 	.sprav__item
 		+condbold
-		padding-bottom: 34px
-		padding-top: 34px
+		padding-bottom: 14px
+		padding-top: 14px
 		&:first-child
-			border-bottom: 1px solid #E5E6EA
+			//border-bottom: 1px solid #E5E6EA
 		dt
 			font-size: 32px
 			+condbold
@@ -26,19 +27,30 @@
 				text-decoration: none
 
 		dd
-			font-size: 20px
+			font-size: 16px
 			color: #181c40
+			+book
 		&.sprav__itemspecial
 			dt
-				margin-bottom: .74em
-
+				min-height: 2.7em
+				margin-bottom: 0  
+.sep
+	border-top: 1px solid #C1C1C1 
+	margin-left: -160px 
+	margin-bottom: 35px 
 .contactform
 	margin-right: -20px
+	padding-bottom: 60px 
 	.contactform__text
-		font-size: 20px
+		font-size: 16px
 		color: #414664
-		+condbold
-		margin-bottom: 35px
+		+book
+		margin-bottom: 45px
+		p
+			margin-bottom: 1em 
+		cite
+			+reg
+			font-style: normal
 	.contactform__field
 		float: left
 		margin-right: 20px
@@ -54,10 +66,13 @@
 		clear: both
 		float: none
 		width: auto
-		margin-bottom: 40px
+		margin-bottom: 14px
+		
 	.contactform__act
 		text-align: right
 		margin-right: 20px
+		clear: both
+		padding-top: 14px 
 	.contactform__submit
 		display: inline-block
 	input, textarea
