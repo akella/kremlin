@@ -29,13 +29,14 @@ module.exports = (grunt) ->
 				,
 					expand: true
 					cwd: "dev/img/svg/"
-					src: ["**"]
-					dest: "fancy/img/svg"
+					src: "*"
+					dest: "fancy/img/svg/"
+					filter: "isFile"
 				]
-
 		watch:
 			files: ["dev/*.html", "dev/js/*.js", "dev/partials/*.html", "dev/img/icons*.png"]
 			tasks: ["clean", "includes", "copy"]
 
 	require("matchdep").filterDev("grunt-*").forEach grunt.loadNpmTasks
 	grunt.registerTask "default", ["watch"]
+	grunt.registerTask "a", ["clean", "includes", "copy"]
