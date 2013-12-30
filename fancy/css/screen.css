@@ -2641,26 +2641,35 @@ body {
       position: relative;
       top: -1px; }
 
-.searchresults {
+.searchtop {
   margin-left: -160px;
   padding-left: 160px;
+  border-bottom: 1px solid #d6d6d6;
+  margin-bottom: 40px; }
+  .searchtop .searchtop__nav {
+    float: right;
+    height: 60px;
+    line-height: 60px;
+    font-size: 15px; }
+    .searchtop .searchtop__nav a {
+      margin-left: 15px;
+      text-decoration: none;
+      color: #868492; }
+    .searchtop .searchtop__nav .searchtop__subscribe {
+      color: #78c8b4; }
+
+.searchresults {
   height: 60px;
   line-height: 60px;
   font-size: 16px;
-  color: #868492;
-  border-bottom: 1px solid #d6d6d6;
-  margin-bottom: 40px; }
+  color: #868492; }
   .searchresults strong {
     font-weight: normal;
     font-family: "regular", arial, sans-serif;
     color: #1e1836; }
 
 .persona {
-  margin-left: -160px;
-  padding-left: 160px;
-  border-bottom: 1px solid #d6d6d6;
   padding-top: 50px;
-  margin-bottom: 40px;
   *zoom: 1; }
   .persona:before, .persona:after {
     content: " ";
