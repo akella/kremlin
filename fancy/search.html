@@ -91,53 +91,35 @@
 	<div class="content content_top content_subnav">
 	<div class="wrapfix__holder">
 			<div class="wrapfix">
-				<div class="content__in">
-					<ul class="subnav">
-						<li><a href="#" class="is-active">Деятельность Президента</a></li>
-						<li><a href="#">Администрация Президента</a></li>
-						<li><a href="#">Комиссии и Советы</a></li>
-					</ul>
+				<div class="content__in searchon">
+					<div class="searchon__wrapper">
+						<div class="searchon__inputwrap">
+							<input type="text" name="" placeholder="Найти на сайте" class="searchon__input" id="">
+							<nav>
+								<a href="#" class="is-active">На всем сайте</a>
+								<a href="#">В этом разделе</a>
+							</nav>
+						</div>
+						<button class="searchon__submit">
+							<i></i>Найти
+						</button>
+					</div>
 				</div>
 				<div class="content__sep"></div>
-			
-				<div class="content__in " >
-					<div class="dateblock">Сентябрь 2013 года</div>
-
-					<ul class="subnav subnav_sub"> 
-						<li><a href="#">Новости</a></li>
-						<li><a href="#">Поездки</a></li>
-						<li><a href="#" class='is-active'>Стенограммы</a></li>
-						<li><a href="#">Телеграммы</a></li>
-					</ul>
-				</div>
-			</div>
-		</div>
-			<div class="content__sep content__sepshadow"></div>
-			<!-- begin rubr -->
-			<div class="rubr">
-				<div class="content__in">
-					<h3 class="rubr__head">Рубрикация материалов</h3>
-				</div>
-				<div class="content__sep"></div>
-				<div class="content__in content__flexible">
-					<div class="rubr__list">
-						<ul>
-							<li><a href="#" class="is-active">Все материалы</a></li>
-							<li><a href="#">Послания Федеральному Собранию</a></li>
-							<li><a href="#">Заявления по важнейшим вопросам</a></li>
-							<li><a href="#">Совещания и заседания</a></li>
-						</ul>
-						<ul>
-							<li><a href="#">Речи и обращения</a></li>
-							<li><a href="#">Встречи с представителями сообществ</a></li>
-							<li><a href="#">Интервью и пресс-конференции</a></li>
-							<li><a href="#">Статьи</a></li>
+				
+					<div class="content__in">
+						<ul class="subnav subnav_sub"> 
+							<li><a href="#">Все типы</a></li>
+							<li><a href="#" class='is-active'>Текст</a></li>
+							<li><a href="#">Видео</a></li>
+							<li><a href="#">Фото</a></li>
 						</ul>
 					</div>
 				</div>
 			</div>
-			<!-- end rubr -->
-		
+			<!-- end wrapfix -->
+		</div>
+		<!-- end wrapfix holder -->
 	</div>
 	<!-- END content -->
 
@@ -147,26 +129,24 @@
 			<!-- BEGIN events -->
 			<div class="events">
 				<h2 class="events__title">
-					<a href="#">4 сентября 2013 года</a>
+					4 сентября 2013 года
 				</h2>
 				<!-- BEGIN  hentry-->
-				<div class="hentry hentry_event">
+				<div class="hentry hentry_event hentry_telegram">
 					<h2  class="hentry__title"><a href="#">Владимир Путин посетил Благовещенский район Амурской области,
 пострадавший от паводка</a></h2>
 					<div class="hentry__meta">7 января 2013 года, 09:00</div>
 					<ul class="hentry__assets">
 						<li><a href="#" class="hentry__text">Текст статьи</a></li>
-						<li><a href="#" class="hentry__photo">Фото</a></li>
-						<li><a href="#" class="hentry__video">Видео</a></li>
 					</ul>
 				</div>
 				<!-- END hentry-->
 				<!-- BEGIN  hentry-->
-				<div class="hentry hentry_event">
+				<div class="hentry hentry_event hentry_telegram">
 					<h2  class="hentry__title"><a href="#">Поздравление православных христиан с Рождеством Христовым</a></h2>
 					<div class="hentry__meta">7 января 2013 года, 09:00</div>
 					<ul class="hentry__assets">
-						<li><a href="#" class="hentry__text">Текст статьи</a></li>
+						<li><a href="#" class="hentry__telegram">Текст статьи</a></li>
 					</ul>
 				</div>
 				<!-- END hentry-->
@@ -174,7 +154,7 @@
 					4 сентября 2013 года
 				</h2>
 				<!-- BEGIN  hentry-->
-				<div class="hentry hentry_event ">
+				<div class="hentry hentry_event hentry_telegram ">
 					<h2  class="hentry__title"><a href="#">Владимир Путин посетил Благовещенский район Амурской области,
 пострадавший от паводка</a></h2>
 					<div class="hentry__meta">7 января 2013 года, 09:00
@@ -184,9 +164,7 @@
 						</div>
 					</div>
 					<ul class="hentry__assets">
-						<li><a href="#" class="hentry__text">Текст статьи</a></li>
-						<li><a href="#" class="hentry__photo">Фото</a></li>
-	
+						<li><a href="#" class="hentry__sadtelegram">Текст статьи</a></li>
 					</ul>
 				</div>
 				<!-- END hentry-->
@@ -194,13 +172,11 @@
 					<a href="#">4 сентября 2013 года</a>
 				</h2>
 				<!-- BEGIN  hentry-->
-				<div class="hentry hentry_event hentry_lastchild">
+				<div class="hentry hentry_event hentry_telegram hentry_lastchild">
 					<h2  class="hentry__title"><a href="#">Поздравление православных христиан с Рождеством Христовым</a></h2>
 					<div class="hentry__meta">7 января 2013 года, 09:00</div>
 					<ul class="hentry__assets">
 						<li><a href="#" class="hentry__text">Текст статьи</a></li>
-						<li><a href="#" class="hentry__video">Видео</a></li>
-	
 					</ul>
 				</div>
 				<!-- END hentry-->

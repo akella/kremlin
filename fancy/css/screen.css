@@ -228,7 +228,6 @@ a img, fieldset {
 
 .h1 {
   font-size: 33px;
-  color: #3656cc;
   margin-bottom: 37px;
   font-weight: normal;
   font-family: "regularcond", arial, sans-serif; }
@@ -343,7 +342,7 @@ a img, fieldset {
   top: 0;
   left: 0;
   right: 0;
-  z-index: 220;
+  z-index: 1220;
   width: 100%; }
   @media only screen and (max-width: 700px) {
     .topline {
@@ -471,6 +470,8 @@ a img, fieldset {
           padding: 13px 0 13px 20px; } }
       .topline .topline__nav a:hover, .topline .topline__nav a.is-active {
         color: #f5f5f6; }
+      .topline .topline__nav a.topline__search.is-active {
+        color: #30be9a; }
       @media only screen and (max-width: 700px) {
         .topline .topline__nav a.topline__search {
           display: none; } }
@@ -2253,6 +2254,13 @@ body {
   .dateblock:first-letter {
     text-transform: uppercase; }
 
+.content_subnav .content__in {
+  height: 60px;
+  line-height: 60px; }
+  .content_subnav .content__in.content__flexible {
+    height: auto;
+    line-height: 1.3; }
+
 .subnav {
   list-style: none;
   font-size: 0; }
@@ -2280,17 +2288,77 @@ body {
         color: #78c8b4; }
         .subnav li a.is-special.is-active:before {
           background: #78c8b4; }
-  .subnav.subnav_sub li a.is-active {
-    position: relative; }
-    .subnav.subnav_sub li a.is-active:before {
+
+.searchon {
+  background: #30be9a;
+  width: auto !important; }
+  .searchon .searchon__wrapper {
+    width: 680px;
+    padding-top: 10px;
+    font-size: 0; }
+  .searchon .searchon__inputwrap {
+    width: 580px;
+    height: 40px;
+    border-radius: 2px;
+    background: white;
+    line-height: 40px;
+    color: #565268;
+    position: relative;
+    margin-right: 25px;
+    display: inline-block;
+    vertical-align: top; }
+    .searchon .searchon__inputwrap input {
+      color: #565268;
+      width: 544px;
+      height: 40px;
+      line-height: 40px;
+      border-style: none;
+      padding-left: 18px;
+      padding-right: 18px;
+      font-size: 15px;
+      background: transparent; }
+      .searchon .searchon__inputwrap input:-moz-placeholder {
+        color: #565268; }
+      .searchon .searchon__inputwrap input::-webkit-input-placeholder {
+        color: #565268; }
+    .searchon .searchon__inputwrap nav {
       position: absolute;
-      bottom: -5px;
-      width: 6px;
-      height: 2px;
-      background: #2a40c8;
-      border-radius: 2px;
-      content: " ";
-      left: 50%; }
+      right: 0;
+      top: 0;
+      padding-right: 18px;
+      font-size: 13px; }
+      .searchon .searchon__inputwrap nav a {
+        margin-left: 18px;
+        text-decoration: none;
+        color: #b0aeb8; }
+        .searchon .searchon__inputwrap nav a.is-active {
+          color: #2a40c8; }
+  .searchon .searchon__submit {
+    color: white;
+    font-size: 15px;
+    display: inline-block;
+    vertical-align: middle;
+    -webkit-appearance: none;
+    border: none;
+    background: transparent;
+    width: 70px;
+    vertical-align: top;
+    position: relative;
+    top: 10px; }
+    .searchon .searchon__submit i {
+      background: url("../img/svg/search.svg") no-repeat 0 0;
+      -webkit-background-size: 13px 13px;
+      -moz-background-size: 13px 13px;
+      -o-background-size: 13px 13px;
+      background-size: 13px 13px;
+      width: 13px;
+      height: 13px;
+      display: inline-block;
+      display: inline-block;
+      vertical-align: middle;
+      margin-right: 8px;
+      position: relative;
+      top: -1px; }
 
 .rubr {
   background: #fcfcfd; }
@@ -2386,12 +2454,6 @@ body {
       opacity: 0;
       z-index: 10; }
 
-.fixme {
-  background: white;
-  z-index: 200;
-  box-shadow: 0 3px 5px rgba(0, 0, 0, 0.1);
-  position: relative; }
-
 .notifications {
   background: #30be9a;
   color: white;
@@ -2400,13 +2462,6 @@ body {
   height: 60px;
   top: 0px;
   margin-top: -60px; }
-
-.content_subnav .content__in {
-  height: 60px;
-  line-height: 60px; }
-  .content_subnav .content__in.content__flexible {
-    height: auto;
-    line-height: 1.3; }
 
 .events .events__title {
   font-family: "regularcond", arial, sans-serif;
