@@ -1848,6 +1848,8 @@ body {
     .content.content_main.content_top .content__in {
       padding-top: 0;
       padding-bottom: 0; }
+  .content.content_search {
+    padding-bottom: 40px; }
   .content .content__sep {
     border-top: 1px solid #eeeff2; }
     .content .content__sep.content__sepshadow {
@@ -2038,6 +2040,12 @@ body {
     margin-top: 22px; }
     .hentry .hentry__pic img {
       display: block; }
+  .hentry .hentry__type {
+    font-size: 20px;
+    font-family: "bookcond", arial, sans-serif;
+    color: #182472;
+    text-decoration: none;
+    margin-bottom: 10px; }
   .hentry .hentry__content {
     font-size: 13px;
     color: #352e4a;
@@ -2359,6 +2367,20 @@ body {
       margin-right: 8px;
       position: relative;
       top: -1px; }
+
+.searchresults {
+  margin-left: -160px;
+  padding-left: 160px;
+  height: 60px;
+  line-height: 60px;
+  font-size: 16px;
+  color: #868492;
+  border-bottom: 1px solid #d6d6d6;
+  margin-bottom: 40px; }
+  .searchresults strong {
+    font-weight: normal;
+    font-family: "regular", arial, sans-serif;
+    color: #1e1836; }
 
 .rubr {
   background: #fcfcfd; }
