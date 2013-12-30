@@ -1,0 +1,124 @@
+.searchon
+	background: #30BE9A
+	width: auto  !important
+	.searchon__wrapper
+		width: 680px 
+		padding-top: 10px 
+		font-size: 0 
+	.searchon__inputwrap
+		width: 580px 
+		height: 40px 
+		border-radius: 2px
+		background: #fff
+		line-height: 40px
+		color: #565268
+		position: relative
+		margin-right: 25px 
+		display: inline-block
+		vertical-align: top
+		input
+			color: #565268 
+			width: 580px - 18px - 18px
+			height: 40px 
+			line-height: 40px
+			border-style: none
+			padding-left: 18px 
+			padding-right: 18px 
+			font-size: 15px 
+			background: transparent 
+			+placeholder-color(#565268)
+		nav
+			position: absolute
+			right: 0
+			top: 0
+			padding-right: 18px   
+			font-size: 13px 
+			a
+				margin-left: 18px 
+				text-decoration: none
+				color: #B0AEB8
+				&.is-active
+					color: #2A40C8 
+	.searchon__submit
+		color: #fff
+		font-size: 15px  
+		display: inline-block
+		vertical-align: middle
+		-webkit-appearance: none
+		border: none
+		background: transparent
+		width: 70px 
+		vertical-align: top
+		position: relative
+		top: 10px 
+		i
+			+svg(search, 13, 13)
+			display: inline-block
+			vertical-align: middle
+			margin-right: 8px 
+			position: relative
+			top: -1px 
+.searchresults
+	margin-left: -160px 
+	padding-left: 160px 
+	height: 60px 
+	line-height: 60px
+	font-size: 16px  
+	color: #868492
+	border-bottom: 1px solid #D6D6D6  
+	margin-bottom: 40px 
+	strong
+		font-weight: normal
+		+reg
+		color: #1E1836 
+.persona
+	margin-left: -160px 
+	padding-left: 160px 
+	border-bottom: 1px solid #D6D6D6
+	padding-top: 50px 
+	margin-bottom: 40px 
+	+clr
+	.persona__in
+		background: #fff
+		+clr
+		.persona__pic
+			float: left
+			img
+				display: block
+		.persona__info
+			overflow: hidden
+			padding: 10px 24px 0 25px 
+			position: relative
+		.persona__name
+			+regcond
+			font-size: 25px 
+			color: #1E1836
+			font-weight: normal
+			margin-bottom: 10px  
+			line-height: 1.1 
+		.persona__position
+			color: #1E1836
+			font-size: 16px  
+			padding-right: 70px
+		.persona__bio
+			position: absolute
+			bottom: 0
+			right: 24px
+			text-decoration: none
+			color: #B0AEB8
+			font-size: 15px    
+	.persona__subscribe
+		float: right
+		height: 60px 
+		line-height: 60px 
+		font-size: 15px 
+		color: #78C8B4 
+		a
+			color: #78C8B4 
+			text-decoration: none 
+	.persona__results
+		float: left
+		height: 60px 
+		line-height: 60px
+		font-size: 15px  
+		color: #868492 
