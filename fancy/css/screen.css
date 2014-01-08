@@ -1376,7 +1376,8 @@ body {
     bottom: -30px;
     right: 17px;
     font-size: 11px;
-    color: #aaafb6; }
+    color: #aaafb6;
+    display: none; }
     @media only screen and (min-width: 1480px) {
       .read .read__updated {
         padding-bottom: 15px;
@@ -1387,7 +1388,7 @@ body {
         position: static;
         padding: 0 40px; } }
   .read .read__in {
-    padding: 25px 120px; }
+    padding: 25px 120px 60px 120px; }
     @media only screen and (max-width: 700px) {
       .read .read__in {
         padding: 0 40px !important; } }

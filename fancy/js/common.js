@@ -32,7 +32,7 @@ $(document).ready(function() {
 	// ===============================================================
 	// ===========================read layer==========================
 	// ===============================================================
-	//opening read in narrow
+	//opening(toggling) read in narrow
 	$('.hentry,.read__overlay').click(function (e) {
 		if($(this).hasClass('hentry')){
 			$(this).addClass('is-active');
@@ -54,7 +54,7 @@ $(document).ready(function() {
 			$('.read__wrap').height($(window).height() - 60);
 			//minheight 100%	
 			if($('.read__wrap').height() + 60 < $(window).height()){
-				$('.read__wrap').css($(window).height());
+				$('.read__wrap').height($(window).height());
 			}
 			else{
 				//$('.read__wrap').height($(window).height() - 60);
@@ -71,7 +71,9 @@ $(document).ready(function() {
 	
 	function setread(){
 		if(b.hasClass('is-narrow')){
+			console.log('hey!!');
 			$('.read__overlay').height($('.read').height() + 60);
+			$('.read__wrap').height($(window).height());
 		}
 		else{
 			readwrap.css('top', 10);
