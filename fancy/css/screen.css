@@ -423,7 +423,7 @@ a img, fieldset {
           display: none; } }
     .topline .topline__head .topline__logo {
       position: absolute;
-      left: -56px;
+      left: -52px;
       top: 13px;
       display: inline-block;
       background: url("../img/svg/biglogo.svg") no-repeat 0 0;
@@ -2514,7 +2514,7 @@ body {
   background: white;
   margin-bottom: 40px; }
   .media .media__top {
-    padding: 22px 30px 18px 30px; }
+    padding: 22px 30px 25px 30px; }
   .media .media__title {
     font-size: 20px;
     font-weight: normal;
