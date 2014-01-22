@@ -2504,6 +2504,11 @@ body {
       width: 30px;
       height: 6px;
       display: inline-block; }
+  .more.more_text {
+    background: #30be9a;
+    font-size: 13px;
+    text-decoration: none;
+    color: #fcfcfc; }
 
 .media {
   background: white;
