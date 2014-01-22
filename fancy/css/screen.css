@@ -2551,12 +2551,12 @@ body {
       display: inline-block; }
       .media .media__meta .media__length:before {
         background: url("../img/svg/smallplay.svg") no-repeat 0 0;
-        -webkit-background-size: 7px 8px;
-        -moz-background-size: 7px 8px;
-        -o-background-size: 7px 8px;
-        background-size: 7px 8px;
-        width: 7px;
-        height: 8px;
+        -webkit-background-size: 9px 10px;
+        -moz-background-size: 9px 10px;
+        -o-background-size: 9px 10px;
+        background-size: 9px 10px;
+        width: 9px;
+        height: 10px;
         display: inline-block;
         content: " ";
         vertical-align: middle;
