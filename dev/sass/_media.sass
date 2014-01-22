@@ -14,12 +14,19 @@
 			text-decoration: none
 	.media__meta
 		font-size: 12px
-		color: #b4b6c0
+		color: #868492
 		.media__type
 			margin-right: 15px
 			display: inline-block
 			color: #868892 
 			text-decoration: none
+		.media__data
+			display: inline-block
+			margin-right: 15px 
+		.media__place
+			display: inline-block
+			margin-right: 15px 
+			color: #868892 
 		.media__published
 			color: #868892
 			margin-right: 15px
@@ -45,7 +52,7 @@
 			display: block
 			width: 100%
 			height: auto !important
-		.media__videolink
+		.media__link
 			position: absolute
 			left: 0
 			top: 0
@@ -54,43 +61,22 @@
 			z-index: 2
 			opacity: 1
 			+transition(all .3s ease-in-out .3s)
-			background: #45A48D
-			background: rgba(#45A48D, 0)
-			.media__videolinkicon
+			background: #2A40C8
+			background: rgba(#2A40C8, 0)
+			.media__linkvideo,.media__linkphoto
 				position: absolute
 				top: 50%
 				left: 50%
 				margin: -40px 0 0 -40px
+				+svg(zoom,80,80)
+				display: none
+			.media__linkvideo
 				+svg(media,80,80)
 				display: none
-		// .media__quality
-		// 	position: absolute
-		// 	left: 50%
-		// 	width: 50px
-		// 	margin-left: -25px
-		// 	bottom: 30px
-		// 	background: #CCF8A6
-		// 	border-radius: 4px
-		// 	+condbold
-		// 	font-size: 12px
-		// 	text-transform: uppercase
-		// 	height: 21px
-		// 	color: #fff
-		// 	span, a
-		// 		border: 2px solid #E3F9CF
-		// 		background: #50AC8F
-		// 		line-height: 19px
-		// 		height: 17px
-		// 		text-align: center
-		// 		width: 24px
-		// 		display: block
-		// 		border-radius: 4px
-		// 		&.is-hd
-		// 			float: right
 		&:hover
-			.media__videolink
-				background: rgba(#45A48D, .6)
-			.media__videolinkicon
+			.media__link
+				background: rgba(#2A40C8, .55)
+			.media__linkvideo,.media__linkphoto
 				display: block
 	&.media_wide
 		.media__title
