@@ -136,8 +136,14 @@
 			border-bottom: none
 		.hentry__title
 			margin-right: 150px
+			margin-bottom: 13px 
 		.hentry__inst
 			padding-right: 60px
+		.hentry__meta
+			font-size: 12px 
+			color: #565268 
+		.hentry__location
+			margin-left: 15px 
 	.hentry__assets
 		position: absolute
 		top: 0px
@@ -153,7 +159,26 @@
 			vertical-align: middle
 			display: inline-block
 			margin-left: 12px
-	@each $s in text, photo, video, telegram, sadtelegram, doc
+		i
+			position: absolute
+			right: -6px
+			top: -6px
+			width: 16px
+			height: 12px
+			line-height: 12px
+			font-size: 8px
+			font-family: Arial, sans-serif
+			color: #fff
+			border-radius: 4px
+			background: #868492
+			text-align: center
+			border: 2px solid #F5F5F6
+			font-style: normal 
+	@each $s in text, photo, video
+		.hentry__#{$s}
+			position: relative
+			+svg(#{$s},26,22)
+	@each $s in telegram, sadtelegram, doc
 		.hentry__#{$s}
 			+s(#{$s})
 	&.hentry_telegram
@@ -164,6 +189,7 @@
 			width: 76px
 
 .admincomis
+	padding-bottom: 40px 
 	+mob
 		padding: 0 40px
 

@@ -141,11 +141,11 @@ $(document).ready(function() {
 		return false;
 	});
 	// fading on hover
-	$('.admincomis__block h2').hoverIntent(function(){
-		$('.admincomis__block.is-active').addClass('is-inactive');
-	},function(){
-		$('.admincomis__block.is-active').removeClass('is-inactive');
-	});
+	// $('.admincomis__block h2').hoverIntent(function(){
+	// 	$('.admincomis__block.is-active').addClass('is-inactive');
+	// },function(){
+	// 	$('.admincomis__block.is-active').removeClass('is-inactive');
+	// });
 	// =========================================================
 	// ================.sites module=============================
 	// =========================================================
