@@ -174,11 +174,11 @@
 			text-align: center
 			border: 2px solid #F5F5F6
 			font-style: normal 
-	@each $s in text, photo, video
+	@each $s in text, photo, video,sadtelegram,doc
 		.hentry__#{$s}
 			position: relative
 			+svg(#{$s},26,22)
-	@each $s in telegram, sadtelegram, doc
+	@each $s in telegram
 		.hentry__#{$s}
 			+s(#{$s})
 	&.hentry_telegram

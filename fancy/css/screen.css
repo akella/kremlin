@@ -740,7 +740,7 @@ a img, fieldset {
     font-size: 15px;
     font-family: "regular", arial, sans-serif;
     font-weight: normal;
-    color: #aca8ba;
+    color: #d8d6e6;
     line-height: 1.3;
     margin-bottom: 42px;
     margin-right: 5px; }
@@ -2248,16 +2248,28 @@ body {
     width: 26px;
     height: 22px;
     display: inline-block; }
+  .hentry .hentry__sadtelegram {
+    position: relative;
+    background: url("../img/svg/sadtelegram.svg") no-repeat 0 0;
+    -webkit-background-size: 26px 22px;
+    -moz-background-size: 26px 22px;
+    -o-background-size: 26px 22px;
+    background-size: 26px 22px;
+    width: 26px;
+    height: 22px;
+    display: inline-block; }
+  .hentry .hentry__doc {
+    position: relative;
+    background: url("../img/svg/doc.svg") no-repeat 0 0;
+    -webkit-background-size: 26px 22px;
+    -moz-background-size: 26px 22px;
+    -o-background-size: 26px 22px;
+    background-size: 26px 22px;
+    width: 26px;
+    height: 22px;
+    display: inline-block; }
   .hentry .hentry__telegram {
     background: url('../../dev/img/icons-s517f033875.png') 0 -726px no-repeat;
-    width: 26px;
-    height: 22px; }
-  .hentry .hentry__sadtelegram {
-    background: url('../../dev/img/icons-s517f033875.png') 0 -694px no-repeat;
-    width: 26px;
-    height: 22px; }
-  .hentry .hentry__doc {
-    background: url('../../dev/img/icons-s517f033875.png') 0 -662px no-repeat;
     width: 26px;
     height: 22px; }
   .hentry.hentry_telegram .hentry__assets {
@@ -2389,9 +2401,6 @@ body {
       text-decoration: none; }
       .rubr .rubr__list a.is-active, .rubr .rubr__list a:hover {
         color: #3559c5; }
-
-.docsearch__wrap {
-  background: #fcfcfd; }
 
 .docsearch {
   padding: 25px 0;
