@@ -252,6 +252,8 @@ a img, fieldset {
       text-decoration: none; }
   .h2.h2_blue {
     color: #3656cc; }
+  .h2.h2_small {
+    font-size: 20px; }
 
 .links {
   list-style: none;
@@ -2900,8 +2902,6 @@ body {
       color: #c4c8d0; }
 
 .page {
-  background: #fcfcfd;
-  padding: 40px 100px;
   margin-bottom: 40px; }
   .page p {
     margin-bottom: 1.7em;
@@ -2912,12 +2912,17 @@ body {
       font-family: "regular", arial, sans-serif;
       font-weight: normal; }
   .page .slider {
-    margin: 20px -100px 28px -100px; }
+    margin: 20px 0 30px 0; }
   .page .lead {
-    font-size: 22px;
+    font-size: 18px;
     font-family: "book", arial, sans-serif;
-    color: #343646;
-    color: #2a40c8; }
+    color: #1e1836; }
+  .page h3 {
+    font-size: 16px;
+    margin-bottom: 27px;
+    color: #30be9a;
+    font-weight: normal;
+    font-family: "regular", arial, sans-serif; }
 
 .page__bottom {
   margin: 40px -100px -40px -100px;
