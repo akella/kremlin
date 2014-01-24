@@ -92,7 +92,7 @@
 				color: #3559C5
 
 .docsearch
-	padding: 25px 0
+	padding: 25px 0 0 0
 	margin-right: -20px
 	overflow: hidden
 	margin-left: -10px
@@ -105,25 +105,38 @@
 		margin-bottom: 14px
 		&.docsearch__fieldlong
 			width: 680px
+		&.docsearch__fieldshort
+			width: 180px 
+		&.docsearch__fieldlonger
+			width: 480px 
 	label
 		display: block
-		font-size: 15px
+		font-size: 13px
 		padding-bottom: 6px
-		color: #343646
+		color: #565268
 	input
-		background: #F5F5F6
 		border-radius: 3px
 		display: block
 		width: 100%
 		+box-sizing(border-box)
 		border: 1px solid #ECECEE
 		padding: 10px
+		background: #FCFCFC 
 		+lite
+		color: #565268 
 		font-size: 15px
 	.docsearch__submit
 		position: absolute
-		bottom: 40px
+		bottom: 14px
 		right: 20px
+		width: 180px 
+		padding-left: 0
+		padding-right: 0
+		.submit
+			padding-left: 0
+			padding-right: 0
+			display: block
+			text-align: center 
 	.select
 		position: relative
 		&:before
@@ -132,7 +145,8 @@
 			top: 50%
 			margin-top: -4px
 			right: 15px
-			+s(select)
+			//+s(select)
+			+svg(select, 12, 7)
 		select
 			-webkit-appearance: none
 			position: absolute

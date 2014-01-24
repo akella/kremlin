@@ -214,7 +214,8 @@ input[type="submit"]::-moz-focus-inner {
 
 body {
   font-family: "book", arial, sans-serif;
-  line-height: 1.4; }
+  line-height: 1.4;
+  background: #f5f5f6; }
 
 a img, fieldset {
   border: none; }
@@ -261,6 +262,8 @@ a img, fieldset {
   margin-left: -160px;
   margin-top: 50px;
   margin-bottom: 50px; }
+  .sep.sep_doc {
+    margin-bottom: 0; }
 
 .links {
   list-style: none;
@@ -2275,7 +2278,8 @@ body {
   .hentry.hentry_telegram .hentry__assets {
     text-align: right; }
   .hentry.hentry_doc .hentry__assets {
-    width: 76px; }
+    width: 76px;
+    text-align: right; }
 
 .admincomis {
   padding-bottom: 40px; }
@@ -2403,7 +2407,7 @@ body {
         color: #3559c5; }
 
 .docsearch {
-  padding: 25px 0;
+  padding: 25px 0 0 0;
   margin-right: -20px;
   overflow: hidden;
   margin-left: -10px;
@@ -2416,13 +2420,16 @@ body {
     margin-bottom: 14px; }
     .docsearch .docsearch__field.docsearch__fieldlong {
       width: 680px; }
+    .docsearch .docsearch__field.docsearch__fieldshort {
+      width: 180px; }
+    .docsearch .docsearch__field.docsearch__fieldlonger {
+      width: 480px; }
   .docsearch label {
     display: block;
-    font-size: 15px;
+    font-size: 13px;
     padding-bottom: 6px;
-    color: #343646; }
+    color: #565268; }
   .docsearch input {
-    background: #f5f5f6;
     border-radius: 3px;
     display: block;
     width: 100%;
@@ -2431,12 +2438,22 @@ body {
     box-sizing: border-box;
     border: 1px solid #ececee;
     padding: 10px;
+    background: #fcfcfc;
     font-family: "book", arial, sans-serif;
+    color: #565268;
     font-size: 15px; }
   .docsearch .docsearch__submit {
     position: absolute;
-    bottom: 40px;
-    right: 20px; }
+    bottom: 14px;
+    right: 20px;
+    width: 180px;
+    padding-left: 0;
+    padding-right: 0; }
+    .docsearch .docsearch__submit .submit {
+      padding-left: 0;
+      padding-right: 0;
+      display: block;
+      text-align: center; }
   .docsearch .select {
     position: relative; }
     .docsearch .select:before {
@@ -2445,9 +2462,14 @@ body {
       top: 50%;
       margin-top: -4px;
       right: 15px;
-      background: url('../../dev/img/icons-s517f033875.png') 0 -777px no-repeat;
+      background: url("../img/svg/select.svg") no-repeat 0 0;
+      -webkit-background-size: 12px 7px;
+      -moz-background-size: 12px 7px;
+      -o-background-size: 12px 7px;
+      background-size: 12px 7px;
       width: 12px;
-      height: 7px; }
+      height: 7px;
+      display: inline-block; }
     .docsearch .select select {
       -webkit-appearance: none;
       position: absolute;
