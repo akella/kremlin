@@ -2797,7 +2797,6 @@ body {
   .persona:after {
     clear: both; }
   .persona .persona__in {
-    background: white;
     *zoom: 1; }
     .persona .persona__in:before, .persona .persona__in:after {
       content: " ";
@@ -2805,19 +2804,18 @@ body {
     .persona .persona__in:after {
       clear: both; }
     .persona .persona__in .persona__pic {
-      float: left; }
+      float: right; }
       .persona .persona__in .persona__pic img {
         display: block; }
     .persona .persona__in .persona__info {
       overflow: hidden;
-      padding: 10px 24px 0 25px;
       position: relative; }
     .persona .persona__in .persona__name {
       font-family: "regularcond", arial, sans-serif;
       font-size: 25px;
-      color: #1e1836;
+      color: #2a40c8;
       font-weight: normal;
-      margin-bottom: 10px;
+      margin-bottom: 30px;
       line-height: 1.1; }
     .persona .persona__in .persona__position {
       color: #1e1836;
