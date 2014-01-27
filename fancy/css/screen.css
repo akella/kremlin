@@ -2948,28 +2948,28 @@ body {
       font-size: 12px;
       color: #b0aeb8; }
 
-.page {
+.page, .spravka {
   margin-bottom: 40px; }
-  .page p {
+  .page p, .spravka p {
     margin-bottom: 1.7em;
     font-size: 16px;
     color: #343646;
     line-height: 1.5; }
-    .page p strong {
+    .page p strong, .spravka p strong {
       font-family: "regular", arial, sans-serif;
       font-weight: normal; }
-  .page .slider {
+  .page .slider, .spravka .slider {
     margin: 20px 0 30px 0; }
-  .page .lead {
+  .page .lead, .spravka .lead {
     font-size: 18px;
     font-family: "book", arial, sans-serif;
     color: #1e1836; }
-  .page .pic {
+  .page .pic, .spravka .pic {
     margin: 30px 0 40px; }
-    .page .pic img {
+    .page .pic img, .spravka .pic img {
       width: 100%;
       display: block; }
-  .page h3 {
+  .page h3, .spravka h3 {
     font-size: 16px;
     margin-bottom: 27px;
     color: #30be9a;
@@ -2980,6 +2980,16 @@ body {
   margin: 40px -100px -40px -100px;
   padding: 45px 100px;
   border-top: 1px solid #f2f2f2; }
+
+.spravka {
+  background: white;
+  padding: 50px 80px 0 80px; }
+  .spravka .lead {
+    color: #2a40c8; }
+  .spravka .spravka__bottom {
+    margin: 40px -80px 0 -80px;
+    border-top: 1px solid #f2f2f2;
+    padding: 50px 80px; }
 
 .greenbutton {
   background: #78c8b4;
