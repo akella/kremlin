@@ -2766,6 +2766,10 @@ body {
   padding-left: 160px;
   border-bottom: 1px solid #d6d6d6;
   margin-bottom: 40px; }
+  .searchtop .searchtop__wrap {
+    margin-left: -160px;
+    padding-left: 160px;
+    border-bottom: 1px solid #d6d6d6; }
   .searchtop .searchtop__nav {
     float: right;
     height: 60px;
@@ -2777,6 +2781,16 @@ body {
       color: #868492; }
     .searchtop .searchtop__nav .searchtop__subscribe {
       color: #78c8b4; }
+  .searchtop .searchtop__topic {
+    padding: 45px 0; }
+    .searchtop .searchtop__topic h3 {
+      font-weight: normal;
+      font-size: 20px;
+      color: #2a40c8;
+      font-family: "bookcond", arial, sans-serif; }
+      .searchtop .searchtop__topic h3 strong {
+        font-weight: normal;
+        font-family: "regularcond", arial, sans-serif; }
 
 .searchresults {
   height: 60px;
@@ -2789,7 +2803,7 @@ body {
     color: #1e1836; }
 
 .persona {
-  padding-top: 50px;
+  padding: 40px 0;
   *zoom: 1; }
   .persona:before, .persona:after {
     content: " ";

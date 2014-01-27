@@ -63,6 +63,10 @@
 	padding-left: 160px 
 	border-bottom: 1px solid #D6D6D6  
 	margin-bottom: 40px
+	.searchtop__wrap
+		margin-left: -160px 
+		padding-left: 160px 
+		border-bottom: 1px solid #D6D6D6  
 	.searchtop__nav
 		float: right
 		height: 60px 
@@ -74,7 +78,16 @@
 			color: #868492 
 		.searchtop__subscribe
 			color: #78C8B4 
-
+	.searchtop__topic
+		padding: 45px 0
+		h3
+			font-weight: normal
+			font-size: 20px
+			color: #2A40C8
+			+bookcond
+			strong
+				font-weight: normal
+				+regcond
 .searchresults
 	height: 60px 
 	line-height: 60px
@@ -85,7 +98,8 @@
 		+reg
 		color: #1E1836 
 .persona	
-	padding-top: 50px 
+	padding: 40px  0
+	
 	+clr
 	.persona__in
 		+clr
