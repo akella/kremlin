@@ -30,7 +30,7 @@
 				height: 14px
 				width: 100%
 				content: ' '
-//+g(#F3F4F6, rgba(#F3F4F6, 0))
+
 .previously
 	+mob
 		padding: 30px 40px
@@ -38,17 +38,35 @@
 
 .cols
 	margin-right: -50px
+	@include display-flex
+	@include align-content(stretch)
+	@include flex-direction(row)
 	@extend %clr
 	+mob
 		margin-right: 0
 	.col
+		@include display-flex
 		width: 320px
-		float: left
-		margin-right: 40px
 		+mob
 			width: auto
 			float: none
 			margin: 0
+		.hentry
+			width: 320px
+			position: relative
+			padding-bottom: 50px
+			@include flex-basis(320px)
+		.hentry_white
+			padding-bottom: 28px
+		.hentry:nth-child(2n)
+			margin-right: 0
+		&:nth-child(2n)
+			margin-left: 40px
+	&.cols_last
+		.hentry
+			border-bottom: 0
+		
+
 
 .promoted
 	background: #fff
@@ -98,10 +116,18 @@
 	overflow: hidden
 	text-decoration: none
 	display: block
+	position: relative
 	+mob
 		padding: 40px 40px
 	+mob
 		overflow: visible
+	&.is-loading:after
+		content: '•'
+		position: absolute
+		color: #2A40C8
+		text-shadow: -10px 0 #2A40C8, 10px 0 #2A40C8
+		right: 180px
+		bottom: 23px
 	.promoted__pic
 		float: right
 		margin-left: 100px
@@ -121,7 +147,7 @@
 			margin-bottom: 15px
 			margin-top: 15px
 		&:hover
-			color: #2A40C8
+			color: $blue
 	.promoted__date
 		margin-top: 10px
 		color: #9c9ea8
@@ -138,4 +164,15 @@
 		.promoted__title
 			color: #a0afc3
 			font-size: 12px
-			padding-top: 0 
+			padding-top: 0
+	&.is-active
+		&:before
+			position: absolute
+			bottom: 25px
+			right: -20px
+			+s(hentryactive)
+			content: ' '
+	&.is-loading
+		+is-loading
+			right: 20px
+			bottom: -23px

@@ -44,6 +44,7 @@
 +font(regularcond, frg67-webfont)
 +font(demi, frg75-webfont)
 +font(demicond, frg77-webfont)
+
 =lite
 	font-family: "book", arial, sans-serif
 
@@ -106,16 +107,17 @@ a img, fieldset
 // common blocks
 .submit
 	border-radius: 3px
-	//background-color: #fbfbfd
+	background-color: transparent
 	// box-shadow: 0 1px 4px rgba(70, 76, 98, .15)
 	display: inline-block
 	font-size: 16px
-	color: #30BE9A
+	color: #37a58c
 	padding: 0 82px
 	height: 39px
 	line-height: 39px
 	cursor: pointer
-	border: 1px solid #E0E0E0 
+	border: 1px solid #E0E0E0
+	-webkit-appearance: none
 
 .content
 	.content__in
@@ -153,7 +155,11 @@ a img, fieldset
 	margin-top: 50px 
 	margin-bottom: 50px 
 	&.sep_doc
-		margin-bottom: 0 
+		margin-bottom: 0
+	&.sep_small
+		margin-top: 12px
+		margin-bottom: 12px
+		
 .links
 	list-style: none
 	margin-bottom: 40px 
@@ -193,3 +199,75 @@ a img, fieldset
 				opacity: 1
 		&:hover
 			z-index: 3 
+			
+
+@include keyframes(loading)
+	33%
+		text-shadow: -10px 0 $blue, 10px 0 #fff
+		color: #fff
+	66%
+		text-shadow: -10px 0 #fff, 10px 0 #fff
+		color: $blue
+	99%
+		text-shadow: -10px 0 #fff, 10px 0 $blue
+		color: #fff
+
+.loader
+	display: inline-block
+	position: absolute
+	left: 50%
+	top: 50%
+	margin-left: -18px
+	margin-top: -3px
+	width: 36px
+	height: 6px
+	line-height: 8px
+	&:after
+		content: '•'
+		color: #fff
+		text-shadow: -10px 0 #fff, 10px 0 #fff
+		@include animation(loading 1.5s infinite)
+
+.photo-grid
+	background: #ECECEC
+	overflow: hidden
+	.photo
+		display: inline-block
+		width: 210px
+		height: 220px
+		text-align: center
+		vertical-align: middle
+		&:before
+			content: ''
+			display: inline-block
+			height: 100%
+			vertical-align: middle
+			margin-right: -0.25em
+		img
+			display: inline-block
+			vertical-align: middle
+
+.read__in
+	.photo-grid
+		margin: 0 -120px
+		padding: 0 120px
+
+.notifications
+	background: #30BE9A
+	color: #ffffff
+	position: fixed
+	z-index: 1219
+	min-height: 60px
+	max-height: 360px
+	top: 0
+	left: 0
+	right: 0
+	line-height: 60px
+	overflow: hidden
+
+	.notification
+		height: 60px
+		width: 680px
+		padding-left: 160px
+		overflow: hidden
+		text-overflow: ellipsis

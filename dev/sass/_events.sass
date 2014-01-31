@@ -16,6 +16,10 @@
 		border-color: #3559C5
 	&:first-letter
 		text-transform: uppercase
+	&.is-loading
+		color: #fff
+		background: #3559c5
+		@include animation(mild-blink 1.4s infinite)
 
 
 .content_subnav
@@ -25,9 +29,27 @@
 		&.content__flexible
 			height: auto
 			line-height: 1.3
+
+@include keyframes(subnav-menu-item-loading)
+	0%
+		opacity: 0
+	50%
+		opacity: 1
+	100%
+		opacity: 0
+		
+@include keyframes(subnav-menu-item-link-loading)
+	0%
+		color: #aaafb6
+	50%
+		color: $blue
+	100%
+		color: #aaafb6
+
 .subnav
 	list-style: none
 	font-size: 0
+	white-space: nowrap
 	li
 		display: inline-block
 		font-size: 15px
@@ -36,26 +58,31 @@
 			color: #565268
 			text-decoration: none
 			margin-right: 23px - 2px
+			position: relative
 			&.is-active
-				color: #2A40C8
-				position: relative
-				&:before
-					position: absolute
-					bottom: -5px
-					width: 6px
-					height: 2px
-					background: #2A40C8
-					border-radius: 2px
-					content: ' '
-					left: 50%
+				color: $blue
+			&.is-loading
+				@include animation(subnav-menu-item-link-loading 1s infinite)
 			&.is-special
-				color: #78C8B4
+				color: $green
 				&.is-active
 					&:before
-						background: #78C8B4
+						background: $green
 		&:last-child
 			a
-				margin-right: 0 
+				margin-right: 0
+
+.subnav.secondary
+	li a.is-active
+		&:before
+			position: absolute
+			bottom: -5px
+			width: 6px
+			height: 2px
+			background: $blue
+			border-radius: 2px
+			content: ' '
+			left: 50%
 
 .rubr
 	background: #FCFCFD
@@ -121,9 +148,9 @@
 		+box-sizing(border-box)
 		border: 1px solid #ECECEE
 		padding: 10px
-		background: #FCFCFC 
+		background: #FCFCFC
 		+lite
-		color: #565268 
+		color: #565268
 		font-size: 15px
 	.docsearch__submit
 		position: absolute
@@ -136,7 +163,8 @@
 			padding-left: 0
 			padding-right: 0
 			display: block
-			text-align: center 
+			text-align: center
+			width: 100%
 	.select
 		position: relative
 		&:before
@@ -164,15 +192,6 @@
 // 	box-shadow: 0 3px 5px rgba(#000, .1)
 // 	position: relative
 
-.notifications
-	background: #30BE9A
-	color: #ffffff
-	position: relative
-	z-index: 1
-	height: 60px
-	top: 0px
-	margin-top: -60px
-
 
 
 .events
@@ -190,10 +209,8 @@
 
 .more
 	border-radius: 2px
-	color: #30BE9A
-	background-color: #fbfbfd
-	background: #ffffff
-	border: 1px solid rgba(48, 190, 154, 0.3)
+	color: #FCFCFC
+	background-color: $green
 	height: 40px
 	text-align: center
 	display: block
@@ -202,7 +219,7 @@
 	line-height: 40px
 	font-size: 13px
 	text-decoration: none
-	+transition(background-color 0.2s ease-in-out, color 0.2s ease-in-out)
+	//+transition(background-color 0.2s ease-in-out, color 0.2s ease-in-out)
 	&:hover
 		background-color: #30BE9A
 		color: white
@@ -215,13 +232,21 @@
 		margin-left: -17px
 		margin-top: -3px
 	&.more_alt
-		border: none
-		background: #E6E6E6
+		background-color: #E6E6E6
 		box-shadow: none
 		i
-			+svg(more_alt,30,6)
+			+s(more_alt)
+	&.is-loading
+		color: #E6E6E6
 	&.more_text
 		background: #30BE9A
-		font-size: 13px  
+		font-size: 13px
 		text-decoration: none
-		color: #FCFCFC 
+		color: #FCFCFC
+	.loader
+		text-indent: 0
+		position: absolute
+		left: 50%
+		top: 50%
+		margin-left: -15px
+		margin-top: -3px

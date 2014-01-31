@@ -7,6 +7,22 @@
 	to
 		opacity: .4
 
+@include keyframes(mild-blink)
+	0%
+		opacity: 1
+	50%
+		opacity: 0.4
+	100%
+		opacity: 1
+
+
+.topline_head
+	position: fixed
+	z-index: 1220
+	width: 100%
+	.wrapsite__overlayfixed
+		top: 0 !important
+
 .topline
 	background: #272446
 	height: 60px
@@ -16,6 +32,7 @@
 	right: 0
 	z-index: 1220
 	width: 100%
+	+transition(all 0.3s ease-in-out)
 	+mob
 		position: fixed
 		height: auto
@@ -79,6 +96,8 @@
 			width: 1px
 			+mob
 				display: none
+		&.is-loading
+			@include animation(mild-blink 1.4s ease-in-out)
 		.topline__logo
 			position: absolute
 			left: -52px
@@ -110,13 +129,21 @@
 			color: #a0afc3
 			text-decoration: none
 			display: block
+			position: relative
+			text-shadow: 0 0 2px rgba(255,255,255,0)
+			+transition(color .3s ease-in-out, text-shadow .3s ease-in-out)
 
 			+mob
 				color: #D6DCF6
 				border-bottom: 1px solid #3B375E
 				padding: 13px 0 13px 20px
+			&.is-loading
+				color: #F5F5F6
+				@include animation(mild-blink 1.4s infinite)
 			&:hover, &.is-active
 				color: #F5F5F6
+			&:active
+				text-shadow: 0 0 2px rgba(255,255,255,0.5)
 			&.topline__search
 				//color: #68788F;
 				&.is-active
@@ -195,7 +222,7 @@
 				margin: 0
 				cursor: pointer
 				+svg(lupa, 14, 14)
-				@extend %hide-text
+				// @extend %hide-text
 				text-indent: -1983em
 				overflow: hidden
 			&:active
@@ -230,6 +257,8 @@
 
 			&:hover
 				text-decoration: underline
+			&.is-loading
+				@include animation(mild-blink 1.4s infinite)
 			+mob
 				display: none
 	.topline__more
@@ -304,4 +333,6 @@
 		.topline
 			margin-top: 60px
 			position: fixed
+
+
 // +transition(all .2s linear)

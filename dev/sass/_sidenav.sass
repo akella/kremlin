@@ -40,7 +40,6 @@ $sidenav: 220px
 		z-index: 30000
 		+transition(opacity .3s ease-in-out .3s)
 	.is-reading.is-withsidebar &
-		background: transparent
 		opacity: 1
 		z-index: 30000
 
@@ -110,7 +109,7 @@ $sidenav: 220px
 		bottom: 0
 	h3
 		color: #fff
-		font-size: 16px
+		font-size: 15px
 		font-weight: normal
 		margin-bottom: 31px
 	ul
@@ -159,7 +158,7 @@ $sidenav: 220px
 
 body
 	+transition(all $animation-duration ease-in-out)
-	.wrapsite, .topline, .read__wrap
+	.wrapsite, .topline_head, .read__wrap
 		+transition(left $animation-duration ease-in-out, right $animation-duration ease-in-out, transform $animation-duration ease-in-out, opacity $animation-duration ease-in-out)
 	//@include transition(all $animation-duration ease-in-out);
 	&.is-withsidebar
@@ -167,13 +166,11 @@ body
 		//margin-left: $sidenav; !!!
 		//overflow-x: hidden 
 		overflow: hidden
-		.read
+		//.read
 			//opacity: .9
-		.sidenav
-			//left: 0
 		.topline__toggleaside
 			display: none
-		.wrapsite, .topline
+		.wrapsite, .topline_head
 			+transition(left $animation-duration ease-in-out, transform $animation-duration ease-in-out)
 			+translate3d($sidenav, 0, 0)
 		//+transition-delay(0.01s)
@@ -181,8 +178,19 @@ body
 		//margin-left: 320px;
 		//-webkit-transform: translate3d(320px, 0, 0);
 		//@include transition(all $animation-duration ease-in-out);
-		.topline
-			//margin-left: 320px;
 		.wrapsite
 			position: relative
 			z-index: 300
+	&.is-withsearch
+		.topline
+			background: #30be9a
+		.topline, .content-view, .subnav-view, .footer
+			+translateY(60px)
+		.wrapfix
+			top: 0 !important
+		.topline_head
+			height: 120px
+
+.content-view, .subnav-view
+	+transition(all 0.3s ease-in-out)
+	background: #fff

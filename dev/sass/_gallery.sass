@@ -1,0 +1,215 @@
+.gallery__wrap
+	padding-top: 0
+	position: fixed
+	top: 0
+	right: 0
+	bottom: 0
+	left: 0
+	margin: 0
+	opacity: 1
+	height: auto !important
+
+
+.gallery
+	+r(wide)
+		box-shadow: none
+
+	.gallery__in
+		padding: 25px 120px
+		+mob
+			padding: 0 40px !important
+
+	.slider
+		position: relative
+		height: 100%
+		margin: 0
+
+		+mob
+			margin: 0 -40px 25px -40px
+		img
+			display: block
+			//width: 100%
+			+mob
+				height: auto !important
+		.slider__next, .slider__prev
+			position: absolute
+			top: 0
+			bottom: 0px
+			width: 180px
+			height: 100%
+			cursor: pointer
+			z-index: 150
+			opacity: 1
+
+			+transition(opacity 0.2s ease-in-out)
+			+mob
+				width: 100px
+			i
+				position: absolute
+				bottom: 50%
+				+mob
+					bottom: 100px
+					display: none !important
+		&:hover
+			.slider__next, .slider__prev, .slider__page
+				opacity: 1
+			.slider__slidetitle
+				color: #000
+		.slider__next
+			right: 0px
+			i
+				+svg(slide_right, 60, 60)
+				right: 60px
+		.slider__prev
+			left: 0
+			i
+				+svg(slide_left, 60, 60)
+				left: 60px
+		.slider__title
+			font-size: 11px
+			color: #c2c6d2
+			text-align: right
+			padding: 10px 20px 0 0
+		.slider__slidetitle
+			margin: 0 120px
+			z-index: 10
+			font-size: 13px
+			color: #9c9ea8
+			background-color: white
+			border-bottom: 1px solid #EAEAEA
+			text-align: left
+			padding: 13px 60px
+			position: absolute
+			bottom: 0
+			left: 0
+			right: 0
+			margin: 0
+			+mob
+				margin: 0 40px
+				font-size: 11px
+		.slider__slide
+			position: relative
+			overflow: hidden
+			bottom: 0
+		img
+			display: block
+		.slider__page
+			position: absolute
+			left: 0
+			bottom: 0
+			padding: 12px 0 14px
+			width: 120px
+			text-align: center
+			font-size: 13px
+			opacity: 0
+			+mob
+				display: none
+				color: #fff
+				font-size: 0
+
+.gallery__content
+	font-size: 15px
+	color: #343646
+	line-height: 1.4em
+	+clr
+	strong
+		font-weight: normal
+		+reg
+	.gallery__categ
+		font-size: 16px
+		+regcond
+		font-weight: normal
+		text-decoration: none
+		color: $blue
+		margin-bottom: 70px
+		+mob
+			margin-bottom: 30px
+			font-size: 15px
+		a
+			text-decoration: none
+			color: $blue
+	h1
+		font-size: 33px
+		color: #3656cc
+		line-height: 41px
+		margin-bottom: 24px
+		font-weight: normal
+		+regcond
+		color: #000
+		+mob
+			font-size: 22px
+			color: #282345
+			line-height: 1.2
+	.gallery__lead
+		color: #565268
+		font-size: 20px
+		line-height: 1.4
+		font-weight: normal
+		margin-bottom: 23px
+		+lite
+		+mob
+			font-size: 15px
+	p
+		margin-bottom: 1.5em
+	ul, ol
+		margin: 1em 2em
+		list-style: disc
+	ol
+		list-style: decimal
+	blockquote
+		font-size: 26px
+		color: #1e2032
+		+lite
+		background: #C8E8E0
+		text-align: left
+		padding: 70px 120px 70px 120px
+		line-height: 1.4
+		margin: 35px  -120px
+		+mob
+			font-size: 18px
+			background: #C8E8E0
+			padding: 60px 40px
+			margin: 30px -40px
+			+reg
+		p
+			margin: 0
+
+	.cut
+		float: right
+		margin: 0px 0 30px 63px
+		font-size: 13px
+		width: 190px
+		+mob
+			float: none
+			width: auto
+			margin-left: 0
+			background: #ECECEC
+			margin: 20px -40px
+			padding: 40px 40px
+		.cut__title
+			font-weight: normal
+			+reg
+			font-size: 16px
+			margin-bottom: 14px
+		.cut__meta
+			font-size: 13px
+			color: #B0AEB8
+			margin-top: 14px
+			+mob
+				font-size: 11px
+		.cut__filetype
+			+svg(filetype, 60, 80)
+			position: relative
+			margin-top: 20px
+			text-decoration: none
+			span
+				position: absolute
+				font-size: 14px
+				text-transform: uppercase
+				color: #30BE9A
+				+reg
+				position: absolute
+				bottom: 14px
+				left: 0
+				width: 100%
+				text-align: center

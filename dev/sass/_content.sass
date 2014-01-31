@@ -1,8 +1,15 @@
+@include keyframes(text-size-info)
+	from
+		opacity: 0
+	to
+		opacity: 1
+	
 // generic content, news, documents
 .hentry
 	margin-bottom: 22px
 	padding-bottom: 22px
-	border-bottom: 1px solid #E4E6EB
+	border-bottom: 1px solid #e4e6eb
+	position: relative
 	.hentry__title
 		font-size: 20px
 		color: #041030
@@ -16,7 +23,7 @@
 			text-decoration: none
 			+transition(all 1.3s ease-in-out)
 			&:hover
-				color: #2A40C8
+				color: $blue
 				+transition(all 0.1s ease-in-out)
 	&.hentry_inactive
 		.hentry__title
@@ -24,12 +31,15 @@
 				color: #aaafb6
 				+transition(all 1.3s ease-in-out)
 				&:hover
-					color: #2A40C8
+					color: $blue
 					+transition(all 0.1s ease-in-out)
 	.hentry__meta
 		color: #aaafb6
 		font-size: 12px
-		color: #565268 
+		color: #565268
+		&.hentry_grid_meta
+			position: absolute
+			bottom: 22px
 	.hentry__pic
 		margin-top: 22px
 		img
@@ -111,10 +121,6 @@
 					display: block
 					width: 100%
 					height: auto
-	&.hentry_equal
-		min-height: 385px
-		+mob
-			min-height: 0
 	&.hentry_last
 		border-bottom: none
 		padding-bottom: 0
@@ -132,6 +138,14 @@
 			right: 20px
 			+s(hentryactive)
 			content: ' '
+	.loader
+		position: absolute
+		right: 0
+		bottom: 25px
+	&.is-loading
+		+is-loading
+			right: 20px
+			bottom: 23px
 	&.hentry_event, &.hentry_doc
 		position: relative
 		margin-bottom: 29px
@@ -181,6 +195,19 @@
 		.hentry__#{$s}
 			position: relative
 			+svg(#{$s},26,22)
+	@each $s in small, medium, big
+		.hentry__text.#{$s}
+			&:hover
+				+svg(text_hover,26,22)
+				position: relative
+				&:after
+					content: ' '
+					+svg(#{$s}_text,26,22)
+					position: absolute
+					left: 0
+					top: 0
+					z-index: 2
+					@include animation(text-size-info 1s ease-in-out)
 	@each $s in telegram
 		.hentry__#{$s}
 			+s(#{$s})
@@ -190,7 +217,6 @@
 	&.hentry_doc
 		.hentry__assets
 			width: 76px
-			text-align: right
 
 .admincomis
 	padding-bottom: 40px 
@@ -209,7 +235,7 @@
 			opacity: 1
 	&.is-active
 		.cols
-			display: block
+			@include display-flex
 	& + .admincomis__block
 		h2
 			opacity: .5

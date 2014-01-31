@@ -13,7 +13,7 @@
 // 		margin-left: 0
 
 // reader layout
-.is-reading
+.is-reading, .is-viewing
 	//overflow: hidden
 	.wrapsite
 		+r(notwide)
@@ -24,8 +24,14 @@
 	+r(wide)
 		overflow: auto
 		overflow-x: hidden
+
+.is-viewing
+	.wrapsite
+		+r(notwide)
+			z-index: 1220
+
 //mobile version of material
-.is-reading
+.is-reading, .is-viewing
 	.footer, .content, .promoted, .sidenav
 		+mob
 			display: none
@@ -112,6 +118,42 @@
 // 	// overflow: visible;
 // 	overflow: auto;
 // }
+
+.gallery__wrap
+	min-width: 840px
+	bottom: 0
+	height: auto
+	right: 0
+	left: 0
+	overflow: auto
+	position: absolute
+	opacity: 0
+	z-index: -1
+	.is-viewing &
+		opacity: 1
+		z-index: 10001
+		position: fixed
+		margin-top: 0
+
+.gallery__overlay
+	position: absolute
+	top: 0
+	left: 0
+	bottom: 0
+	right: 0
+	background: #1E1C2C
+	.is-viewing &
+		z-index: 240
+
+.gallery
+	position: absolute
+	top: 60px
+	bottom: 60px
+	left: 60px
+	right: 60px
+	min-height: 800px
+	min-width: 560px
+	z-index: 260
 
 .read__overlay
 	position: absolute

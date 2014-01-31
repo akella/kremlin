@@ -1,6 +1,8 @@
 .media
 	background: #fff
 	margin-bottom: 40px
+	flex-basis: 320px
+	position: relative
 	.media__top
 		padding: 22px 30px 25px 30px
 	.media__title
@@ -61,8 +63,8 @@
 			z-index: 2
 			opacity: 1
 			+transition(all .3s ease-in-out .3s)
-			background: #2A40C8
-			background: rgba(#2A40C8, 0)
+			background: $blue
+			background: rgba($blue, 0)
 			.media__linkvideo,.media__linkphoto
 				position: absolute
 				top: 50%
@@ -75,7 +77,7 @@
 				display: none
 		&:hover
 			.media__link
-				background: rgba(#2A40C8, .55)
+				background: rgba($blue, .55)
 			.media__linkvideo,.media__linkphoto
 				display: block
 	&.media_wide
@@ -91,12 +93,15 @@
 		+transition(all .3s linear)
 		+box-shadow(0px 6px 32px 4px rgba(34, 30, 74, 0.15))
 		.media__title
-			color: #2A40C8 
+			color: $blue
 			a
-				color: #2A40C8 
+				color: $blue
 		.media__meta
 			.media__type
 				color: #37a58c
 			.media__published
-				color: #565268 
-	
+				color: #565268
+	&.is-loading
+		+is-loading
+			right: 20px
+			top: 5px

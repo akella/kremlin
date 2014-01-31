@@ -107,6 +107,8 @@
 					left: 50%
 					margin-left: -7px
 					content: ' '
+			&.is-loading
+				@include animation(mild-blink 1.4s infinite)
 		.read__options
 			display: none
 			position: relative
@@ -179,7 +181,7 @@
 				display: block
 				left: -34px
 				opacity: 1
-	.read__published, .read__time
+	.read__published, .read__time, .read__length
 		margin-right: 14px
 		display: inline-block
 		color: #565268
@@ -227,6 +229,9 @@
 		font-weight: normal
 		+reg
 		margin-bottom: 27px
+		white-space: nowrap
+		text-overflow: ellipsis
+		overflow: hidden
 	ul
 		list-style: none
 
@@ -249,6 +254,8 @@
 				background: #30BE9A
 				border-color: #30BE9A
 		.read__tagsmore
+			transition: all 0.5s ease-in-out
+			overflow: hidden
 			a
 				color: #B0AEB8
 				&:hover
@@ -259,6 +266,9 @@
 			height: 32px
 			&:hover
 				z-index: 20
+				&.read__tagsmore
+					height: auto
+					overflow: visible
 				a
 					color: #ffffff
 					background: #30BE9A
@@ -269,6 +279,13 @@
 					-ms-text-overflow: auto
 					text-overflow: auto
 					max-width: 300px
+					box-shadow: 0 0 6px 6px #FCFCFC
+
+.read__download
+	h3
+		font-size: 16px
+		font-weight: normal
+		+reg
 
 .read__status
 	padding-top: 25px
@@ -290,6 +307,11 @@
 		font-size: 13px
 		color: #868492
 		padding-top: 3px
+	a
+		color: #868492
+		text-decoration: none
+		&:hover
+			color: $blue
 
 .read__content
 	font-size: 15px
@@ -304,14 +326,14 @@
 		+regcond
 		font-weight: normal
 		text-decoration: none
-		color: #2A40C8
+		color: $blue
 		margin-bottom: 70px
 		+mob
 			margin-bottom: 30px
 			font-size: 15px
 		a
 			text-decoration: none
-			color: #2A40C8
+			color: $blue
 	h1
 		font-size: 33px
 		color: #3656cc
@@ -384,7 +406,10 @@
 					&.fotoset__vertical
 						width: 60% 
 						margin: 0 auto 
-				
+
+	.media__container
+		margin-left: -120px
+		margin-right: -120px
 	.cut
 		float: right
 		margin: 0px 0 30px 63px
@@ -551,7 +576,7 @@
 			color: #222
 			border-top: 1px solid #F2F2F2
 			&:hover
-				color: #2A40C8
+				color: $blue
 	.keyevents__more
 		color: #B0AEB8
 		&:hover
