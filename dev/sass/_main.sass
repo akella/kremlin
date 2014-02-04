@@ -1,3 +1,4 @@
+@charset "UTF-8"
 //mainpage styles
 
 .content
@@ -38,14 +39,16 @@
 
 .cols
 	margin-right: -50px
-	@include display-flex
-	@include align-content(stretch)
-	@include flex-direction(row)
+	// @todo fix this
+	// @include display-flex
+	// @include align-content(stretch)
+	// @include flex-direction(row)
 	@extend %clr
 	+mob
 		margin-right: 0
 	.col
-		@include display-flex
+		// @todo fix this
+		// @include display-flex
 		width: 320px
 		+mob
 			width: auto
@@ -55,7 +58,8 @@
 			width: 320px
 			position: relative
 			padding-bottom: 50px
-			@include flex-basis(320px)
+			// @todo fix this
+			// @include flex-basis(320px)
 		.hentry_white
 			padding-bottom: 28px
 		.hentry:nth-child(2n)
