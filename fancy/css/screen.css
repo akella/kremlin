@@ -362,6 +362,18 @@ a img, fieldset {
         opacity: 1; }
     .links a:hover {
       z-index: 3; }
+    .links a.links__external:before {
+      right: 23px;
+      top: 50%;
+      margin-top: -6px;
+      background: url("../img/svg/external.svg") no-repeat 0 0;
+      -webkit-background-size: 16px 12px;
+      -moz-background-size: 16px 12px;
+      -o-background-size: 16px 12px;
+      background-size: 16px 12px;
+      width: 16px;
+      height: 12px;
+      display: inline-block; }
 
 @-moz-keyframes loading {
   33% {

@@ -202,6 +202,14 @@ a img, fieldset
 				opacity: 1
 		&:hover
 			z-index: 3 
+		&.links__external
+			&:before
+				right: 23px
+				top: 50%
+				margin-top: -6px   
+				+svg(external, 16, 12)
+			&:hover
+
 			
 
 @include keyframes(loading)
