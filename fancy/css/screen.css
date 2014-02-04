@@ -3846,6 +3846,18 @@ body {
   height: 40px;
   line-height: 40px; }
 
+.president .h1 {
+  margin-bottom: 10px; }
+.president .president__history dd {
+  font-size: 16px;
+  color: #1d1735;
+  margin-bottom: 30px;
+  padding-right: 180px; }
+.president .president__history dt {
+  float: right;
+  font-size: 16px;
+  color: #2a40c8; }
+
 #calroot {
   background: #fcfcfd;
   -webkit-box-shadow: 0 8px 36px rgba(24, 46, 132, 0.15);
