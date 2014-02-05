@@ -2467,7 +2467,8 @@ body {
     .cols {
       margin-right: 0; } }
   .cols .col {
-    width: 320px; }
+    width: 320px;
+    float: left; }
     @media only screen and (max-width: 700px) {
       .cols .col {
         width: auto;
@@ -3900,6 +3901,47 @@ body {
 
 .structure h3 {
   color: #2a3fc8; }
+
+.contact {
+  display: inline-block;
+  width: 320px; }
+  .contact dt {
+    font-family: "regularcond", arial, sans-serif;
+    font-size: 32px;
+    line-height: 1; }
+  .contact dd {
+    font-family: "regular", arial, sans-serif;
+    font-size: 16px;
+    color: #565268; }
+
+.contactperson {
+  overflow: hidden;
+  width: 100%;
+  margin-bottom: 50px; }
+  .contactperson.contactperson_first {
+    border-bottom: 1px solid #e0e0e0;
+    padding-bottom: 60px; }
+  .contactperson .contact {
+    width: 220px; }
+    .contactperson .contact dt {
+      font-size: 24px; }
+  .contactperson .contactperson__position {
+    margin-bottom: 10px; }
+  .contactperson .contactperson__name {
+    font-size: 24px;
+    font-family: "regularcond", arial, sans-serif;
+    margin-bottom: 14px; }
+  .contactperson .contactperson__photo {
+    float: right;
+    margin-left: 50px;
+    background: url("../img/svg/contact.svg") no-repeat 0 0;
+    -webkit-background-size: 140px 140px;
+    -moz-background-size: 140px 140px;
+    -o-background-size: 140px 140px;
+    background-size: 140px 140px;
+    width: 140px;
+    height: 140px;
+    display: inline-block; }
 
 #calroot {
   background: #fcfcfd;

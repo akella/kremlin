@@ -110,3 +110,35 @@
 .structure
 	h3
 		color: #2A3FC8
+.contact
+	display: inline-block
+	width: 320px 
+	dt
+		+condbold
+		font-size: 32px 
+		line-height: 1 
+	dd
+		+reg
+		font-size: 16px 
+		color: #565268 
+.contactperson
+	overflow: hidden
+	width: 100%
+	margin-bottom: 50px 
+	&.contactperson_first
+		border-bottom: 1px solid #E0E0E0 
+		padding-bottom: 60px 
+	.contact
+		width: 220px 
+		dt
+			font-size: 24px 
+	.contactperson__position
+		margin-bottom: 10px 
+	.contactperson__name
+		font-size: 24px 
+		+condbold
+		margin-bottom: 14px 
+	.contactperson__photo
+		float: right
+		margin-left: 50px 
+		+svg(contact,140,140)
