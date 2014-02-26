@@ -29,6 +29,23 @@ $(document).ready(function() {
 	// newtop = 0;
 	// newheight = 0;
 
+
+	// ===============================================================
+	// =========================== material ==========================
+	// ===============================================================
+	function jmaterial () {
+		var jmaterial = $('.material');
+		var jmaterial_content = jmaterial.find('.material__content');
+		var jmaterial_content_width = jmaterial_content.outerWidth();
+		var jmaterial_footer = $('.material__footer');
+		var jmaterial_underground = $('.material__underground');
+		jmaterial_footer.width(jmaterial_content_width);
+		jmaterial_underground.width(jmaterial_content_width);
+	}
+	jmaterial();
+
+
+
 	// ===============================================================
 	// ===========================read layer==========================
 	// ===============================================================
@@ -226,6 +243,7 @@ $(document).ready(function() {
 		setwideclass();
 		setsidenav();
 		setread();
+		jmaterial();
 	});
 
 

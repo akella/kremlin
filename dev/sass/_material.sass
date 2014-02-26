@@ -1,0 +1,530 @@
+$bgmt: #f5f5f5
+
+
+.no-scrollbar
+	+r(notwide)
+		overflow: hidden
+
+
+.material
+	position: fixed
+	top: 10px
+	right: 10px
+	bottom: 10px
+	left: 880px
+	background: $bgmt
+	+transition(all .2s linear)
+	z-index: 99999
+	+r(notwide)
+		top: 60px
+		left: 0
+		right: 0
+		bottom: 0
+.material__in
+	position: absolute
+	top: 0
+	left: 0
+	bottom: 0
+	right: 0
+	overflow: auto 
+	z-index: 4 
+	+r(notwide)
+		padding: 20px 0 20px 160px
+	+mob
+		padding: 0
+.material__content
+	max-width: 940px
+	padding: 25px 120px 70px 120px
+	+box-sizing(border-box)
+	+r(notwide)
+		max-width: 680px
+		margin-left: 1px
+		padding-bottom: 90px 
+	+mob
+		padding: 20px 40px 70px
+		margin: 0
+.material__underground
+	position: absolute
+	top: 0
+	left: 0
+	right: 0
+	bottom: 0
+	background: #fff
+	z-index: 2 
+	+r(notwide)
+		top: 20px
+		left: 160px
+		bottom: 20px
+		border: 1px solid #ccc
+	+mob
+		top: 0
+		left: 0
+		bottom: 0
+		right: 0
+		border: none
+.material__line-top,
+.material__line-bottom
+	display: none
+	position: absolute
+	left: 0
+	right: 25px
+	height: 20px
+	background: $bgmt
+	z-index: 6 
+	+r(notwide)
+		display: block
+	+mob
+		display: none
+.material__line-top
+	top: 0
+.material__line-bottom
+	bottom: 0
+.material__footer
+	position: absolute
+	left: 0
+	bottom: 0
+	height: 60px
+	background: #ececec
+	font-size: 40px
+	z-index: 6 
+	+r(notwide)
+		left: 161px
+		bottom: 20px
+		border-bottom: 1px solid #ccc 
+	+mob	
+		left: 0
+		bottom: 0
+		border: none
+	*
+		float: left
+	i
+		display: inline-block
+		position: relative
+		font-style: normal
+	span
+		position: absolute
+		right: -8px
+		top: -4px
+		width: 16px
+		height: 12px
+		line-height: 12px
+		font-size: 8px
+		font-family: Arial, sans-serif
+		color: #fff
+		border-radius: 4px
+		background: #868492
+		text-align: center
+		border: 2px solid #DADCE0
+.material__loadarticle
+	margin-left: 10px
+	+mob
+		margin-left: 0
+	i
+		+svg(article, 26, 22)
+	&:hover, &:active, &.is-active
+		i
+			+svgi(article_active, 26, 22)
+.material__loadphoto
+	i
+		+svg(photo, 26, 22)
+	&:hover, &:active, &.is-active
+		i
+			+svgi(photo_active, 26, 22)
+.material__loadvideo
+	i
+		+svg(video, 26, 22)
+	&:hover, &:active, &.is-active
+		i
+			+svgi(video_active, 26, 22)
+.material__loadvideo, .material__loadphoto, .material__loadarticle, .material__options
+	position: relative
+	cursor: pointer
+	height: 40px
+	padding: 20px 30px 0 30px
+	+mob
+		padding: 20px 20px 0 20px
+	&.is-active
+		position: relative
+		&:before
+			content: ""
+			position: absolute
+			top: 0
+			left: 50%
+			margin-left: -7px
+			width: 0px
+			height: 0px
+			border-style: solid
+			border-width: 7px 7px 0 7px
+			border-color: #fff transparent transparent transparent
+	&.is-loading
+		@include animation(mild-blink 1.4s infinite)
+.material__options
+	display: none
+	position: relative
+	cursor: pointer
+	height: 40px
+	padding: 20px 30px 0 30px
+	margin-left: 10px
+	i
+		+svg(options, 26, 22)
+	+mob
+		display: block
+.material__share
+	float: right
+	cursor: pointer
+	height: 40px
+	padding: 20px 40px 0 20px
+	+mob
+		display: none
+	i
+		+svg(export, 26, 22)
+	&:hover, &:active, &.is-active
+		i
+			+svg(export_active, 26, 22)
+.material__sep
+	position: relative
+	top: 16px
+	height: 28px
+	border-left: 1px solid #D6D8DC
+.material__meta
+	font-size: 13px
+	color: #aaafb6
+	margin-bottom: 31px
+	+mob
+		font-size: 11px
+		margin-bottom: 0
+.material__location
+	display: inline-block
+	i
+		display: inline-block
+		+s(geo)
+		position: relative
+		top: 2px
+		margin-right: 6px
+.material__top
+	margin: -25px -120px 0 -120px
+	background: #ECECEC
+	padding: 85px 120px 45px 120px
+	margin-bottom: 38px
+	+mob
+		margin: 0 -40px 30px -40px
+		padding: 30px 40px 30px 40px
+.material__updated
+	position: absolute
+	bottom: -30px
+	right: 17px
+	font-size: 11px
+	color: #aaafb6
+	display: none
+	+r(wide)
+		padding-bottom: 15px
+		bottom: 0
+		display: none
+	+mob
+		position: static
+		padding: 0 40px
+.material__categ
+	font-size: 15px
+	color: #5c5e6c
+	margin-bottom: 37px
+	+book
+	position: relative
+	i
+		position: absolute
+		left: -34px + 4px
+		+svg(arr_left, 8, 14)
+		top: 4px
+		opacity: 0
+		+transition(all .2s ease-in-out)
+	&:hover
+		i
+			display: block
+			left: -34px
+			opacity: 1
+.material__published, .material__time, .material__length
+	margin-right: 14px
+	display: inline-block
+	color: #565268
+	+book
+.material__copy
+	display: inline-block
+	color: #9c9ea8
+	font-size: 11px
+.material__place
+	color: #868492
+	display: inline-block
+.material__download
+	h3
+		font-size: 16px
+		font-weight: normal
+		+reg
+.material__status
+	padding-top: 25px
+	border-top: 1px solid #ECECEC
+	+mob
+		margin-bottom: 10px
+	h3
+		width: 33%
+		float: left
+		font-size: 16px
+		font-weight: normal
+		+reg
+		+mob
+			float: none
+			width: auto
+			margin-bottom: 20px
+	p
+		overflow: hidden
+		font-size: 13px
+		color: #868492
+		padding-top: 3px
+	a
+		color: #868492
+		text-decoration: none
+		&:hover
+			color: $blue
+.material__content
+	font-size: 15px
+	color: #343646
+	line-height: 1.4em
+	+clr
+	strong
+		font-weight: normal
+		+reg
+	.material__categ
+		font-size: 16px
+		+regcond
+		font-weight: normal
+		text-decoration: none
+		color: $blue
+		margin-bottom: 70px
+		+mob
+			margin-bottom: 30px
+			font-size: 15px
+		a
+			text-decoration: none
+			color: $blue
+	h1
+		font-size: 33px
+		color: #3656cc
+		line-height: 41px
+		margin-bottom: 35px
+		font-weight: normal
+		+regcond
+		color: #000
+		+mob
+			font-size: 22px
+			color: #282345
+			line-height: 1.2
+	.material__lead
+		color: #565268
+		font-size: 20px
+		line-height: 1.4
+		font-weight: normal
+		margin-bottom: 23px
+		+lite
+		+mob
+			font-size: 15px
+	p
+		margin-bottom: 1.5em
+	ul, ol
+		margin: 1em 2em
+		list-style: disc
+	ol
+		list-style: decimal
+	blockquote
+		font-size: 26px
+		color: #1e2032
+		+lite
+		background: #C8E8E0
+		text-align: left
+		padding: 70px 120px 70px 120px
+		line-height: 1.4
+		margin: 35px  -120px
+		+mob
+			font-size: 18px
+			background: #C8E8E0
+			padding: 60px 40px
+			margin: 30px -40px
+			+reg
+		p
+			margin: 0
+	.fotoset
+		background: #ECECEC
+		padding: 60px 120px 30px 120px
+		margin: 25px  -120px
+		text-align: left
+		+mob
+			padding: 30px 40px
+			margin: 30px -40px
+		ul
+			list-style: none
+			font-size: 0 
+			width: 100%
+			li
+				display: inline-block
+				vertical-align: middle
+				width: 29% 
+				padding: 0 2%
+				margin-bottom: 30px  
+				text-align: center
+				+mob
+					width: 46% 
+				img
+					width: 100% 
+					display: block
+					&.fotoset__vertical
+						width: 60% 
+						margin: 0 auto 
+	.media__container
+		margin-left: -120px
+		margin-right: -120px
+	.cut
+		float: right
+		margin: 0px 0 30px 63px
+		font-size: 13px
+		width: 190px
+		+mob
+			float: none
+			width: auto
+			margin-left: 0
+			background: #ECECEC
+			margin: 20px -40px
+			padding: 40px 40px
+		.cut__title
+			font-weight: normal
+			+reg
+			font-size: 16px
+			margin-bottom: 14px
+		.cut__meta
+			font-size: 13px
+			color: #B0AEB8
+			margin-top: 14px
+			+mob
+				font-size: 11px
+		.cut__filetype
+			+svg(filetype, 60, 80)
+			position: relative
+			margin-top: 20px
+			text-decoration: none
+			span
+				position: absolute
+				font-size: 14px
+				text-transform: uppercase
+				color: #30BE9A
+				+reg
+				position: absolute
+				bottom: 14px
+				left: 0
+				width: 100%
+				text-align: center
+
+
+
+.slider
+	position: relative
+	margin-bottom: 1.5em
+	margin: 0 -120px 1.5em -120px
+	+mob
+		margin: 0 -40px 25px -40px
+	img
+		display: block
+		width: 100%
+		+mob
+			height: auto !important
+	.slider__next, .slider__prev
+		position: absolute
+		top: 0
+		bottom: 0px
+		width: 180px
+		height: 100%
+		cursor: pointer
+		z-index: 150
+		opacity: 0
+		+transition(opacity 0.2s ease-in-out)
+		+mob
+			width: 100px
+		i
+			position: absolute
+			bottom: 60px + 50px
+			+mob
+				bottom: 100px
+				display: none !important
+	&:hover
+		.slider__next, .slider__prev, .slider__page
+			opacity: 1
+		.slider__slidetitle
+			color: #000
+	.slider__next
+		right: 0px
+		i
+			+svg(next, 60, 60)
+			right: 60px
+	.slider__prev
+		left: 0
+		i
+			+svg(prev, 60, 60)
+			left: 60px
+	.slider__title
+		font-size: 11px
+		color: #c2c6d2
+		text-align: right
+		padding: 10px 20px 0 0
+	.slider__slidetitle
+		margin: 0 120px
+		z-index: 10
+		font-size: 13px
+		color: #9c9ea8
+		border-bottom: 1px solid #EAEAEA
+		text-align: left
+		padding: 13px 0
+		+mob
+			margin: 0 40px
+			font-size: 11px
+	.slider__slide
+		position: relative
+		width: 100%
+		overflow: hidden
+	img
+		display: block
+	.slider__page
+		position: absolute
+		left: 0
+		bottom: 0
+		padding: 12px 0 14px
+		width: 120px
+		text-align: center
+		font-size: 13px
+		opacity: 0
+		+mob
+			display: none
+			color: #fff
+			font-size: 0
+
+.subtle
+	color: #B0AEB8
+
+.keyevents
+	margin-bottom: 60px
+	h3
+		font-weight: normal
+		+reg
+		font-size: 16px
+		margin-bottom: 13px
+	ul
+		list-style: none
+		margin: 0
+		padding: 0
+		font-size: 15px
+		a
+			display: block
+			padding: 13px 0
+			text-decoration: none
+			color: #222
+			border-top: 1px solid #F2F2F2
+			&:hover
+				color: $blue
+	.keyevents__more
+		color: #B0AEB8
+		&:hover
+			color: #30BE9A
