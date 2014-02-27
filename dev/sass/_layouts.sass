@@ -74,6 +74,12 @@
 // 		width: auto
 // 		margin: 0
 
+@include keyframes(show-up)
+	0%
+		left: 840px + 40px -60px
+	100%
+		left: 840px + 40px
+
 .read__wrap
 	// position: fixed
 	// top: 100px 
@@ -94,6 +100,8 @@
 	//height: auto !important
 	//top: 0 !important
 	.is-reading &
+		.show-up
+			@include animation(show-up 0.3s ease-in)
 		opacity: 1
 		z-index: 200
 		position: absolute
@@ -208,13 +216,33 @@
 .wrapfix__holder
 	height: 120px
 	&.wrapfix__holder_small
-		height: 60px 
+		height: 60px
+	&.wrapfix__holder_large
+		height: 180px
 	.wrapfix
 		background: #fff
 		z-index: 140
 		width: 100%
 		box-shadow: 0 15px 15px -15px rgba(0, 0, 0, 0.1)
-
+		&.wrapfix_catalog
+			background: #f5f5f6
+			box-shadow: none
+			.content__sep
+				border-top: 1px solid #D6D6D6
+			.sep
+				margin-top: 0
+				margin-bottom: 0
+			.wrapfix__title
+				font-size: 15px
+				font-family: "regular", arial, sans-serif
+			.subnav
+				li
+					a.is-active:after
+						content: "\2013"
+						position: absolute
+						bottom: -34px
+						right: 40%
+						color: #2A40C8
 .state1
 	position: fixed
 	top: 0

@@ -11,6 +11,8 @@
 			@extend %in
 			padding-top: 40px
 			padding-bottom: 40px
+			&.content__in__small
+				padding-top: 13px
 			+mob
 				padding-top: 30px
 				padding-bottom: 30px
@@ -39,19 +41,15 @@
 
 .cols
 	margin-right: -50px
-	// @todo fix this
-	// @include display-flex
-	// @include align-content(stretch)
-	// @include flex-direction(row)
+	@include display-flex
+	@include align-content(stretch)
+	@include flex-direction(row)
 	@extend %clr
 	+mob
 		margin-right: 0
 	.col
-		// @todo fix this
-		// @include display-flex
+		@include display-flex
 		width: 320px
-		float: left
-		//margin-right: 50px 
 		+mob
 			width: auto
 			float: none
@@ -60,8 +58,7 @@
 			width: 320px
 			position: relative
 			padding-bottom: 50px
-			// @todo fix this
-			// @include flex-basis(320px)
+			@include flex-basis(320px)
 		.hentry_white
 			padding-bottom: 28px
 		.hentry:nth-child(2n)
