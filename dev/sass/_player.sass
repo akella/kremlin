@@ -56,14 +56,14 @@ $loading-circle-size: 40
 		width: 0
 		opacity: 0
 	&:before
-		content: '•'
+		content: "\00b7"
 		color: #78C8B4
 		font-size: 12px
 		position: absolute
 		top: 13px
 		left: 0
 	&:after
-		content: '•'
+		content: "\00b7"
 		color: #78C8B4
 		font-size: 12px
 		position: absolute
@@ -134,7 +134,7 @@ $loading-circle-size: 40
 	border: 0
 	width: 8px
 	height: 8px
-	+bradius(4px)
+	border-radius: 4px
 	top: 15px
 	margin-left: -1px
 	border: 0 solid white
@@ -143,7 +143,7 @@ $loading-circle-size: 40
 .mejs-controls .mejs-time-rail .mejs-time-handle:hover
 	width: 10px
 	height: 10px
-	+bradius(5px)
+	border-radius: 5px
 	top: 14px
 	margin-left: -2px
 
@@ -151,7 +151,7 @@ $loading-circle-size: 40
 .mejs-controls .mejs-time-rail .mejs-time-handle:active
 	width: 7px
 	height: 7px
-	+bradius(5px)
+	border-radius: 5px
 	top: 14px
 	margin-left: -2px
 	background: none
@@ -165,7 +165,7 @@ $loading-circle-size: 40
 .mejs-controls .mejs-time-rail .mejs-time-float
 	color: #30BE9A
 	border: 0
-	+bradius(2px)
+	border-radius: 2px
 	width: 34px
 	margin-left: -14px
 	top: -10px
@@ -191,7 +191,7 @@ $loading-circle-size: 40
 	border: 0
 	width: 8px
 	height: 8px
-	+bradius(4px)
+	border-radius: 4px
 	top: 8px
 	background: #fff
 	position: absolute
@@ -200,7 +200,7 @@ $loading-circle-size: 40
 .mejs-controls .mejs-quality-button
 	button
 		border: 2px solid #78C8B4
-		+bradius(1px)
+		border-radius: 1px
 		-webkit-font-smoothing: subpixel-antialiased
 		background-image: none
 		color: #78c8b4
@@ -235,7 +235,7 @@ $loading-circle-size: 40
 .mejs-overlay-loading
 	background: none
 	&:after
-		content: '•'
+		content: "\00b7"
 		font-size: 40px
 		color: #fff
 		text-shadow: -20px 0 #fff, 20px 0 #fff
@@ -295,12 +295,12 @@ $loading-circle-size: 40
 		.mejs-horizontal-volume-current
 			width: 35px
 			top: 18px
-			+bradius(1px)
+			border-radius: 1px
 		.mejs-horizontal-volume-total
 			background: #78C8B4
 			opacity: 0.6
 			&:after
-				content: '•'
+				content: "\00b7"
 				color: #78C8B4
 				font-size: 12px
 				position: absolute
